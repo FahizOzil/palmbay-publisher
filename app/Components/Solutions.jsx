@@ -68,7 +68,7 @@ const Solutions = () => {
                 <ul className="mt-3 text-gray-700">
                   {card.services.map((service, i) => (
                     <li key={i} className="flex items-center text-xl gap-2">
-                      <span className="text-green-700">&#10003;</span> {service}
+                      <span className="text-green-700 border border-green-700 rounded-full px-1 text-sm">&#10003;</span> {service}
                     </li>
                   ))}
                 </ul>

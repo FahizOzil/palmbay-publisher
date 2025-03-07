@@ -1,6 +1,6 @@
-import { Poppins } from "next/font/google";
+import { Poppins, Tinos } from "next/font/google";
 
-export const font = Poppins({
+export const font = Tinos({
    subsets: ['latin'],
     weight: "400"
 })

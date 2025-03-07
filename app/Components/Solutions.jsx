@@ -61,7 +61,7 @@ const Solutions = () => {
         <Slider {...sliderSettings}>
           {cardData.map((card, index) => (
             <div key={index} className="px-4 flex justify-center items-center">
-              <div className="bg-gray-200 p-12 h-[30rem] rounded-tl-4xl rounded-br-4xl shadow-lg w-72">
+              <div className="bg-gray-200 p-12 h-[30rem] rounded-tl-4xl rounded-br-4xl shadow-lg w-full">
                 <img src={card.image} alt={card.title} className="w-full h-40 object-cover rounded-md" />
                 <h2 className="text-xl font-bold mt-4 text-teal-700">{card.title}</h2>
                 <p className="italic text-gray-600">by <strong>{card.author}</strong></p>

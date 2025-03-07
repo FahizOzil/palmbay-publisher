@@ -7,7 +7,7 @@ const About = () => {
         <div className='customorange'>
             <img src='/ring.png' className='w-32'/>
         </div>
-        <div className={`${font.className} p-12 text-white customorange flex flex-col justify-center items-center`}>
+        <div className={`${font.className}  text-white customorange flex flex-col justify-center items-center`}>
             <div>
                 <img src='aboutus.webp'/>
             </div>

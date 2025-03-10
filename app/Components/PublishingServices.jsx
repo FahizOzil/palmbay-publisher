@@ -32,6 +32,9 @@ const PublishingServices = () => {
                 <h1 className='green-text mt-4 text-2xl'>Marketing</h1>
             </div>
         </div>
+        <button className="button-gradient mt-8 cursor-pointer px-8 py-3 rounded-md font-bold text-black hover:bg-yellow-400">
+          Get Started!
+        </button>
     </div>
   )
 }

@@ -4,7 +4,7 @@ import { font } from './font/font'
 const Culture = () => {
   return (
     <section className={`${font.className}`}>
-        <div className={`${font.className} bg-white flex justify-center items-center p-12`}>
+        <div className={` bg-white flex justify-center items-center p-12`}>
             <h1 className='text-5xl font-bold tracking-wider'>Our Culture</h1>
         </div>
         <div className='flex'>

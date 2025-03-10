@@ -2,6 +2,7 @@ import About from './Components/About';
 import Apart from './Components/Apart';
 import ContactBanner from './Components/ContactBanner';
 import Culture from './Components/Culture';
+import Footer from './Components/Footer';
 import GetStartedSection from './Components/GetStartedSection';
 import Hero from './Components/Hero';
 import Navbar from './Components/Navbar';
@@ -26,6 +27,7 @@ export default function Home() {
       <Process/>
       <GetStartedSection/>
       <ContactBanner/>
+      <Footer/>
     </div>
   );
 }

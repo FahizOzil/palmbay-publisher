@@ -22,7 +22,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`${font.className} w-full text-white`}>
+    <nav className={`${font.className} sticky top-0 z-50 w-full text-white`}>
       <div className="customgreen w-full md:h-12 h-6 py-4 md:py-0 flex md:justify-end justify-center items-center px-4">
         <FaPhoneAlt className="text-xl mr-2" />
         <p className="text-xl font-extrabold tracking-wider">+310 564 9107</p>

@@ -1,5 +1,6 @@
 import About from './Components/About';
 import Apart from './Components/Apart';
+import ContactBanner from './Components/ContactBanner';
 import Culture from './Components/Culture';
 import GetStartedSection from './Components/GetStartedSection';
 import Hero from './Components/Hero';
@@ -24,6 +25,7 @@ export default function Home() {
       <PublishingServices/>
       <Process/>
       <GetStartedSection/>
+      <ContactBanner/>
     </div>
   );
 }

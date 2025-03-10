@@ -1,4 +1,5 @@
 import About from './Components/About';
+import Apart from './Components/Apart';
 import Culture from './Components/Culture';
 import Hero from './Components/Hero';
 import Navbar from './Components/Navbar';
@@ -14,6 +15,7 @@ export default function Home() {
       <Solutions/>
       <About/>
       <Culture/>
+      <Apart/>
     </div>
   );
 }

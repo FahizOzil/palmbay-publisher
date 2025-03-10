@@ -3,6 +3,7 @@ import Apart from './Components/Apart';
 import Culture from './Components/Culture';
 import Hero from './Components/Hero';
 import Navbar from './Components/Navbar';
+import Process from './Components/Process';
 import PublishingServices from './Components/PublishingServices';
 import Rating from './Components/Rating';
 import Solutions from './Components/Solutions';
@@ -20,6 +21,7 @@ export default function Home() {
       <Apart/>
       <TruePublishingPartner/>
       <PublishingServices/>
+      <Process/>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import About from './Components/About';
 import Apart from './Components/Apart';
 import Culture from './Components/Culture';
+import GetStartedSection from './Components/GetStartedSection';
 import Hero from './Components/Hero';
 import Navbar from './Components/Navbar';
 import Process from './Components/Process';
@@ -22,6 +23,7 @@ export default function Home() {
       <TruePublishingPartner/>
       <PublishingServices/>
       <Process/>
+      <GetStartedSection/>
     </div>
   );
 }

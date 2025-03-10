@@ -5,6 +5,7 @@ import Hero from './Components/Hero';
 import Navbar from './Components/Navbar';
 import Rating from './Components/Rating';
 import Solutions from './Components/Solutions';
+import TruePublishingPartner from './Components/TruePublishingPartner';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <About/>
       <Culture/>
       <Apart/>
+      <TruePublishingPartner/>
     </div>
   );
 }

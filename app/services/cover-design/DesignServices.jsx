@@ -48,10 +48,26 @@ const DesignServices = () => {
                 <div className='space-y-2 mt-4 text-xl text-left'>
                 <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;3 Cover concepts with front, spine, and back design</p>
                 <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Up to 4 fully licensed premium stock images per concept</p>
-                <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;2 Round of changes</p>
-                <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Appropriate for all genres</p>
+                <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;3 Round of changes</p>
+                <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Appropriate for all genres, especially fiction</p>
                 </div>
             </div>
+        </div>
+          <div className='flex flex-col md:space-x-8 md:flex-row mt-16 justify-center items-center'>
+            <div className='flex flex-col justify-start items-start p-2'>
+                <h1 data-aos="fade-left" className='text-3xl md:text-5xl mt-6 md:max-w-xl text-left'>Illustrated Cover</h1>
+                <p data-aos="fade-up" className='green-text text-3xl md:max-w-xl mt-4 text-left'>
+                    Starting at $899
+                </p>
+                <div className='space-y-2 mt-4 text-xl text-left'>
+                <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;1 Cover concept & Illustration with front, spine, and back design</p>
+                <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Black & white sketch phase with 2 rounds of changes</p>
+                <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;Color illustration phase with 2 rounds of changes</p>
+                <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Design phase with 1 round of changes (this round includes text placement)</p>
+                <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Popular for fantasy, sci-fi, and children’s books</p>
+                </div>
+            </div>
+            <img data-aos="fade-right" src='/cover4.webp' className='w-96 h-96' />
         </div>
     </div>
   )

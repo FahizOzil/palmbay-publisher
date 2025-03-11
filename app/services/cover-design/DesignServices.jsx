@@ -9,7 +9,6 @@ const DesignServices = () => {
           <p className="pt-4 text-md md:text-xl max-w-3xl">
           Check out our services below to find the right fit for your needs!</p>
           <p className="pt-8 text-xl italic max-w-3xl">*Our cover design services are automatically formatted for paperback books. Additional fees are required for converting to hardcover and/or e-book.</p>   
-          
         </div>
   )
 }

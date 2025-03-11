@@ -1,8 +1,9 @@
+import { font } from '@/app/Components/font/font'
 import React from 'react'
 
 const InteriorFormatting = () => {
   return (
-    <div className={``}>
+    <div className={`${font.className}`}>
 
     </div>
   )

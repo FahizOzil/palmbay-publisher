@@ -6,6 +6,7 @@ import BookCoverDesign from './BookCoverDesign'
 import InteriorFormatting from './InteriorFormatting'
 import ContactBanner from '@/app/Components/ContactBanner'
 import Footer from '@/app/Components/Footer'
+import Apart from '@/app/Components/Apart'
 
 const page = () => {
   return (

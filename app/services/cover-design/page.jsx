@@ -1,12 +1,13 @@
 import { font } from '@/app/Components/font/font'
 import Navbar from '@/app/Components/Navbar'
 import React from 'react'
+import DesignServices from './DesignServices'
 
 const page = () => {
   return (
     <div className={`${font.className}`}>
       <Navbar />
-      <div className="relative w-full min-h-[30rem] bg-cover bg-center" style={{ backgroundImage: "url('/whitewood.png')" }}>
+      <div className="relative  w-full min-h-[30rem] bg-cover bg-center" style={{ backgroundImage: "url('/whitewood.png')" }}>
         <div className="absolute inset-0 flex flex-col justify-center items-center text-black px-4 text-center">
           <p className="text-3xl md:text-6xl">Book Cover Design</p>
           <p className="pt-4 text-md md:text-xl max-w-3xl">
@@ -18,6 +19,7 @@ const page = () => {
           </button>
         </div>
       </div>
+      <DesignServices/>
     </div>
   )
 }

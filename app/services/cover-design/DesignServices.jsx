@@ -19,6 +19,7 @@ const DesignServices = () => {
                 <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;1 Cover concept with front, spine, and back design</p>
                 <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;1 Fully licensed premium stock image or author provided image</p>
                 <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;1 Round of changes</p>
+                
                 <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Popular for poetry, business, and religious books</p>
                 </div>
             </div>
@@ -34,6 +35,9 @@ const DesignServices = () => {
                 <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Up to 2 fully licensed premium stock images per concept</p>
                 <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;2 Round of changes</p>
                 <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Appropriate for all genres</p>
+                <button className="button-gradient mt-6 md:mt-8 px-6 sm:px-8 py-3 rounded-md font-bold text-black transition duration-300 hover:bg-yellow-400">
+          Get Started!
+        </button>
                 </div>
             </div>
             <img data-aos="fade-right" src='/cover2.webp' className='w-96 h-96' />

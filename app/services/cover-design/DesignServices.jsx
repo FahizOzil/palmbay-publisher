@@ -20,7 +20,7 @@ const DesignServices = () => {
                 <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;1 Fully licensed premium stock image or author provided image</p>
                 <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;1 Round of changes</p>
                 
-    <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Popular for poetry, business, and religious books</p>
+<p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Popular for poetry, business, and religious books</p>
                 </div>
             </div>
         </div>

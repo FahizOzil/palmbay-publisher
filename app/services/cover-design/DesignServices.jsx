@@ -20,6 +20,9 @@ const DesignServices = () => {
                 <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;1 Fully licensed premium stock image or author provided image</p>
                 <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;1 Round of changes</p>
                 <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Popular for poetry, business, and religious books</p>
+                <button className="button-gradient mt-6 md:mt-8 px-6 sm:px-8 py-3 rounded-md font-bold text-black transition duration-300 hover:bg-yellow-400">
+          Get Started!
+        </button>
                 </div>
             </div>
         </div>

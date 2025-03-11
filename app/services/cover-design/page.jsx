@@ -4,6 +4,8 @@ import React from 'react'
 import DesignServices from './DesignServices'
 import BookCoverDesign from './BookCoverDesign'
 import InteriorFormatting from './InteriorFormatting'
+import ContactBanner from '@/app/Components/ContactBanner'
+import Footer from '@/app/Components/Footer'
 
 const page = () => {
   return (
@@ -24,6 +26,9 @@ const page = () => {
       <DesignServices/>
       <BookCoverDesign/>
       <InteriorFormatting/>
+      <Apart/>
+      <ContactBanner/>
+      <Footer/>
     </div>
   )
 }

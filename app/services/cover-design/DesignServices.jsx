@@ -4,7 +4,7 @@ import React from 'react'
 const DesignServices = () => {
   return (
     <div className={`${font.className
-    } flex flex-col mt-20 justify-center items-center text-black px-4 text-center`}>
+} flex flex-col mt-20 justify-center items-center text-black px-4 text-center`}>
           <p className="text-3xl md:text-4xl">Book Cover Design Services</p>
           <p className="pt-4 text-md md:text-xl max-w-3xl">
           Check out our services below to find the right fit for your needs!</p>

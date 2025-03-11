@@ -8,20 +8,19 @@ const Sequence = () => {
         <h1 className='text-3xl mt-10 md:text-5xl text-center'>Professional Book Cover Designs</h1>
 
         {/* Ensure h2 starts immediately below h1 */}
-        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Silver Gate Cover</h2>
-        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>Our Silver Gate Cover service is a clean and minimalistic design for genres like poetry, business, or religion, where emphasizing the text is paramount. It’s also a great choice for authors using existing artwork from a third-party designer or illustrator. This service option assumes minimal photo editing work but still packs a punch and effectively conveys your book’s tone to potential readers. </p>
+        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Line Editing </h2>
+        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>Line editing comes before copy editing. Where copy editors are concerned with mechanics, line editors are concerned primarily with questions of style. Line editing involves editing a book sentence by sentence (or line by line) to upgrade the prose, always keeping the craft in mind. A line edit ensures that your book’s content is consistent while its language is creative and concise.</p>
+        <p className='mt-6 pl-28 text-left w-full text-xl max-w-[70%]'>Line editing involves correcting word choice, sentence effectiveness, suggestions for better ways to say something, and apparent inconsistencies. This is the most popular editing choice for our authors. </p>
+        <p className='mt-6 pl-28 text-left w-full text-xl max-w-[70%]'>Line editors read while keeping attention to detail, maintaining an interest in the way language works at the sentence level, and appreciating the flow of the story.</p>
 
-        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Custom Cover</h2>
-        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>Our Custom Cover service is appropriate for all genres and offers more choice and flexibility. This service is our most popular option, giving our authors more creative freedom to choose between two unique concepts. Your book is one of a kind, and we want the same for your cover! With our talented designers and collaborative approach, we’ll bring your book to life with a cover that matches your vision. </p>
+        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Copy Editing</h2>
+        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>Any book or manuscript can benefit from copy editing. Copy editing focuses less on the big picture and more on the details of the language. Hence, a copy editor ensures that the language in a manuscript follows standard English rules and adheres to the Chicago Manual of Style, the standard in trade publishing. Copy editing services check for accuracy, consistency, grammatical errors, spelling, syntax, and punctuation.</p>
+        <p className='mt-6 pl-28 text-left w-full text-xl max-w-[70%]'>Most books go through at least one round of line editing and one round of copy edits. Copy editing is intended to be a final review of the manuscript after the content has been fully edited. Skipping copy editing may considerably lower the quality of a finished product.</p>
     
-        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Complex Cover</h2>
-        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>Complex Covers are also suitable for all genres, with fiction being the most common. With this service, we offer three distinct concepts that utilize more advanced image manipulation in order to capture a multifaceted vision.  </p>
-    
-        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Illustrated Cover</h2>
-        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>Our Illustrated cover is most popular for fantasy, sci-fi, and children’s book genres. With this service, our illustrators can create a custom piece of cover art that serves as a powerful storytelling tool for your readers. Whether you’re looking to showcase a custom character or bring a place in your fictional world to life, we can create a striking cover that will leave a lasting impression.</p>
-        
-        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">E-book Conversion</h2>
-        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>If you purchase this service, we create the cover and interior design for paperback, then convert both files to e-book for $399. This service includes the EPUB file to make your e-book available on all major platforms.</p>
+        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Developmental Editing</h2>
+        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>Typically, the first stage of the editing process is the developmental edit. Developmental book editing is our most involved option, as it requires the most time and effort to uncover and identify the “big-picture” problems underlying your story. </p>
+        <p className='mt-6 pl-28 text-left w-full text-xl max-w-[70%]'>We pair our experienced developmental editors with authors to guide them in conceiving the topic, planning the overall structure, and developing an outline. We complete the round of edits and give authors a chance to review them before moving forward. </p>
+        <p className='mt-6 pl-28 text-left w-full text-xl max-w-[70%]'>With this service, you can expect an extensive markup with many suggestions on improving the story or manuscript, helping the flow and enriching the story, and evaluating the book as a whole so it all makes sense. </p>
     </div>
   )
 }

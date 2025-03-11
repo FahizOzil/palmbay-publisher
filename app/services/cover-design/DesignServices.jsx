@@ -33,7 +33,7 @@ const DesignServices = () => {
                 <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;2 Cover concepts with front, spine, and back design</p>
                 <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Up to 2 fully licensed premium stock images per concept</p>
                 <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;2 Round of changes</p>
-                <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Popular for poetry, business, and religious books</p>
+                <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Appropriate for all genres</p>
                 </div>
             </div>
             <img data-aos="fade-right" src='/cover2.webp' className='w-96 h-96' />

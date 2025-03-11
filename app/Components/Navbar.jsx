@@ -52,13 +52,12 @@ const Navbar = () => {
 
               {/* Dropdown */}
               <ul
-                className={`absolute left-0 mt-2 w-72 bg-white text-black rounded shadow-lg transition-all duration-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible p-4 gap-4 ${
+                className={`absolute left-0 mt-2 w-72 customgreen text-white rounded shadow-lg transition-all duration-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible p-4 gap-4 ${
                   openDropdown === index ? "opacity-100 visible" : ""
                 }`}
               >
-                <img src="/thread-img.png.webp" alt="Thread" className="w-full h-20 object-cover rounded-md" />
                 {menu.items.map((item, i) => (
-                  <li key={i} className="px-4 py-2 hover:bg-gray-200 cursor-pointer rounded-md">
+                  <li key={i} className="px-4 py-2 hover:bg-teal-400 cursor-pointer rounded-md">
                     {item}
                   </li>
                 ))}

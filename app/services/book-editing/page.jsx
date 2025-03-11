@@ -17,9 +17,9 @@ const page = () => {
         <div className="absolute inset-0 flex flex-col justify-center items-center text-black px-4 text-center">
           <p className="text-3xl md:text-6xl">Book Editing Services</p>
           <p className="pt-4 text-md md:text-xl max-w-3xl">
-            Silver Gate Publishing offers four different professional book cover design services tailored to meet the needs of any independent author based on their budget and design preferences. Learn more about our services below and how we can help you design a captivating book cover.
+          Elevate your book with Silver Gate’s comprehensive book editing services. Our experienced editors proofread and edit your manuscript, carefully reviewing its structure, tone, and textual flow to ensure a polished outcome. With a keen eye for detail, they also thoroughly check for grammar, punctuation, and spelling errors, resulting in a professional, high-quality manuscript ready to be printed. Learn more about all of our professional editing services below!
           </p>
-          <p className="pt-8 text-xl italic max-w-3xl">*Cover Design and Interior Formatting are required services.</p>   
+          {/* <p className="pt-8 text-xl italic max-w-3xl">*Cover Design and Interior Formatting are required services.</p>    */}
           <button className="mt-8 button-gradient cursor-pointer px-8 py-3 rounded-md font-bold text-black hover:bg-yellow-400">
             Get Started!
           </button>

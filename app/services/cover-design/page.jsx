@@ -20,7 +20,6 @@ const page = () => {
             Get Started!
           </button>
         </div>
-
       </div>
     </div>
   )

@@ -1,9 +1,9 @@
 import { font } from '@/app/Components/font/font'
 import Navbar from '@/app/Components/Navbar'
 import React from 'react'
-import DesignServices from './DesignServices'
-import BookCoverDesign from './BookCoverDesign'
-import InteriorFormatting from './InteriorFormatting'
+import DesignServices from '../cover-design/DesignServices'
+import AudioFormatting from './AudioFormatting'
+import AudioSequence from './AudioSequence'
 import ContactBanner from '@/app/Components/ContactBanner'
 import Footer from '@/app/Components/Footer'
 import Apart from '@/app/Components/Apart'
@@ -14,7 +14,7 @@ const page = () => {
       <Navbar />
       <div className="relative  w-full min-h-[30rem] bg-cover bg-center" style={{ backgroundImage: "url('/whitewood.png')" }}>
         <div className="absolute inset-0 flex flex-col justify-center items-center text-black px-4 text-center">
-          <p className="text-3xl md:text-6xl">Book Cover Design</p>
+          <p className="text-3xl md:text-6xl">Audio Book Services</p>
           <p className="pt-4 text-md md:text-xl max-w-3xl">
             Silver Gate Publishing offers four different professional book cover design services tailored to meet the needs of any independent author based on their budget and design preferences. Learn more about our services below and how we can help you design a captivating book cover.
           </p>
@@ -25,8 +25,8 @@ const page = () => {
         </div>
       </div>
       <DesignServices/>
-      <BookCoverDesign/>
-      <InteriorFormatting/>
+      <AudioSequence/>
+      <AudioFormatting/>
       <Apart/>
       <ContactBanner/>
       <Footer/>

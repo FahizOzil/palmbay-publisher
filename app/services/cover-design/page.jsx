@@ -2,6 +2,7 @@ import { font } from '@/app/Components/font/font'
 import Navbar from '@/app/Components/Navbar'
 import React from 'react'
 import DesignServices from './DesignServices'
+import BookCoverDesign from './BookCoverDesign'
 
 const page = () => {
   return (
@@ -20,6 +21,7 @@ const page = () => {
         </div>
       </div>
       <DesignServices/>
+      <BookCoverDesign/>
     </div>
   )
 }

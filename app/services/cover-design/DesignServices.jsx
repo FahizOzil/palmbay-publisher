@@ -65,6 +65,9 @@ const DesignServices = () => {
                 <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;Color illustration phase with 2 rounds of changes</p>
                 <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Design phase with 1 round of changes (this round includes text placement)</p>
                 <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Popular for fantasy, sci-fi, and children’s books</p>
+                <button className="button-gradient mt-6 md:mt-8 px-6 sm:px-8 py-3 rounded-md font-bold text-black transition duration-300 hover:bg-yellow-400">
+          Get Started!
+        </button>
                 </div>
             </div>
             <img data-aos="fade-right" src='/cover4.webp' className='w-96 h-96' />

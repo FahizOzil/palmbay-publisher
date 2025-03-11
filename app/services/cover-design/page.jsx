@@ -3,6 +3,7 @@ import Navbar from '@/app/Components/Navbar'
 import React from 'react'
 import DesignServices from './DesignServices'
 import BookCoverDesign from './BookCoverDesign'
+import InteriorFormatting from './InteriorFormatting'
 
 const page = () => {
   return (
@@ -22,6 +23,7 @@ const page = () => {
       </div>
       <DesignServices/>
       <BookCoverDesign/>
+      <InteriorFormatting/>
     </div>
   )
 }

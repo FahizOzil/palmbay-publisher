@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { FaChevronDown, FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
 import { font } from "./font/font";
+import Link from "next/link";
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -63,7 +64,9 @@ const Navbar = () => {
       <div className="custombg shadow-black shadow-sm w-full py-4 flex justify-between items-center px-6 relative">
         
         {/* Logo */}
-        <img src="/logo1.png" alt="Logo" className="w-40 md:w-60 h-12 md:h-16" />
+        <Link href={"/"}>
+          <img src="/logo1.png" alt="Logo" className="w-40 cursor-pointer md:w-60 h-12 md:h-16" />
+        </Link>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6">

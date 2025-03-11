@@ -1,12 +1,12 @@
 import { font } from '@/app/Components/font/font'
 import Navbar from '@/app/Components/Navbar'
 import React from 'react'
-import DesignServices from '../cover-design/DesignServices'
 import AudioFormatting from './AudioFormatting'
 import AudioSequence from './AudioSequence'
 import ContactBanner from '@/app/Components/ContactBanner'
 import Footer from '@/app/Components/Footer'
 import Apart from '@/app/Components/Apart'
+import AudioDesign from './AudioDesign'
 
 const page = () => {
   return (
@@ -24,7 +24,7 @@ const page = () => {
           </button>
         </div>
       </div>
-      <DesignServices/>
+      <AudioDesign/>
       <AudioSequence/>
       <AudioFormatting/>
       <Apart/>

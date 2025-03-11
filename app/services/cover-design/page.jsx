@@ -6,8 +6,7 @@ const page = () => {
   return (
     <div className={`${font.className}`}>
       <Navbar />
-      
-      {/* Background Section */}
+
       <div className="relative w-full min-h-[30rem] bg-cover bg-center" style={{ backgroundImage: "url('/whitewood.png')" }}>
 
         {/* Text Content */}

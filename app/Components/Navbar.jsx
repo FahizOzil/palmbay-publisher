@@ -12,14 +12,42 @@ const Navbar = () => {
     { 
       title: "Publishing Services", 
       items: [
-        "Cover Design", "Book Editing", "Book Printing", "Audiobook Publishing", 
-        "Social Media Consulting", "Illustrations", "Interior Formatting", 
-        "Book Distribution", "Marketing"
-      ] 
+        { name: "Cover Design", href: "/services/cover-design" },
+        { name: "Book Editing", href: "/services/book-editing" },
+        { name: "Book Printing", href: "/services/book-printing" },
+        { name: "Audiobook Publishing", href: "/services/audiobook-publishing" },
+        { name: "Social Media Consulting", href: "/services/social-media" },
+        { name: "Illustrations", href: "/services/illustrations" },
+        { name: "Interior Formatting", href: "/services/interior-formatting" },
+        { name: "Book Distribution", href: "/services/book-distribution" },
+        { name: "Marketing", href: "/services/marketing" }
+      ]
     },
-    { title: "Guides", items: ["Self-Publishing Guide", "Marketing Tips", "Writing Tips"] },
-    { title: "About Us", items: ["Our Story", "Team", "Contact Us"] },
-    { title: "Genres", items: ["Fiction", "Non-Fiction", "Sci-Fi", "Romance"] },
+    { 
+      title: "Guides", 
+      items: [
+        { name: "Self-Publishing Guide", href: "/guides/self-publishing" },
+        { name: "Marketing Tips", href: "/guides/marketing-tips" },
+        { name: "Writing Tips", href: "/guides/writing-tips" }
+      ]
+    },
+    { 
+      title: "About Us", 
+      items: [
+        { name: "Our Story", href: "/about/our-story" },
+        { name: "Team", href: "/about/team" },
+        { name: "Contact Us", href: "/about/contact" }
+      ]
+    },
+    { 
+      title: "Genres", 
+      items: [
+        { name: "Fiction", href: "/genres/fiction" },
+        { name: "Non-Fiction", href: "/genres/non-fiction" },
+        { name: "Sci-Fi", href: "/genres/sci-fi" },
+        { name: "Romance", href: "/genres/romance" }
+      ]
+    }
   ];
 
   return (
@@ -38,27 +66,20 @@ const Navbar = () => {
         <img src="/logo1.png" alt="Logo" className="w-40 md:w-60 h-12 md:h-16" />
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 text-lg relative">
+        <ul className="hidden md:flex space-x-6">
           {menuItems.map((menu, index) => (
-            <li
-              key={index}
-              className="relative group"
-              onMouseEnter={() => setOpenDropdown(index)}
-              onMouseLeave={() => setOpenDropdown(null)}
-            >
-              <button className="flex items-center cursor-pointer hover:text-gray-300 focus:outline-none">
-                {menu.title} <FaChevronDown className="ml-1 text-sm" />
+            <li key={index} className="relative group">
+              <button className="flex items-center text-xl hover:text-gray-300">
+                {menu.title}
               </button>
 
               {/* Dropdown */}
-              <ul
-                className={`absolute left-0 mt-2 w-72 customgreen text-white rounded shadow-lg transition-all duration-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible p-4 gap-4 ${
-                  openDropdown === index ? "opacity-100 visible" : ""
-                }`}
+              <ul 
+                className="absolute left-0 top-full bg-white text-black shadow-lg p-4 w-60 rounded-md opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible"
               >
                 {menu.items.map((item, i) => (
-                  <li key={i} className="px-4 py-2 hover:bg-teal-400 cursor-pointer rounded-md">
-                    {item}
+                  <li key={i} className="p-2 hover:bg-gray-100 rounded-md">
+                    <a href={item.href} className="block text-lg">{item.name}</a>
                   </li>
                 ))}
               </ul>
@@ -81,7 +102,7 @@ const Navbar = () => {
 
       </div>
 
-      {/* Mobile Menu (Slide Down) */}
+      {/* Mobile Menu */}
       <div
         className={`absolute top-full left-0 w-full bg-gray-900 text-white flex flex-col space-y-4 px-6 py-4 transition-all duration-300 md:hidden ${
           mobileMenuOpen ? "block" : "hidden"
@@ -93,18 +114,18 @@ const Navbar = () => {
               className="flex items-center justify-between w-full py-2 text-lg focus:outline-none"
               onClick={() => setOpenDropdown(openDropdown === index ? null : index)}
             >
-              {menu.title} <FaChevronDown className="ml-2" />
+              {menu.title} <FaChevronDown className={`ml-2 transform ${openDropdown === index ? "rotate-180" : "rotate-0"} transition-transform`} />
             </button>
             
             {/* Mobile Dropdown */}
             <ul
-              className={`bg-gray-800 rounded-md mt-2 p-2 transition-all duration-300 ${
-                openDropdown === index ? "block" : "hidden"
+              className={`overflow-hidden bg-gray-800 rounded-md mt-2 p-2 transition-all duration-300 ${
+                openDropdown === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
               }`}
             >
               {menu.items.map((item, i) => (
                 <li key={i} className="px-4 py-2 hover:bg-gray-700 cursor-pointer rounded-md">
-                  {item}
+                  <a href={item.href} className="block w-full">{item.name}</a>
                 </li>
               ))}
             </ul>

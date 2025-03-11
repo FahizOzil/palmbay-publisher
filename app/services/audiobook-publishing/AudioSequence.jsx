@@ -5,22 +5,26 @@ const AudioSequence = () => {
   return (
     <div className={`${font.className} flex flex-col justify-center items-center`}>
         <hr className='text-yellow-600 border-2 w-[70%] mt-20' />
-        <h1 className='text-3xl mt-10 md:text-5xl text-center'>Professional Book Cover Designs</h1>
+        <h1 className='text-3xl mt-10 md:text-5xl text-center'>How Silver Gate's Audiobook <br/> Publishing
+        Service Works</h1>
+        <p className='mt-6 text-xl text-center max-w-2xl'>We work closely with authors throughout the audiobook publishing process to ensure your audiobook matches your vision. Here’s what you can expect.</p>
 
         {/* Ensure h2 starts immediately below h1 */}
-        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Line Editing </h2>
-        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>Line editing comes before copy editing. Where copy editors are concerned with mechanics, line editors are concerned primarily with questions of style. Line editing involves editing a book sentence by sentence (or line by line) to upgrade the prose, always keeping the craft in mind. A line edit ensures that your book’s content is consistent while its language is creative and concise.</p>
-        <p className='mt-6 pl-28 text-left w-full text-xl max-w-[70%]'>Line editing involves correcting word choice, sentence effectiveness, suggestions for better ways to say something, and apparent inconsistencies. This is the most popular editing choice for our authors. </p>
-        <p className='mt-6 pl-28 text-left w-full text-xl max-w-[70%]'>Line editors read while keeping attention to detail, maintaining an interest in the way language works at the sentence level, and appreciating the flow of the story.</p>
+        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Audiobook Questionnaire </h2>
+        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>We start the audiobook publishing process once the final interior is approved. We’ll send an audiobook questionnaire that asks you to describe your ideal narrator based on gender, accent, and more. Our questionnaire also asks you to specify any words that need special pronunciation and any other special notes.</p>
 
-        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Copy Editing</h2>
-        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>Any book or manuscript can benefit from copy editing. Copy editing focuses less on the big picture and more on the details of the language. Hence, a copy editor ensures that the language in a manuscript follows standard English rules and adheres to the Chicago Manual of Style, the standard in trade publishing. Copy editing services check for accuracy, consistency, grammatical errors, spelling, syntax, and punctuation.</p>
-        <p className='mt-6 pl-28 text-left w-full text-xl max-w-[70%]'>Most books go through at least one round of line editing and one round of copy edits. Copy editing is intended to be a final review of the manuscript after the content has been fully edited. Skipping copy editing may considerably lower the quality of a finished product.</p>
+        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Narrator Selection</h2>
+        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>We open a casting call to 500+ professional narrators. Narrators that are a good match will submit five-minute auditions for your approval. You’ll typically get five to ten different auditions. This step takes seven to ten business days.</p>
     
-        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Developmental Editing</h2>
-        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>Typically, the first stage of the editing process is the developmental edit. Developmental book editing is our most involved option, as it requires the most time and effort to uncover and identify the “big-picture” problems underlying your story. </p>
-        <p className='mt-6 pl-28 text-left w-full text-xl max-w-[70%]'>We pair our experienced developmental editors with authors to guide them in conceiving the topic, planning the overall structure, and developing an outline. We complete the round of edits and give authors a chance to review them before moving forward. </p>
-        <p className='mt-6 pl-28 text-left w-full text-xl max-w-[70%]'>With this service, you can expect an extensive markup with many suggestions on improving the story or manuscript, helping the flow and enriching the story, and evaluating the book as a whole so it all makes sense. </p>
+        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Recording</h2>
+        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>After selecting a narrator, it’s time to start recording. Your book will be recorded in chapters if it has them. We send the raw audio recordings for you to review for misreads and mistakes, then rerecord any edits. You’ll receive a changes form to record all necessary changes. </p>
+        
+        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Editing</h2>
+        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>After you approve the raw audio, we record and add backing music to the opening and closing credit files. We then go through the recording word by word to apply manual detail editing for breath control, lip/mouth sounds, pace corrections, and remove any other unwanted sounds. After this, we apply a carefully balanced mix with EQ, Compression, Saturation, and other production tools to achieve a nice and warm overall sound. The final step of the editing process is to master and format the audio to meet audiobook requirements and ensure outlets accept them.</p>
+        
+        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Final Review</h2>
+        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>Once editing is complete, we’ll send you the final audiobook to review. When you’re satisfied and approve the final product, we’ll distribute your audiobook to retailers, making your work accessible to a broader audience of eager listeners.</p>
+
     </div>
   )
 }

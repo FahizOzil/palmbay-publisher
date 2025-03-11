@@ -46,7 +46,7 @@ const DesignServices = () => {
                     Starting at $899
                 </p>
                 <div className='space-y-2 mt-4 text-xl text-left'>
-                <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;2 Cover concepts with front, spine, and back design</p>
+                <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;3 Cover concepts with front, spine, and back design</p>
                 <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Up to 2 fully licensed premium stock images per concept</p>
                 <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;2 Round of changes</p>
                 <p data-aos="fade-up-left"><span className='green-text'>&#x2022;</span>&nbsp;Appropriate for all genres</p>

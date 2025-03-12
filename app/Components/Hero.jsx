@@ -16,7 +16,7 @@ const Hero = () => {
           Bring Your Publishing Dream to Life with Silver Gate
         </h1>
         <p className="mt-4 text-lg max-w-md md:max-w-lg">
-          Palmetto Publishing empowers you to publish your words, your way. 
+          Silver Gate Publishing empowers you to publish your words, your way. 
           Our independent authors maintain full creative control, keep 100% of royalties, 
           and have a dedicated publishing consultant and project manager to guide you every step of the journey.
         </p>

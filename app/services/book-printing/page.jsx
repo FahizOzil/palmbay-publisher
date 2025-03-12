@@ -5,6 +5,7 @@ import Footer from '@/app/Components/Footer'
 import Navbar from '@/app/Components/Navbar'
 import Solutions from '@/app/Components/Solutions'
 import React from 'react'
+import CustomBookPrinting from './CustomBookPrinting'
 
 const page = () => {
   return (
@@ -23,9 +24,7 @@ const page = () => {
         </div>
       </div>
       <Solutions word={"Printing"}/>
-      {/* <AudioDesign/>
-      <AudioSequence/>
-      <AudioFormatting/> */}
+      <CustomBookPrinting/>
       <Apart/>
       <ContactBanner/>
       <Footer/>

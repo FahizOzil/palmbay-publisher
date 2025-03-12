@@ -19,4 +19,4 @@ const AudioFormatting = () => {
   )
 }
 
-export default AudioFormatting
+export default WhyPrint

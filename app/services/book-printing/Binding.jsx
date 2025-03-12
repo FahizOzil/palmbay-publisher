@@ -1,9 +1,10 @@
+import { font } from '@/app/Components/font/font'
 import React from 'react'
 
 const Binding = () => {
   return (
-    <div>
-        
+    <div className={`${font.className}`}>
+
     </div>
   )
 }

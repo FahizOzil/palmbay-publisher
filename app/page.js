@@ -18,7 +18,7 @@ export default function Home() {
       <Navbar/>
       <Hero/>
       <Rating/>
-      <Solutions/>
+      <Solutions word={"Publishing"}/>
       <About/>
       <Culture/>
       <Apart/>

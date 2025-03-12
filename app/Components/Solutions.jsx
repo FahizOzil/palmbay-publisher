@@ -26,7 +26,7 @@ const cardData = [
   },
 ];
 
-const Solutions = () => {
+const Solutions = ({ word }) => {
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -52,7 +52,7 @@ const Solutions = () => {
     <div className={`${font.className} flex flex-col overflow-hidden items-center text-center px-6 py-16 bg-white`}>
       {/* Heading Section */}
       <h1 className="text-3xl md:text-5xl font-semibold">
-        Publishing Solutions For Every Genre
+        {word} Solutions For Every Genre
       </h1>
       <hr className="w-24 md:w-32 mt-4 border-2 border-yellow-600" />
 

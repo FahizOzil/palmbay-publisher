@@ -3,6 +3,7 @@ import ContactBanner from '@/app/Components/ContactBanner'
 import { font } from '@/app/Components/font/font'
 import Footer from '@/app/Components/Footer'
 import Navbar from '@/app/Components/Navbar'
+import Solutions from '@/app/Components/Solutions'
 import React from 'react'
 
 const page = () => {
@@ -21,6 +22,7 @@ const page = () => {
           </button>
         </div>
       </div>
+      <Solutions word={"Printing"}/>
       {/* <AudioDesign/>
       <AudioSequence/>
       <AudioFormatting/> */}

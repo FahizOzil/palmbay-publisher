@@ -5,7 +5,7 @@ const HowWePrepare = () => {
   return (
     <div className={`${font.className} flex flex-col justify-center items-center`}>
         <hr className='text-yellow-600 border-2 w-[70%] mt-20' />
-        <h1 className='text-3xl mt-10 md:text-5xl text-center'>How Silver Gate's Audiobook <br/> Publishing
+        <h1 className='text-3xl mt-10 md:text-5xl text-center'>How Silver Gate Publishing<br/>  Prepares For Your Book
         Service Works</h1>
         <p className='mt-6 text-xl text-center max-w-2xl'>We work closely with authors throughout the audiobook publishing process to ensure your audiobook matches your vision. Here’s what you can expect.</p>
 

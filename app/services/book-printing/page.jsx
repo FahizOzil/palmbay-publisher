@@ -6,6 +6,7 @@ import Navbar from '@/app/Components/Navbar'
 import Solutions from '@/app/Components/Solutions'
 import React from 'react'
 import CustomBookPrinting from './CustomBookPrinting'
+import HowWePrepare from './HowWePrepare'
 
 const page = () => {
   return (
@@ -25,6 +26,7 @@ const page = () => {
       </div>
       <Solutions word={"Printing"}/>
       <CustomBookPrinting/>
+      <HowWePrepare/>
       <Apart/>
       <ContactBanner/>
       <Footer/>

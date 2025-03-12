@@ -1,7 +1,7 @@
 import { font } from '@/app/Components/font/font'
 import React from 'react'
 
-const AudioFormatting = () => {
+const WhyPrint = () => {
   return (
     <div className={`${font.className} mt-20`}>
         <div className="relative  w-full min-h-[25rem] bg-cover bg-center" style={{ backgroundImage: "url('/whitewood.png')" }}>

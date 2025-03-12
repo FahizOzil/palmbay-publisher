@@ -8,6 +8,7 @@ import React from 'react'
 import CustomBookPrinting from './CustomBookPrinting'
 import HowWePrepare from './HowWePrepare'
 import Binding from './Binding'
+import WhyPrint from './WhyPrint'
 
 const page = () => {
   return (
@@ -29,6 +30,7 @@ const page = () => {
       <CustomBookPrinting/>
       <HowWePrepare/>
       <Binding/>
+      <WhyPrint/>
       <Apart/>
       <ContactBanner/>
       <Footer/>

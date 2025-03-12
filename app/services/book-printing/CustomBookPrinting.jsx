@@ -55,10 +55,10 @@ const CustomBookPrinting = () => {
         </button>
                 </div>
             </div>
-            <img data-aos="fade-right" src='/print5.webp' className='w-96 h-96' />
+            <img data-aos="fade-right" src='/print4.webp' className='w-96 h-96' />
         </div>
         <div className='flex flex-col md:space-x-8 md:flex-row mt-16 justify-center items-center'>
-            <img data-aos="fade-right" src='/print3.webp' className='w-96 h-96' />
+            <img data-aos="fade-right" src='/print5.webp' className='w-96 h-96' />
             <div className='flex flex-col justify-start items-start p-2'>
                 <h1 data-aos="fade-left" className='text-3xl green-text md:text-5xl mt-6 md:max-w-xl text-left'>Interior Paper Stock Options</h1>
                 <div className='space-y-2 mt-4 text-xl text-left'>

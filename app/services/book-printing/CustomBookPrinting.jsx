@@ -49,7 +49,7 @@ const CustomBookPrinting = () => {
             <div className='flex flex-col justify-start items-start p-2'>
                 <h1 data-aos="fade-left" className='text-3xl green-text md:text-5xl mt-6 md:max-w-xl text-left'>Full Color Printing</h1>
                 <div className='space-y-2 mt-4 text-xl text-left'>
-                <p className='max-w-2xl' data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;When your vision meets our craftsmanship, we can create something truly special. Choose between the timeless embrace of hardcover or the inviting allure of paperback binding options. For an added touch of refinement, our custom hardcovers can come adorned with dust jackets that mirror the elegance of your writing.</p>
+                <p className='max-w-2xl' data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;The interior of your book should be just as captivating as the cover. Palmetto’s vibrant, full-color image and custom interior text printing options ensure that every page of your book is a canvas of cohesion. We help your narrative unfold seamlessly, connecting words and imagery with artistic precision.</p>
                 <button className="button-gradient mt-6 md:mt-8 px-6 sm:px-8 py-3 rounded-md font-bold text-black transition duration-300 hover:bg-yellow-400">
           Get Started!
         </button>

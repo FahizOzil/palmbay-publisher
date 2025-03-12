@@ -7,6 +7,7 @@ import Solutions from '@/app/Components/Solutions'
 import React from 'react'
 import CustomBookPrinting from './CustomBookPrinting'
 import HowWePrepare from './HowWePrepare'
+import Binding from './Binding'
 
 const page = () => {
   return (
@@ -27,6 +28,7 @@ const page = () => {
       <Solutions word={"Printing"}/>
       <CustomBookPrinting/>
       <HowWePrepare/>
+      <Binding/>
       <Apart/>
       <ContactBanner/>
       <Footer/>

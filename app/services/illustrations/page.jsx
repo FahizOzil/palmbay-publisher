@@ -5,10 +5,7 @@ import Footer from '@/app/Components/Footer'
 import Navbar from '@/app/Components/Navbar'
 import Solutions from '@/app/Components/Solutions'
 import React from 'react'
-// import CustomBookPrinting from './CustomBookPrinting'
-// import HowWePrepare from './HowWePrepare'
-// import Binding from './Binding'
-// import WhyPrint from './WhyPrint'
+import IllustrationPackages from './IllustrationPackages'
 
 const page = () => {
   return (
@@ -30,6 +27,7 @@ const page = () => {
       <HowWePrepare/>
       <Binding/>
       <WhyPrint/> */}
+      <IllustrationPackages/>
       <Apart/>
       <ContactBanner/>
       <Footer/>

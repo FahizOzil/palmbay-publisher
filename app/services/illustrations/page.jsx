@@ -6,6 +6,7 @@ import Navbar from '@/app/Components/Navbar'
 import Solutions from '@/app/Components/Solutions'
 import React from 'react'
 import IllustrationPackages from './IllustrationPackages'
+import IllustrationProcess from './IllustrationProcess'
 
 const page = () => {
   return (
@@ -28,6 +29,7 @@ const page = () => {
       <Binding/>
       <WhyPrint/> */}
       <IllustrationPackages/>
+      <IllustrationProcess/>
       <Apart/>
       <ContactBanner/>
       <Footer/>

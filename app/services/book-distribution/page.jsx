@@ -26,7 +26,7 @@ const page = () => {
           </button>
         </div>
       </div>
-      <Solutions word={"Distribution"}/>
+      <Solutions word={"Distributing"}/>
       {/* <CustomBookPrinting/>
       <HowWePrepare/>
       <Binding/>

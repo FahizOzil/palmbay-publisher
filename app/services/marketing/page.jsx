@@ -5,6 +5,7 @@ import Footer from '@/app/Components/Footer'
 import Navbar from '@/app/Components/Navbar'
 import Solutions from '@/app/Components/Solutions'
 import React from 'react'
+import MarketingServices from './MarketingServices'
 
 const page = () => {
   return (
@@ -14,7 +15,7 @@ const page = () => {
         <div className="absolute inset-0 flex flex-col justify-center items-center text-black px-4 text-center">
           <p className="text-3xl md:text-6xl">Book Marketing Services</p>
           <p className="pt-4 text-md md:text-xl max-w-3xl">
-          Bring your book to life with captivating illustrations created by one of our talented illustrators. Our artists are here to convey your story with a diverse range of illustration styles. Learn more about our book illustration services and find the best one for you!
+          You’ve poured your heart and soul into your book, crafting every sentence with care and precision. Now that your masterpiece is finished, we want to ensure all your hard work pays off. Our expert book marketing services and vital marketing materials can help you get your book noticed by readers, media outlets, and new audiences.
           </p>
           <button className="mt-8 button-gradient cursor-pointer px-8 py-3 rounded-md font-bold text-black hover:bg-yellow-400">
             Get Started!
@@ -22,8 +23,7 @@ const page = () => {
         </div>
       </div>
       <Solutions word={"Marketing"}/>
-      {/* <IllustrationPackages/>
-      <IllustrationProcess/> */}
+      <MarketingServices/>
       <Apart/>
       <ContactBanner/>
       <Footer/>

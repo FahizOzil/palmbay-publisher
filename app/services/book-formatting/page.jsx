@@ -5,6 +5,7 @@ import Footer from '@/app/Components/Footer'
 import Navbar from '@/app/Components/Navbar'
 import Solutions from '@/app/Components/Solutions'
 import React from 'react'
+import BookFormattingServices from './BookFormattingServices'
 // import CustomBookPrinting from './CustomBookPrinting'
 // import HowWePrepare from './HowWePrepare'
 // import Binding from './Binding'
@@ -27,10 +28,7 @@ const page = () => {
         </div>
       </div>
       <Solutions word={"Formatting"}/>
-      {/* <CustomBookPrinting/>
-      <HowWePrepare/>
-      <Binding/>
-      <WhyPrint/> */}
+      <BookFormattingServices/>
       <Apart/>
       <ContactBanner/>
       <Footer/>

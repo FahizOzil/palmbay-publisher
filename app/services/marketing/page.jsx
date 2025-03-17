@@ -6,6 +6,7 @@ import Navbar from '@/app/Components/Navbar'
 import Solutions from '@/app/Components/Solutions'
 import React from 'react'
 import MarketingServices from './MarketingServices'
+import MarketingProcess from './MarketingProcess'
 
 const page = () => {
   return (
@@ -24,6 +25,7 @@ const page = () => {
       </div>
       <Solutions word={"Marketing"}/>
       <MarketingServices/>
+      <MarketingProcess/>
       <Apart/>
       <ContactBanner/>
       <Footer/>

@@ -7,7 +7,7 @@ const MarketingServices = () => {
               <p className="text-3xl md:text-6xl max-w-xl">A Collaborative Approach to
               Marketing Your Book</p>
               <p className="pt-4 text-md md:text-xl max-w-3xl">
-              When you work with Palmetto Publishing, you can expect a personalized and collaborative book promotion experience. We’ll start with a 30-minute call with your dedicated publishing consultant to create a strategy unique to your goals, genre, and skills. Our expert guidance, combined with your passion and drive, form the foundation for a winning marketing plan that showcases your book to the world. Here are just a few of our book marketing options, with pricing.</p>
+              When you work with Silver Gate Publishing, you can expect a personalized and collaborative book promotion experience. We’ll start with a 30-minute call with your dedicated publishing consultant to create a strategy unique to your goals, genre, and skills. Our expert guidance, combined with your passion and drive, form the foundation for a winning marketing plan that showcases your book to the world. Here are just a few of our book marketing options, with pricing.</p>
               <div className='flex flex-col md:space-x-8 md:flex-row mt-16 justify-center items-center'>
                 <img data-aos="fade-right" src='/marketing-package.png.webp' className='w-96 h-96' />
                 <div className='flex flex-col justify-start items-start p-2'>
@@ -30,7 +30,7 @@ const MarketingServices = () => {
                 <div className='flex flex-col justify-start items-start p-2'>
                     <h1 data-aos="fade-left" className='text-3xl md:text-5xl mt-6 md:max-w-xl text-left'>Press Release & Distribution</h1>
                     <p data-aos="fade-up" className=' text-xl md:max-w-xl mt-4 text-left'>
-                    The Palmetto team will craft a targeted press release that effectively presents your book to the appropriate media channels and gets the word out. With over 780,000 available media connections, we have ample opportunities to get your book in front of people who can help raise awareness for your book.
+                    The Silver Gate team will craft a targeted press release that effectively presents your book to the appropriate media channels and gets the word out. With over 780,000 available media connections, we have ample opportunities to get your book in front of people who can help raise awareness for your book.
                     </p>
                     <div className='space-y-2 mt-4 text-xl text-left'>
                     <p data-aos="fade-up-right"><span className='green-text'>&#x2022;</span>&nbsp;100 outlets — $729</p>

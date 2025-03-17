@@ -6,6 +6,7 @@ import Navbar from '@/app/Components/Navbar'
 import Solutions from '@/app/Components/Solutions'
 import React from 'react'
 import DistributionServices from './DistributionServices'
+import Sell from './Sell'
 // import CustomBookPrinting from './CustomBookPrinting'
 // import HowWePrepare from './HowWePrepare'
 // import Binding from './Binding'
@@ -28,6 +29,7 @@ const page = () => {
       </div>
       <Solutions word={"Distributing"}/>
       <DistributionServices/>
+      <Sell/>
       <Apart/>
       <ContactBanner/>
       <Footer/>

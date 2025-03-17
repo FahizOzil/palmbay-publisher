@@ -19,7 +19,7 @@ const Navbar = () => {
         { name: "Audiobook Publishing", href: "/services/audiobook-publishing" },
         // { name: "Social Media Consulting", href: "/services/social-media" },
         { name: "Illustrations", href: "/services/illustrations" },
-        { name: "Interior Formatting", href: "/services/interior-formatting" },
+        { name: "Interior Formatting", href: "/services/book-formatting" },
         { name: "Book Distribution", href: "/services/book-distribution" },
         { name: "Marketing", href: "/services/marketing" }
       ]

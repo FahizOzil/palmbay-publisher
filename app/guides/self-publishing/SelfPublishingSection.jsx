@@ -2,6 +2,8 @@
 
 import React from 'react'
 import { font } from '@/app/Components/font/font';
+import ContactBanner from '@/app/Components/ContactBanner';
+import Footer from '@/app/Components/Footer';
 
 const SelfPublishingSection = () => {
   // Function to handle smooth scrolling
@@ -13,6 +15,7 @@ const SelfPublishingSection = () => {
   };
 
   return (
+    <div>
     <div className={`${font.className} relative mt-48 flex flex-col md:flex-row w-full px-4 lg:px-16 py-12 gap-8`}>
       
       {/* Left Side - Table of Contents (Sticky) */}
@@ -286,20 +289,154 @@ const SelfPublishingSection = () => {
         <p className="mt-2 text-gray-700">
         Silver Gate makes it easy to publish your book in any format. With us, you can ensure your book reaches your readers in whatever format they prefer!
         </p>
+        <p className='text-yellow-600 mt-12 text-3xl text-center'>Step</p>
+        <p className='text-yellow-600 mt-2 text-5xl text-center'>— 06 —</p>
+        <h3 className="text-3xl text-center text-teal-600 mt-6">
+        Distribution
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Distribution is how your book makes it into the hands of readers. Your most affordable option is to handle the process yourself, working directly with retailers.
+        </p>
+        <h3 className="text-2xl uppercase text-yellow-600 mt-6">
+        Where to Distribute
+        </h3>
+        <p className="mt-2 text-gray-700">
+        When it comes to distributing your books, the first step is to put yourself in your readers’ shoes. Where are they most likely to buy your book? Does your reader prefer online shopping or visiting a brick-and-mortar store? Will you have better luck finding them in bookstores or boutique shops?
+        </p>
+        <p className="mt-6 text-gray-700">
+        If you’ve decided to go the brick-and-mortar route, be aware that it’s not always easy to claim shelf space. We recommend building a good relationship with independent sellers who can take your book under their wing. The better your relationship with store owners, the higher your chance of snagging a spot on their shelves.
+        </p>
+        <p className="mt-6 text-gray-700">
+        When distributing your book to physical stores, consider buying them in bulk. Also, be aware that it’s standard for retailers to get a 30–55% discount on the price of your books.
+        </p>
+        <h3 className="text-2xl uppercase text-yellow-600 mt-6">
+        The Benefits of Outsourcing
+        </h3>
+        <p className="mt-2 text-gray-700">
+        When you handle distribution, you keep more in your pocket per sale, but all the logistics and negotiations fall on your shoulders. It can be extremely stressful, especially if you lack industry experience.
+        </p>
+        <p className="mt-6 text-gray-700">
+        Another option is to outsource your distribution. If you print through Palmetto, we work with retailers on your behalf. Palmetto distributes print books to more than 40,000 retail stores and libraries across the world, including Barnes & Noble and Amazon. E-books also make it to the top platforms, including:
+        </p>
+        <p className='text-yellow-600 mt-12 text-3xl text-center'>Step</p>
+        <p className='text-yellow-600 mt-2 text-5xl text-center'>— 07 —</p>
+        <h3 className="text-3xl text-center text-teal-600 mt-6">
+        Marketing
+        </h3>
+        <p className="mt-2 text-gray-700">
+        As with distribution, the first step in the marketing process is to consider your audience and where they’re buying from. Actively promote your book on your social platforms to engage readers and build a community around your work.
+        </p>
+        <p className="mt-6 text-gray-700">
+        Below are some tips for reaching out to your audience, depending on where they are. For additional marketing advice, check out our Marketing Guide.
+        </p>
+        <h3 className="text-2xl uppercase text-yellow-600 mt-6">
+        Guerilla Marketing
+        </h3>
+        <p className="mt-2 text-gray-700">
+        One of the best ways to market your book is to establish genuine connections. Consider reaching out to local bookstores and inquire if they would be willing to feature your book on their shelves. Creating this personal connection increases your book’s visibility and fosters support from the local community.
+        </p>
+        <p className="mt-6 text-gray-700">
+        To expand your book’s reach, consider checking out local markets. These spaces can attract diverse audiences and provide an excellent opportunity to introduce your book to new readers. Placing your work in unconventional yet relevant locations can introduce it to a larger audience.
+        </p>
+        <p className="mt-6 text-gray-700">
+        For direct engagement with your audience, visit book festivals, comic cons, or literary festivals. These events offer a platform to connect with readers, build a community around your work, and generate excitement. Attendees at these types of events are often passionate about literature, making it a great environment to create a buzz around your book and leave a lasting impression.
+        </p>
+        <h3 className="text-2xl uppercase text-yellow-600 mt-6">
+        Social Media
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Whoever your readers are, they’re probably on social media. More than four and a half billion people around the world use social platforms like Facebook and Instagram — a 10% increase in just a year.
+        </p>
+        <p className="mt-6 text-gray-700">
+        As it grows, social media has become a gathering place for readers. Book lovers have created BookTube on YouTube, BookTok on TikTok, and #bookstagram on Instagram.
+        </p>
+        <p className="mt-6 text-gray-700">
+        Communities like these allow authors to build connections and market their books for free. If you engage with creators, you can ask for reviews when your book hits shelves. You can also buy ads to increase your exposure with people who haven’t seen your work before.
+        </p>
+        <h3 className="text-2xl uppercase text-yellow-600 mt-6">
+        Author Website
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Every book project needs an internet home. Your author website will be a resource for anyone interested in your book, whether they hear about it on the radio or watch a reviewer discuss it on YouTube.
+        </p>
+        <p className="mt-6 text-gray-700">
+        Your website is where you can tell your story as the author. Talk about your “why.” What made you decide to write your book? What inspired your story? Sharing details about yourself can help you create genuine connections with your readers.
+        </p>
+        <p className="mt-6 text-gray-700">
+        You can design and publish your website yourself or hire an expert. Palmetto’s designers are ready to help. You can also check out this blog for more advice on improving your website.
+        </p>
+        <h3 className="text-2xl uppercase text-yellow-600 mt-6">
+        Press Releases
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Traditional media still matters. With a good press release, you can get interviews and write-ups from local and industry journalists, podcasters, and bloggers.
+        </p>
+        <p className="mt-6 text-gray-700">
+        Palmetto offers press release writing and distribution a la carte or as part of a book marketing package. Drawing on a network of more than 780,000 media outlets, Palmetto’s professionals will send your announcement to as many as 1,000 media outlets.
+        </p>
+        <h3 className="text-2xl uppercase text-yellow-600 mt-6">
+        Reviews
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Reviews are another critical part of marketing because they can significantly influence potential readers. Positive reviews provide social proof of a book’s quality and act as endorsements that can build trust with readers. Word of mouth has a significant impact on book sales, and authentic reviews, whether on online platforms, blogs, or traditional media, contribute to organic promotion.
+        </p>
+        <p className="mt-6 text-gray-700">
+        We don’t offer review services at Palmetto, but we suggest including them in your marketing efforts. Consider asking your readers to go to your favorite platform to leave reviews for your book. You can also pay for book reviews through companies like Kirkus Reviews.
+        </p>
+        <h3 className="text-2xl uppercase text-yellow-600 mt-6">
+        Author Events
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Author events and conventions allow authors to directly connect with their audience and create lasting impressions. Whether it’s a book signing at a local bookstore or a panel discussion at a literary festival, these platforms let authors engage with readers, showcase their personalities, and build a genuine connection. Besides direct sales, these events contribute to brand building, letting authors establish themselves as accessible and relatable people in the literary community.
+        </p>
 
-        {/* Add placeholder sections for remaining items */}
-        <h2 id="costs" className="text-5xl text-gray-900 mt-6">
-          What Does It Cost to Self-Publish a Book?
-        </h2>
+        <div className='custombg flex flex-col justify-center items-center text-white'>
+            <h2 id="costs" className="text-5xl p-8 pb-4 text-center mt-6">
+            What Does It Cost to Self-Publish a Book?
+            </h2>
+            <p className=" text-center pb-12">
+        Author events and conventions allow authors to directly connect with their audience and create lasting impressions. Whether it’s a book signing at a local bookstore or a panel discussion at a literary festival, these platforms let authors engage with readers, showcase their personalities, and build a genuine connection. Besides direct sales, these events contribute to brand building, letting authors establish themselves as accessible and relatable people in the literary community.
+        </p>
+        <button className="mt-4 mb-12 button-gradient mx-auto text-black px-6 py-2 rounded-md hover:bg-yellow-400">
+          GET STARTED!
+        </button>
+        </div>
         <h2 id="pricing" className="text-5xl text-gray-900 mt-6">
           Pricing Your Book
         </h2>
+        <p className="mt-4 text-gray-700">
+        Setting the price for your book requires a thoughtful approach. While there’s no one-size-fits-all formula, it’s important to consider developmental costs, publishing expenses, and royalties. Here are some other factors that should influence your book price.
+        </p>
+        <h3 className="text-2xl text-teal-600 mt-6">
+        Assess Competitive Book Prices
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Research and analyze the prices of similar titles in your genre, particularly those from new or first-time authors. By comparing rates and considering the number of reviews and ratings, you gain insights into industry standards and reader expectations. Try to set a competitive yet reasonable price that aligns with your book’s values and the market it caters to.
+        </p>
+        <h3 className="text-2xl text-teal-600 mt-6">
+        Consider Your Publishing Goals
+        </h3>
+        <p className="mt-2 text-gray-700">
+        While setting the price for your book, think about what you want to achieve during your publishing journey. Take a look at how much time, effort, and money you’ve put into writing, publishing, and promoting your book. If you want to get your story into as many hands as possible, consider setting a lower price. On the other hand, if you see your book as a premium choice, a higher price tag may be better.
+        </p>
         <h2 id="earnings" className="text-5xl text-gray-900 mt-6">
           How Much Do Authors Make?
         </h2>
+        <p className="mt-4 text-gray-700">
+        The amount of money authors make can vary widely depending on the type of book, publishing costs, and the market. However, according to the Alliance of Independent Authors, you’re more likely to make a living if you self-publish. In 2022, the medium revenue for self-published authors was $12,749, increasing by 53%.
+        </p>
         <h2 id="get-started" className="text-5xl text-gray-900 mt-6">
           Get Started With Publication
         </h2>
+        <p className="mt-4 text-gray-700">
+        The world of self-publishing is much easier to navigate with a knowledgeable partner like Palmetto Publishing. Palmetto is a top-tier company with expert staff in all aspects of book publishing, from copy editing to book marketing.
+        </p>
+        <p className="mt-6 text-gray-700">
+        Working with Silver Gate lets you focus on what you know best — your book and its audiences. You have the freedom to market and print with Palmetto or handle those aspects on your own, trusting us with only the essentials of interior formatting and cover design.
+        </p>
+        <p className="mt-6 text-gray-700">
+        Reach out today to learn about our author services. You’ve worked hard on your book, and you deserve a publication process that’s as easy as possible.
+        </p>
       </div>
 
       {/* Right Side - Call to Action (Sticky) */}
@@ -312,7 +449,9 @@ const SelfPublishingSection = () => {
         <p className="mt-4">Or call us</p>
         <p className="text-2xl">888 408 8965</p>
       </div>
-
+    </div>
+    <ContactBanner/>
+    <Footer/>
     </div>
   )
 }

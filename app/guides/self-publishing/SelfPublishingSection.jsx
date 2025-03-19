@@ -228,6 +228,20 @@ const SelfPublishingSection = () => {
         <p className='mt-4 text-xl text-gray-700'><span className='text-yellow-600 text-3xl'>&#x2022;&nbsp;</span>Paragraph construction and line spacing</p>
         <p className='mt-4 text-xl text-gray-700'><span className='text-yellow-600 text-3xl'>&#x2022;&nbsp;</span>Font size and type</p>
         <p className='mt-4 text-xl text-gray-700'><span className='text-yellow-600 text-3xl'>&#x2022;&nbsp;</span>Chapter title styling</p>
+        <h3 className="text-2xl text-yellow-600 mt-6">
+        IMAGES
+        </h3>
+        <p className="mt-2 text-gray-700">
+        If you want to use your own images or illustrations for your book, ensure they’re high-quality. You’ll also want to ensure you own the rights to all the images you use. Consider your book’s trim size as well. Check out our Complete Guide to the Perfect Book Layout to learn more about trim sizes and book dimensions.
+        </p>
+      <p className='text-yellow-600 mt-12 text-3xl text-center'>Step</p>
+        <p className='text-yellow-600 mt-2 text-5xl text-center'>— 04 —</p>
+        <h3 className="text-3xl text-center text-teal-600 mt-6">
+        Book Metadata
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Paying attention to your book’s metadata is a critical step that can impact your book’s discoverability and appeal to readers. The metadata consists of essential information that helps potential readers, distributors, and retailers understand what your book is about and how it fits into the market.
+        </p>
 
         {/* Add placeholder sections for remaining items */}
         <h2 id="costs" className="text-5xl text-gray-900 mt-6">

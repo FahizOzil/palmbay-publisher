@@ -1,7 +1,7 @@
 import { font } from '@/app/Components/font/font'
 import Navbar from '@/app/Components/Navbar'
 import React from 'react'
-import MarketingSection from '../marketing-tips/MarketingSection'
+import WritingSection from './WritingSection'
 
 const page = () => {
   return (
@@ -25,7 +25,7 @@ const page = () => {
       {/* Centered Image */}
       <div className="relative w-full flex justify-center">
         <img 
-          src="/book-marketing.webp" 
+          src="/book-writing.webp" 
           className="rounded-md h-96 absolute bottom-[-200px] z-20" 
         />
       </div>
@@ -38,7 +38,7 @@ const page = () => {
         />
       </div>
     </div>
-      <MarketingSection/>
+      <WritingSection/>
     </div>
   )
 }

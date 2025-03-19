@@ -1,15 +1,9 @@
 "use client"
 
+import React, { useEffect } from 'react';
 import ContactBanner from '@/app/Components/ContactBanner';
 import { font } from '@/app/Components/font/font';
 import Footer from '@/app/Components/Footer';
-import React, { useEffect } from 'react';
-
-// Temporarily remove font import to isolate the issue
-// import { font } from '@/app/Components/font/font';
-// Temporarily remove ContactBanner and Footer to isolate the issue
-// import ContactBanner from '@/app/Components/ContactBanner';
-// import Footer from '@/app/Components/Footer';
 
 const WritingSection = () => {
   // Ensure scrollToSection only runs on the client side
@@ -30,8 +24,7 @@ const WritingSection = () => {
   return (
     <div>
       {/* Main Content Container */}
-      {/* Replace font.className with a placeholder to avoid import issues */}
-      <div className={`${font.className} relative mt-48 flex flex-col md:flex-row w-full px-4 lg:px-16 py-12 gap-8`}>
+      <div className={`${font?.className || ''} relative mt-48 flex flex-col md:flex-row w-full px-4 lg:px-16 py-12 gap-8`}>
         
         {/* Left Side - Table of Contents (Sticky) */}
         <div className="w-full h-fit md:w-1/4 bg-gray-100 rounded-lg p-6 shadow-md sticky top-24 max-h-[80vh] overflow-auto table-of-contents">
@@ -41,75 +34,75 @@ const WritingSection = () => {
           <ul className="mt-4 space-y-3 text-gray-700">
             <li 
               className="cursor-pointer hover:text-teal-600 transition-colors"
-              onClick={() => scrollToSection('understand-market')}
+              onClick={() => scrollToSection('embrace-identity')}
             >
-              Understand Your Market
+              Embrace Your Identity as a Writer
             </li>
             <li 
               className="cursor-pointer hover:text-teal-600 transition-colors"
-              onClick={() => scrollToSection('marketing-audience')}
+              onClick={() => scrollToSection('writing-space')}
             >
-              Marketing to Your Audience
+              Set Up Your Writing Space
             </li>
             <li 
               className="cursor-pointer hover:text-teal-600 transition-colors"
-              onClick={() => scrollToSection('author-website')}
+              onClick={() => scrollToSection('writing-schedule')}
             >
-              Author Website
+              Create a Writing Schedule
             </li>
             <li 
               className="cursor-pointer hover:text-teal-600 transition-colors"
-              onClick={() => scrollToSection('online-marketing')}
+              onClick={() => scrollToSection('develop-idea')}
             >
-              Online Book Marketing
+              Develop Your Book Idea
             </li>
             <li 
               className="cursor-pointer hover:text-teal-600 transition-colors"
-              onClick={() => scrollToSection('social-media')}
+              onClick={() => scrollToSection('research-genre')}
             >
-              Social Media Marketing
+              Research Your Genre
             </li>
             <li 
               className="cursor-pointer hover:text-teal-600 transition-colors"
-              onClick={() => scrollToSection('amazon')}
+              onClick={() => scrollToSection('first-draft')}
             >
-              Amazon
+              Write Your First Draft
             </li>
             <li 
               className="cursor-pointer hover:text-teal-600 transition-colors"
-              onClick={() => scrollToSection('paid-ads')}
+              onClick={() => scrollToSection('revise-edit')}
             >
-              Paid Ads
+              Revise and Edit Your Manuscript
             </li>
             <li 
               className="cursor-pointer hover:text-teal-600 transition-colors"
-              onClick={() => scrollToSection('email-marketing')}
+              onClick={() => scrollToSection('get-feedback')}
             >
-              Email Marketing
+              Get Feedback from Readers
             </li>
             <li 
               className="cursor-pointer hover:text-teal-600 transition-colors"
-              onClick={() => scrollToSection('media-exposure')}
+              onClick={() => scrollToSection('professional-editor')}
             >
-              Media Exposure
+              Work with a Professional Editor
             </li>
             <li 
               className="cursor-pointer hover:text-teal-600 transition-colors"
-              onClick={() => scrollToSection('guerilla-marketing')}
+              onClick={() => scrollToSection('design-book')}
             >
-              Guerilla Marketing
+              Design Your Book’s Interior and Cover
             </li>
             <li 
               className="cursor-pointer hover:text-teal-600 transition-colors"
-              onClick={() => scrollToSection('marketing-cost')}
+              onClick={() => scrollToSection('publish-book')}
             >
-              How Much Does It Cost to Market the Book?
+              Publish Your Book
             </li>
             <li 
               className="cursor-pointer hover:text-teal-600 transition-colors"
               onClick={() => scrollToSection('collaborate-experts')}
             >
-              Collaborate With the Book Marketing Experts
+              Collaborate With Publishing Experts
             </li>
           </ul>
         </div>
@@ -117,194 +110,139 @@ const WritingSection = () => {
         {/* Middle Section - Main Content */}
         <div className="w-full text-xl md:w-2/4">
           <p className="text-gray-700">
-            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options before your book finds its audience. Count on Palmetto Publishing to guide you along the way.
+            Writing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of creative decisions, editing stages, and publishing options to navigate before your book reaches its readers. Count on Palmetto Publishing to guide you along the way.
           </p>
           <p className="mt-4 text-gray-700">
-            To stand out in today’s competitive book market, it’s essential to know how to market a book. You’ve done the hard work and finally completed your masterpiece. Now, it’s time to turn that work into a product that actually reaches your audience.
+            To bring your story to life in today’s competitive literary world, it’s essential to understand the writing process. You’ve got a story to tell, and now it’s time to turn that idea into a manuscript that captivates your audience.
           </p>
           <p className="mt-4 text-gray-700">
-            As an author, marketing might not be your forte, and figuring out how to grow an audience for your work can seem daunting. Luckily, marketing actually involves storytelling, too — it’s about communicating an idea with an audience that grabs their attention.
+            As an author, writing might come naturally, but structuring your process and seeing it through to publication can seem daunting. Luckily, writing is a craft that can be honed with the right steps—turning your ideas into a story that resonates with readers.
           </p>
           <p className="mt-4 text-gray-700">
-            In this complete guide to marketing a book, we’ll break down everything you need to know to sell your work. From finding your audience to Amazon marketing, keep reading to learn how to get your work into your readers’ hands.
-          </p>
-
-          <h2 id="understand-market" className="text-5xl text-gray-900 mt-12">
-            Understand Your Market
-          </h2>
-          <p className="mt-4 text-gray-700">
-            Before implementing any book marketing strategies, you need to understand your market and what makes your book appealing to readers. Each genre has a slightly different market and audience. Successfully marketing your book requires researching your genre, studying bestsellers, and understanding your target demographic. Consider collecting research on the following:
-          </p>
-          <ul className="mt-4 space-y-2 text-gray-700">
-            <li className="flex items-start">
-              <span className="text-yellow-600 text-2xl mr-2">•</span>
-              Best-selling genres on Amazon
-            </li>
-            <li className="flex items-start">
-              <span className="text-yellow-600 text-2xl mr-2">•</span>
-              Titles, covers, and content of best-selling books within your genre
-            </li>
-            <li className="flex items-start">
-              <span className="text-yellow-600 text-2xl mr-2">•</span>
-              Online presence of bestselling authors in your genre (social media websites, Amazon profiles, etc.)
-            </li>
-            <li className="flex items-start">
-              <span className="text-yellow-600 text-2xl mr-2">•</span>
-              Types of people reading your genre
-            </li>
-            <li className="flex items-start">
-              <span className="text-yellow-600 text-2xl mr-2">•</span>
-              What readers look for in a book in your genre
-            </li>
-          </ul>
-          <p className="mt-4 text-gray-700">
-            This process is called market research, and it’s essential for figuring out how to successfully market your product. Take note of all your observations, and save them for future reference. As you gather this information, also consider why readers would want to pick up your book.
+            In this complete guide to writing a book, we’ll break down everything you need to know to create your work. From developing your idea to publishing your book, keep reading to learn how to bring your story into readers’ hands.
           </p>
 
-          <h2 id="marketing-audience" className="text-5xl text-gray-900 mt-12">
-            Marketing to Your Audience
+          <h2 id="embrace-identity" className="text-5xl text-gray-900 mt-12">
+            Embrace Your Identity as a Writer
           </h2>
           <p className="mt-4 text-gray-700">
-            Now that you’ve done some market research, it’s time to narrow down your audience and start developing your book marketing plan. Rather than marketing your book to everyone, it’s best to get specific about who you’re targeting. The type of person who reads your genre will be the audience you want to focus on. These people will be the most interested in actually reading your book, after all.
+            The first step in mastering how to write books is to embrace your identity as a writer. Announce it to yourself and others: “I am a writer.” This simple act can help you get into the mindset of being a writer.
           </p>
           <p className="mt-4 text-gray-700">
-            Think back to the demographic of your book’s genre. What kind of person reads this genre? How old are they? What is their income level? How much do they read? What interests them? What style of cover do they gravitate toward? Get specific and create a reader avatar for your book or the theoretical person who will read your book. As you’re marketing your book, look back to your reader avatar and make sure you’re marketing directly to them.
-          </p>
-          <p className="mt-4 text-gray-700">
-            For example, if your reader loves to fill their shelves with aesthetically pleasing covers, you’ll need to make sure your cover catches their eye. If your reader is obsessed with all things fantasy, you’ll want to share fantasy-related posts on social media. If your reader doesn’t enjoy long reads, you’ll need to make sure your book is the right length.
-          </p>
-          <p className="mt-4 text-gray-700">
-            Consider what literary festivals, book fairs, or conventions they may attend where you could market your book. You can also try to connect with popular book bloggers in your genre to spread the word about your book.
+            There’s one quality that defines a writer—they write. It’s easy to think about writing, but you need to create the habit of writing to make real progress. Embracing your identity as a writer sets the foundation for the journey ahead.
           </p>
 
-          <h2 id="author-website" className="text-5xl text-gray-900 mt-12">
-            Author Website
+          <h2 id="writing-space" className="text-5xl text-gray-900 mt-12">
+            Set Up Your Writing Space
           </h2>
           <p className="mt-4 text-gray-700">
-            Every author should have a website. It becomes the final destination for all of your online advertising, from social media ads to blog posts. Your author website should include an extensive author biography section, a sales page for your books, an updated contact page, and an editable blog with room for instant comments from your readers.
+            When you think about the physical act of writing, what do you envision? What does your ideal office look like, and what tools do you need? Carve out a writing space for yourself.
           </p>
           <p className="mt-4 text-gray-700">
-            Just like with writing a book, you want to make sure your site has a specific voice that remains consistent and appeals to your audience. An author site should also have a clean design that’s easy to navigate. Your website is also the ideal place to host your blog. Readers will get easy access to your other content and, most importantly, your books.
-          </p>
-          <p className="mt-4 text-gray-700">
-            Your site also needs to be cleanly laid out with sections and headlines. Plus, the text needs to be easy to read. Readable online content has short paragraphs and snappy sentences. If you’re a flowery prose writer, have someone else read your website content or plug it into a site like the Hemingway App, which will scan for easy readability. You may love words, but search engines prefer simplicity.
-          </p>
-          <p className="mt-4 text-gray-700">
-            Websites also love fresh content, so add to your website regularly. You can cover anything related to your topic, from “trends in 21st-century science fiction” for the sci-fi author to “best fertilizers of the year” for the nonfiction gardening guru. Palmetto Publishing offers an Author Website for $1,499 to create the perfect custom website for you and your work.
+            Some people do their best work among others, and other writers require absolute privacy. Whether it’s a quiet corner of your home or a bustling café, find a space that inspires you to write consistently.
           </p>
 
-          <h2 id="online-marketing" className="text-5xl text-gray-900 mt-12">
-            Online Book Marketing
+          <h2 id="writing-schedule" className="text-5xl text-gray-900 mt-12">
+            Create a Writing Schedule
           </h2>
           <p className="mt-4 text-gray-700">
-            In the digital age we live in, understanding how to market a book online is key to reaching a wide audience of potential readers. Scaling online audiences, however, takes a lot of time and effort. That’s why it’s important to get started as soon as possible — even before your book is released.
+            It is crucial for the book writing process to settle on a schedule that allows you to write consistently. Assign yourself blocks of writing time and pencil them into your schedule. Treat them with the respect you’d give any other commitment.
           </p>
           <p className="mt-4 text-gray-700">
-            Start by growing your digital presence through guest blog posts and articles on websites that are relevant to your book’s genre or theme. Use platforms like Goodreads and visit online writing communities to connect with readers and find support.
-          </p>
-          <p className="mt-4 text-gray-700">
-            A profitable book marketing strategy will get traffic to book-selling sites. But don’t worry if you’re not a marketer. These simple techniques will help you build an audience and get your work into readers’ hands.
+            Remember, frequency matters as much as duration when writing a book. It isn’t easy to finish a book when you only work in fits and starts. If you have a busy schedule, try writing for fifteen minutes at the same time every day. You’ll still need to find larger blocks of time, but stay in touch with your project between them.
           </p>
 
-          <h2 id="social-media" className="text-5xl text-gray-900 mt-12">
-            Social Media Marketing
+          <h2 id="develop-idea" className="text-5xl text-gray-900 mt-12">
+            Develop Your Book Idea
           </h2>
           <p className="mt-4 text-gray-700">
-            Social media marketing is a powerful way for authors to connect with existing followers and find new readers. According to Search Engine Journal, around 84% of the U.S. population and almost 58% of the world’s population use social media regularly. Most social media networks let you post for free or pay for advertising.
+            Figuring out how to write a book—your particular book—is hard. You need to find the space in your world and the resources to help you stay on track. Start by developing a clear idea for your book.
           </p>
           <p className="mt-4 text-gray-700">
-            Free posting, also called organic marketing, is most effective if you have an established audience of readers. You can get that audience by building connections with other writers and readers. Social media book marketing is all about building relationships. Someone who finds you on Instagram won’t always run out to buy a copy of your book. But, they might follow you and get familiar with your work.
-          </p>
-          <p className="mt-4 text-gray-700">
-            Google “social media demographics” to learn where your reader base hangs out, then set up accounts there. Post to those accounts regularly. Add bi-weekly or weekly reminders to your calendar if it helps. You can also boost your presence by purchasing ads on your favorite platforms. For authors, especially new ones, we think it’s best to start with the most popular platforms before seeking your audience on more obscure channels.
-          </p>
-          <p className="mt-4 text-gray-700">
-            Social media marketing for authors can be an effective use of your time. When you present an enticing story engagingly via the right medium for people to find it, then there is no limit to how big you can scale your social media marketing. Palmetto Publishing offers social media service plans that provide a comprehensive and strategic approach to establishing, growing, and sustaining your online presence.
+            Whether you’re writing fiction, nonfiction, or a memoir, take the advice of a top-tier publishing company: it’s time to put pen to paper and start writing that book you’ve imagined for years. Jot down your ideas, outline your story, and define the core message or theme you want to convey.
           </p>
 
-          <h2 id="amazon" className="text-5xl text-gray-900 mt-12">
-            Amazon
+          <h2 id="research-genre" className="text-5xl text-gray-900 mt-12">
+            Research Your Genre
           </h2>
           <p className="mt-4 text-gray-700">
-            Start by optimizing your book’s Amazon page with an eye-catching cover, captivating description, and appropriate keywords. Amazon makes it easy for authors to advertise their books on its platform. When you log into your account, set up a campaign for your book and choose the best keywords to target for your novel or genre.
+            Researching your primary chosen genre will provide you with inspiration as to how to write a compelling story. Though your novel will likely fall into a distinct genre, you don’t need to feel bound to every convention of that genre; many novels contain elements typical of multiple genres.
           </p>
           <p className="mt-4 text-gray-700">
-            Not sure what keywords will work best? Automatic targeting lets Amazon choose your keywords for you. The downside is that Amazon will only advertise books sold on its platform. Palmetto Publishing can help ensure your book is available on digital platforms like Amazon, with search-engine-optimized book descriptions and appropriate BISAC categorizations.
+            Read books like yours to understand what readers expect. What do you find when you open a book from that aisle of the library? Palmetto’s authors write in a wide range of genres, and you can find their titles in our bookstore for inspiration.
           </p>
 
-          <h2 id="paid-ads" className="text-5xl text-gray-900 mt-12">
-            Paid Ads
+          <h2 id="first-draft" className="text-5xl text-gray-900 mt-12">
+            Write Your First Draft
           </h2>
           <p className="mt-4 text-gray-700">
-            Consider using paid advertising on social media or Amazon to boost your book’s visibility. Most social media networks let you pay for advertising, and you can also boost your presence by purchasing ads on your favorite platforms.
+            Once you’ve got a story idea in your head, it’s time to learn how to put it into the proper words. Whether you’re a beginner or a fairly seasoned writer, following a structured process will help keep you on track to a beautiful, publish-ready work.
           </p>
           <p className="mt-4 text-gray-700">
-            Facebook ads are a useful tool, but if you’re on a budget, we recommend sticking to two types of Facebook ads: Traffic Ads for your Book Launch Promotion allow you to make a big splash for your initial launch, build an email list, and even boost sales from time to time when used sparingly.
-          </p>
-          <p className="mt-4 text-gray-700">
-            Amazon also makes it easy for authors to advertise their books on its platform, as mentioned earlier. Set up a campaign with targeted keywords to reach readers searching for books in your genre.
+            Don’t try to write your book all at once—break it into sections. Remember that your book doesn’t have to be perfect the first time. Don’t worry about what others will think. Just focus on getting your ideas down on the page.
           </p>
 
-          <h2 id="email-marketing" className="text-5xl text-gray-900 mt-12">
-            Email Marketing
+          <h2 id="revise-edit" className="text-5xl text-gray-900 mt-12">
+            Revise and Edit Your Manuscript
           </h2>
           <p className="mt-4 text-gray-700">
-            Your mailing list subscribers are some of the best people to market your book launch to. You can also utilize your mailing list to ask for reviews on your website or Amazon page. You might want to consider giving your subscribers early access to your books and encouraging them to leave reviews before your official launch.
+            A writer’s novel is only as good as their edits. Putting your eyes—and others’—on your words several times over is the best way to improve your story’s readability, grammar, spelling, and more.
           </p>
           <p className="mt-4 text-gray-700">
-            Your author website should include a mailing list signup page where people can opt into updates. This helps you build a direct line of communication with your readers, allowing you to share news about your book launches, events, and more.
+            Book editing is an iterative process, not a single box you can check on the way to publication. You may need another draft—or three. That’s okay and perfectly normal. Set your manuscript aside for a few days, then revisit it with fresh eyes to refine your work.
           </p>
 
-          <h2 id="media-exposure" className="text-5xl text-gray-900 mt-12">
-            Media Exposure
+          <h2 id="get-feedback" className="text-5xl text-gray-900 mt-12">
+            Get Feedback from Readers
           </h2>
           <p className="mt-4 text-gray-700">
-            You can connect with media outlets to gain exposure through radio, podcast, and magazine interviews. A press release helps get the word out on your upcoming book launch, and it’s a great way to attract attention. It can also lead to other kinds of media exposure.
+            After meticulously combing through your manuscript, give it to someone else to read and review. Ask for feedback on spelling, grammar, and overall development. If possible, give it to someone with editing experience or a natural talent for writing to further refine your manuscript.
           </p>
           <p className="mt-4 text-gray-700">
-            Press releases require a specific format that top publishers expect to see. If you publish through Palmetto Publishing, you’ll have access to press release writing and distribution services. Palmetto has more than 780,000 media contacts and can share your book’s press release with up to 1,000 outlets.
-          </p>
-          <p className="mt-4 text-gray-700">
-            Utilizing a vast web of carefully selected media contacts, Palmetto Publishing can unveil your masterpiece to the world. By distributing and presenting marketing materials to just the right media outlets, we can get your book in front of eager readers most likely to engage with it and drum up the buzz it needs to succeed.
+            Once family and friends have read it, pass it along to an acquaintance, new friend, or stranger—someone who isn’t closely connected to you. Ask them to read it and tell you what worked, what didn’t, and what was confusing. While your story is your baby, accepting constructive feedback is critical.
           </p>
 
-          <h2 id="guerilla-marketing" className="text-5xl text-gray-900 mt-12">
-            Guerilla Marketing
+          <h2 id="professional-editor" className="text-5xl text-gray-900 mt-12">
+            Work with a Professional Editor
           </h2>
           <p className="mt-4 text-gray-700">
-            Contact book bloggers and influencers, gather reviews, and visit local bookstores and events to promote your book. Similar to collaborating with BookTubers and #bookstagram influencers, you can collaborate with book websites and blogs to promote your work.
+            Now that your book has gone through several people for feedback, it’s time to pass your manuscript to a professional editor. A professional editor will look at your manuscript and turn it into a polished product.
           </p>
           <p className="mt-4 text-gray-700">
-            Another book marketing idea is to ask bloggers to promote you. You will likely have to offer a free copy of your book, but the exposure to their base and potential positive reviews will help broaden your audience and drive book sales.
-          </p>
-          <p className="mt-4 text-gray-700">
-            Consider YouTube, the second biggest search engine in the world. On there, Booktube is the unofficial name and vlogging community dedicated to a collection of YouTube channels that discuss all things bookish. For book marketing specifically, it’s an excellent way to give books and their authors some more credibility as, each day, thousands of online creators share videos about books they love.
+            Editors know industry standards and what resonates with readers, and they’ll make sure your book is as good as it can be. They’ll also catch errors that a writer or beta reader can easily miss. Palmetto Publishing offers various editing services, from comprehensive developmental editing to copy editing.
           </p>
 
-          <h2 id="marketing-cost" className="text-5xl text-gray-900 mt-12">
-            How Much Does It Cost to Market the Book?
+          <h2 id="design-book" className="text-5xl text-gray-900 mt-12">
+            Design Your Book’s Interior and Cover
           </h2>
           <p className="mt-4 text-gray-700">
-            There’s no magic number for the cost of a book marketing campaign. Palmetto has seen independent authors do it for less than $200, relying mostly on free options and networking. Other authors spend thousands on book editing, design, and marketing services to get truly impressive results.
+            You’re not done quite yet. After all, your goal was writing a book, not a manuscript. Technically, you can convert a text document into an e-book on your own, but a professional book design gives your book an edge.
           </p>
           <p className="mt-4 text-gray-700">
-            Many authors are concerned about the book marketing cost. After all, you don’t want to spend thousands of dollars advertising a book that may only sell a few copies. However, investing a little money into your marketing campaign can help set your book up for success.
+            Covers matter—amateurish designs can deter readers from investing their time and money in your book. Palmetto’s book interior formatting ensures the best reading experience for all your soon-to-be fans. Add any necessary images to the book, and consider using a professional illustrator for high-impact areas like the title page.
+          </p>
+
+          <h2 id="publish-book" className="text-5xl text-gray-900 mt-12">
+            Publish Your Book
+          </h2>
+          <p className="mt-4 text-gray-700">
+            You’re ready to send your baby out into the world. Self-publishing can be a nerve-wracking process, but there are things you can do to increase your chances of success. Publishing with Palmetto also gives you access to our on-demand book printing.
           </p>
           <p className="mt-4 text-gray-700">
-            The experts at Palmetto Publishing offer affordable book marketing services to help you share your book with readers. You can choose services based on your budget and needs, with packages starting at $249 for marketing copy and comprehensive promotional packages available up to $2,299.
+            Order only the copies you want for yourself, and then let us handle printing needs as they arise. If you want people to love your book, you have to let them know it exists first. Palmetto’s book marketing packages prepare you for a successful launch.
           </p>
 
           <h2 id="collaborate-experts" className="text-5xl text-gray-900 mt-12">
-            Collaborate With the Book Marketing Experts
+            Collaborate With Publishing Experts
           </h2>
           <p className="mt-4 text-gray-700">
-            When you partner with Palmetto Publishing for your book marketing services, you open the door to a dynamic process that propels your creation into the spotlight. Your journey begins with a consultation call with your dedicated publishing consultant. We’re not just interested in your book; we’re invested in your vision.
+            When you partner with Palmetto Publishing, you open the door to a dynamic process that brings your creation to life. Your journey begins with a consultation call with your dedicated publishing consultant. We’re not just interested in your book; we’re invested in your vision.
           </p>
           <p className="mt-4 text-gray-700">
-            By delving into your goals, genre nuances, target audience aspirations, and the essence of your creation, we lay the foundation for a marketing strategy tailored uniquely to you. Palmetto Publishing is a top-tier publishing company offering quality book marketing services for independent authors — including marketing copy, press releases, author websites, and more.
+            Palmetto Publishing is a top-tier publishing company offering quality services for independent authors—including editing, cover design, formatting, distribution, and printing. We collaborate closely with authors to bring their literary dreams to life through tailored packages.
           </p>
           <p className="mt-4 text-gray-700">
-            Your journey with us is collaborative. Every step of the way, we value your insights, champion your creativity, and encourage your active participation. Book marketing can be challenging, but you don’t have to do it alone. Reach out to Palmetto Publishing today to get started.
+            Your journey with us is collaborative. Every step of the way, we value your insights, champion your creativity, and encourage your active participation. Writing a book can be challenging, but you don’t have to do it alone. Reach out to Palmetto Publishing today to get started.
           </p>
         </div>
 
@@ -320,8 +258,9 @@ const WritingSection = () => {
         </div>
       </div>
 
-     <ContactBanner/>
-     <Footer/>
+      {/* Add fallbacks for ContactBanner and Footer */}
+      {ContactBanner ? <ContactBanner /> : <div className="text-gray-700 p-4">ContactBanner failed to load</div>}
+      {Footer ? <Footer /> : <div className="text-gray-700 p-4">Footer failed to load</div>}
     </div>
   );
 };

@@ -260,7 +260,7 @@ const WritingSection = () => {
 
       {/* Add fallbacks for ContactBanner and Footer */}
       {ContactBanner ? <ContactBanner /> : <div className="text-gray-700 p-4">ContactBanner failed to load</div>}
-      {Footer ? <Footer /> : <div className="text-gray-700 p-4">Footer failed to load</div>}
+      {Footer ? <Footer /> : <div className="text-gray-700 p-4">Footer failed to load.</div>}
     </div>
   );
 };

@@ -39,6 +39,12 @@ const SelfPublishingSection = () => {
         <p className="mt-4 text-gray-700">
         Traditional publishing is the time-tested method where authors submit their manuscripts to literary agents who act as intermediaries between authors and publishers. If accepted, the publisher handles the entire publishing process, including editing, cover design, printing, distribution, and marketing. Authors usually receive an advance against royalties, but a significant portion of the book’s earnings go to the publisher, literary agent, and intermediaries. While traditional publishing provides the support of an experienced team, it often involves a longer timeframe and less control for the author.
         </p>
+        <h3 className="text-3xl  text-teal-600 mt-6">
+        What Is Self-Publishing?
+        </h3>
+        <p className="mt-4 text-gray-700">
+        Self-publishing is a more independent approach where the author takes charge of the entire publishing process. Authors can use self-publishing platforms and services to publish their work in digital, print, and audio formats. With self-publishing, authors typically earn higher profit margins per sale, retain ownership of their work, and can bring their books to market much faster than traditional publishing. While it involves more hands-on involvement from the author, self-publishing provides greater creative autonomy and the potential for increased financial returns.
+        </p>
       </div>
 
       {/* Right Side - Call to Action */}

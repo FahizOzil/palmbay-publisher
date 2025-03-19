@@ -23,9 +23,9 @@ const SelfPublishingSection = () => {
       </div>
 
       {/* Middle Section - Main Content */}
-      <div className="w-full md:w-2/4">
+      <div className="w-full text-xl md:w-2/4">
         <p className="text-gray-700">
-          As technology continues to reshape how we consume literature, self-publishing has become a powerful avenue for writers...
+        As technology continues to reshape how we consume literature, self-publishing has become a powerful avenue for writers looking for greater control, flexibility, and direct access to their audience. However, publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Palmetto Publishing to guide you along the way. In this complete guide, we’ll explore how to publish your own book and how Palmetto can help every step of the way.
         </p>
         <h2 className="text-3xl font-bold text-gray-900 mt-6">
           Traditional Publishing vs. Self-Publishing

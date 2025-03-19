@@ -201,6 +201,34 @@ const SelfPublishingSection = () => {
         <p className='mt-4 text-xl text-gray-700'><span className='text-yellow-600 text-3xl'>&#x2022;&nbsp;</span>Willing to be honest. Only take beta readers who are explicitly okay with offering constructive feedback.</p>
         <p className='mt-4 text-xl text-gray-700'><span className='text-yellow-600 text-3xl'>&#x2022;&nbsp;</span>Not too busy. Reading an entire book takes time. You want someone who will get back to you in a timeframe that works for you.</p>
 
+        <p className='text-yellow-600 mt-12 text-3xl text-center'>Step</p>
+        <p className='text-yellow-600 mt-2 text-5xl text-center'>— 03 —</p>
+        <h3 className="text-3xl text-center text-teal-600 mt-6">
+          Professional Book Editing
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Don’t underestimate the power of a great book design concept. When in the market for a new book, your audience will be faced with hundreds of choices.
+        </p>
+        <h3 className="text-2xl text-yellow-600 mt-6">
+        BOOK COVER DESIGN
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Everyone says, “Don’t judge a book by its cover,” but we all do — including your future audiences. If your book doesn’t look professional and polished, discerning readers may pass it by. A professional book cover design helps you put your best foot forward, capturing the attention of potential readers and signaling the care and quality they can expect within the pages of your book.
+        </p>
+        <h3 className="text-2xl text-yellow-600 mt-6">
+        INTERIOR BOOK DESIGN
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Book interior formatting matters, too, especially if you publish digitally. Your book needs to be readable across a range of devices. Proper formatting makes that happen.
+        </p>
+        <p className="mt-6 text-gray-700">
+        Readers also look for signs of quality in print books. That includes:
+        </p>
+        <p className='mt-4 text-xl text-gray-700'><span className='text-yellow-600 text-3xl'>&#x2022;&nbsp;</span>Page size</p>
+        <p className='mt-4 text-xl text-gray-700'><span className='text-yellow-600 text-3xl'>&#x2022;&nbsp;</span>Paragraph construction and line spacing</p>
+        <p className='mt-4 text-xl text-gray-700'><span className='text-yellow-600 text-3xl'>&#x2022;&nbsp;</span>Font size and type</p>
+        <p className='mt-4 text-xl text-gray-700'><span className='text-yellow-600 text-3xl'>&#x2022;&nbsp;</span>Chapter title styling</p>
+
         {/* Add placeholder sections for remaining items */}
         <h2 id="costs" className="text-5xl text-gray-900 mt-6">
           What Does It Cost to Self-Publish a Book?

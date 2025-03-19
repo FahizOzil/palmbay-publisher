@@ -70,73 +70,73 @@ const SelfPublishingSection = () => {
       {/* Middle Section - Main Content */}
       <div className="w-full text-xl md:w-2/4">
         <p className="text-gray-700">
-          As technology continues to reshape how we consume literature, self-publishing has become a powerful avenue for writers looking for greater control...
+        As technology continues to reshape how we consume literature, self-publishing has become a powerful avenue for writers looking for greater control, flexibility, and direct access to their audience. However, publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Palmetto Publishing to guide you along the way. In this complete guide, we’ll explore how to publish your own book and how Palmetto can help every step of the way.
         </p>
         <h2 id="traditional-vs-self" className="text-4xl text-gray-900 mt-6">
           Traditional Publishing vs. Self-Publishing
         </h2>
         <p className="mt-4 text-gray-700">
-          When it comes to publishing your book, authors can use traditional publishing or self-publishing services...
+        When it comes to publishing your book, authors can use traditional publishing or self-publishing services. Here’s what these processes entail and how they differ.
         </p>
         <h3 className="text-3xl text-teal-600 mt-6">
           What Is Traditional Publishing?
         </h3>
         <p className="mt-4 text-gray-700">
-          Traditional publishing is the time-tested method where authors submit their manuscripts to literary agents...
+        Traditional publishing is the time-tested method where authors submit their manuscripts to literary agents who act as intermediaries between authors and publishers. If accepted, the publisher handles the entire publishing process, including editing, cover design, printing, distribution, and marketing. Authors usually receive an advance against royalties, but a significant portion of the book’s earnings go to the publisher, literary agent, and intermediaries. While traditional publishing provides the support of an experienced team, it often involves a longer timeframe and less control for the author.
         </p>
         <h3 className="text-3xl text-teal-600 mt-6">
           What Is Self-Publishing?
         </h3>
         <p className="mt-4 text-gray-700">
-          Self-publishing is a more independent approach where the author takes charge of the entire publishing process...
+        Self-publishing is a more independent approach where the author takes charge of the entire publishing process. Authors can use self-publishing platforms and services to publish their work in digital, print, and audio formats. With self-publishing, authors typically earn higher profit margins per sale, retain ownership of their work, and can bring their books to market much faster than traditional publishing. While it involves more hands-on involvement from the author, self-publishing provides greater creative autonomy and the potential for increased financial returns.
         </p>
         <h2 id="benefits" className="text-5xl text-gray-900 mt-6">
           Benefits of Self-Publishing
         </h2>
         <p className="mt-4 text-gray-700">
-          It’s not always easy to decide between traditional publishing and self-publishing a book...
+        It’s not always easy to decide between traditional publishing and self-publishing a book. On one hand, traditional publishers give your book a certain level of credibility. A contract from a publishing house tells booksellers that someone knowledgeable has backed your idea. But that credibility can come at a cost. Here are some reasons why self-publishing a book may be a better option.
         </p>
         <h3 className="text-3xl text-teal-600 mt-6">
           No Gatekeepers
         </h3>
         <p className="mt-4 text-gray-700">
-          In the traditional publishing space, authors often must convince literary agents or publishing houses...
+        In the traditional publishing space, authors often must convince literary agents or publishing houses to take on their work. Self-publishing eliminates this hurdle, letting authors bring their stories directly to readers. This freedom enables a diverse range of voices and stories to find their audience without being filtered through the subjective judgments of industry gatekeepers.
         </p>
         <h3 className="text-3xl text-teal-600 mt-6">
           Higher Margins
         </h3>
         <p className="mt-4 text-gray-700">
-          Self-published authors tend to enjoy higher profit margins compared to traditional publishing...
+        Self-published authors tend to enjoy higher profit margins compared to traditional publishing. With traditional publishing, many book sales go to publishers, literary agents, and distributors. According to Writer’s Digest, traditionally published authors only keep 10% to 15% of a book’s profit. Self-published authors can keep up to 100%, depending on arrangements with sellers. This financial advantage provides authors with greater control over their income and the ability to invest in future projects.
         </p>
         <h3 className="text-3xl text-teal-600 mt-6">
           More Control
         </h3>
         <p className="mt-4 text-gray-700">
-          Self-publishing not only provides higher profit margins but also gives authors more control...
+        Self-publishing not only provides higher profit margins but also gives authors more control over the creative process. In traditional publishing, decisions on editing, cover design, and marketing are often delegated to a team. However, with self-publishing a book, authors can choose their editors and designers, ensuring their work aligns with their artistic vision.
         </p>
         <h3 className="text-3xl text-teal-600 mt-6">
           Maintain Rights
         </h3>
         <p className="mt-4 text-gray-700">
-          In addition to creative control, authors retain full rights over their works when they self-publish...
+        In addition to creative control, authors retain full rights over their works when they self-publish. Unlike traditional publishing contracts, which often require authors to relinquish a significant portion of their rights, self-published authors maintain ownership. This allows authors to explore alternative publishing avenues, adaptations, and licensing opportunities without constraints.
         </p>
         <h3 className="text-3xl text-teal-600 mt-6">
           Timeline
         </h3>
         <p className="mt-4 text-gray-700">
-          Traditional publishing processes involve submission, review, editing, and production...
+        Traditional publishing processes involve submission, review, editing, and production, which can be very time-consuming. It can take months or years to even find a literary agent. However, with self-publishing, authors can set their own pace and get their books into the hands of readers in just a matter of weeks.
         </p>
         <h3 className="text-3xl text-teal-600 mt-6">
           Equal Quality
         </h3>
         <p className="mt-4 text-gray-700">
-          The perception that self-published books don’t match the quality of traditionally published ones...
+        The perception that self-published books don’t match the quality of traditionally published ones is quickly fading away. Thanks to the availability of professional editors, designers, and formatting tools, self-published authors now have the means to create premium books. Many accomplished self-published authors make wise investments in professional services to guarantee that their work not only meets but surpasses industry standards. Consequently, self-published authors are rightfully earning the recognition they deserve.
         </p>
         <h2 id="how-to" className="text-5xl text-gray-900 mt-6">
           How to Self-Publish a Book
         </h2>
         <p className="mt-4 text-gray-700">
-          The appeal of self-publishing has made it the fastest-growing segment in book publishing...
+        The appeal of self-publishing has made it the fastest-growing segment in book publishing, according to the Alliance of Independent Authors. It’s still not an easy road, but you can navigate it with the right guidance. Following these steps, will provide everything you need to know on self-publishing a book.
         </p>
         <p className='text-yellow-600 mt-12 text-3xl text-center'>Step</p>
         <p className='text-yellow-600 mt-2 text-5xl text-center'>— 01 —</p>
@@ -265,6 +265,26 @@ const SelfPublishingSection = () => {
         </h3>
         <p className="mt-2 text-gray-700">
         BISAC codes help categorize your book by genre and subject. Choosing the most relevant BISAC codes increases your book’s visibility in online retailers and libraries, making it easier for readers to find. Palmetto will discuss these codes with you to help you choose one that accurately represents the content in your book.
+        </p>
+        <p className='text-yellow-600 mt-12 text-3xl text-center'>Step</p>
+        <p className='text-yellow-600 mt-2 text-5xl text-center'>— 05 —</p>
+        <h3 className="text-3xl text-center text-teal-600 mt-6">
+        Publishing
+        </h3>
+        <p className="mt-2 text-gray-700">
+        When you feel like your book is polished, it’s time to arrange your book for printing. You can publish your book in several formats. When it comes to printing physical books, your most budget-friendly option is to print on demand.
+        </p>
+        <h3 className="text-2xl uppercase text-yellow-600 mt-6">
+        Why Make Your Book Available in All Formats?
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Making your books available in various formats, like print, audiobooks, and e-books, gives your readers a variety of ways to enjoy your book. Using all three formats helps you meet people where they are and how they like to experience a good read. Some people love the feel of a physical book in their hands, while others want the freedom of listening to an audiobook during their daily commute. E-books offer digital versatility, appealing to readers who appreciate the convenience of having their library at their fingertips.
+        </p>
+        <h3 className="text-2xl uppercase text-yellow-600 mt-6">
+        Where to Self-Publish
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Silver Gate makes it easy to publish your book in any format. With us, you can ensure your book reaches your readers in whatever format they prefer!
         </p>
 
         {/* Add placeholder sections for remaining items */}

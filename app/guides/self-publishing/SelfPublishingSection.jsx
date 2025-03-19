@@ -1,8 +1,9 @@
 import React from 'react'
+import { font } from '@/app/Components/font/font';
 
 const SelfPublishingSection = () => {
   return (
-    <div className="relative flex flex-col md:flex-row w-full px-4 lg:px-16 py-12 gap-8">
+    <div className={`${font.className} relative mt-48 flex flex-col md:flex-row w-full px-4 lg:px-16 py-12 gap-8`}>
       
       {/* Left Side - Table of Contents */}
       <div className="w-full md:w-1/4 bg-gray-100 rounded-lg p-6 shadow-md">

@@ -1,9 +1,11 @@
 import { font } from '@/app/Components/font/font'
 import Navbar from '@/app/Components/Navbar'
 import React from 'react'
+import SelfPublishingSection from './SelfPublishingSection'
 
 const page = () => {
   return (
+    <div>
     <div className={`${font.className} relative`}>
       <Navbar />
       <div className="relative w-full min-h-[30rem] bg-cover bg-center" style={{ backgroundImage: "url('/whitewood.png')" }}>
@@ -24,7 +26,7 @@ const page = () => {
       <div className="relative w-full flex justify-center">
         <img 
           src="/self-publish.webp" 
-          className="rounded-md h-96 absolute bottom-[-200px] z-50" 
+          className="rounded-md h-96 absolute bottom-[-200px] z-20" 
         />
       </div>
 
@@ -35,6 +37,8 @@ const page = () => {
           className="rounded-md h-64 absolute bottom-[-200px] right-[120px] z-10" 
         />
       </div>
+    </div>
+      <SelfPublishingSection/>
     </div>
   )
 }

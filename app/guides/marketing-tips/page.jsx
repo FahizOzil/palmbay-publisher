@@ -1,7 +1,7 @@
 import { font } from '@/app/Components/font/font'
 import Navbar from '@/app/Components/Navbar'
 import React from 'react'
-import SelfPublishingSection from '../self-publishing/SelfPublishingSection'
+import MarketingSection from './MarketingSection'
 
 const page = () => {
   return (
@@ -38,7 +38,7 @@ const page = () => {
         />
       </div>
     </div>
-      <SelfPublishingSection/>
+      <MarketingSection/>
     </div>
   )
 }

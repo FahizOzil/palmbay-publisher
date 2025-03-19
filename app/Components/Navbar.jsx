@@ -28,8 +28,8 @@ const Navbar = () => {
       title: "Guides", 
       items: [
         { name: "Self-Publishing Guide", href: "/guides/self-publishing" },
-        { name: "Marketing Tips", href: "/guides/marketing-tips" },
-        { name: "Writing Tips", href: "/guides/writing-tips" }
+        { name: "Marketing Guide", href: "/guides/marketing-tips" },
+        { name: "Book Writing Guide", href: "/guides/book-writing-guide" }
       ]
     },
     { 

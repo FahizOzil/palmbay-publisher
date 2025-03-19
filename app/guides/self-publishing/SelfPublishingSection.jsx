@@ -242,6 +242,30 @@ const SelfPublishingSection = () => {
         <p className="mt-2 text-gray-700">
         Paying attention to your book’s metadata is a critical step that can impact your book’s discoverability and appeal to readers. The metadata consists of essential information that helps potential readers, distributors, and retailers understand what your book is about and how it fits into the market.
         </p>
+        <h3 className="text-2xl text-yellow-600 mt-6">
+        BOOK TITLE
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Your book’s title is the first interaction readers have with your work, making it a crucial element of your book’s identity. It should be catchy, memorable, and reflect the essence of your book. A well-crafted title can pique curiosity and entice potential readers to explore further.
+        </p>
+        <h3 className="text-2xl uppercase text-yellow-600 mt-6">
+        Book Description
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Your book description should be engaging and informative to convince readers to open your book. This brief yet powerful text should provide a snapshot of your book’s theme, main characters, and the unique elements that set it apart. A captivating description encourages readers to delve into the world you’ve created.
+        </p>
+        <h3 className="text-2xl uppercase text-yellow-600 mt-6">
+        ISBN
+        </h3>
+        <p className="mt-2 text-gray-700">
+        Securing an ISBN is a fundamental aspect of book metadata. These identifiers are assigned to individual books and are essential for proper cataloging and identification in the publishing industry. Palmetto will help you obtain your ISBN.
+        </p>
+        <h3 className="text-2xl uppercase text-yellow-600 mt-6">
+        BISAC Codes
+        </h3>
+        <p className="mt-2 text-gray-700">
+        BISAC codes help categorize your book by genre and subject. Choosing the most relevant BISAC codes increases your book’s visibility in online retailers and libraries, making it easier for readers to find. Palmetto will discuss these codes with you to help you choose one that accurately represents the content in your book.
+        </p>
 
         {/* Add placeholder sections for remaining items */}
         <h2 id="costs" className="text-5xl text-gray-900 mt-6">

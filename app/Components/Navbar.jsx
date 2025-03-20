@@ -35,8 +35,9 @@ const Navbar = () => {
     { 
       title: "About Us", 
       items: [
-        { name: "Our Story", href: "/about/our-story" },
-        { name: "Team", href: "/about/team" },
+        { name: "Our Process", href: "/about/our-process" },
+        { name: "Why Silver Gate?", href: "/about/why-silvergate" },
+        { name: "FAQs", href: "/about/faqs" },
         { name: "Contact Us", href: "/about/contact" }
       ]
     },

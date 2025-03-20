@@ -7,6 +7,8 @@ import ContactForm from './ContactForm'
 import FewReasons from './FewReasons'
 import Alli from './Alli'
 import Numbers from './Numbers'
+import ContactBanner from '@/app/Components/ContactBanner'
+import Footer from '@/app/Components/Footer'
 
 const page = () => {
   return (
@@ -26,6 +28,8 @@ const page = () => {
       <FewReasons/>
       <Alli/>
       <Numbers/>
+      <ContactBanner/>
+      <Footer/>
     </div>
   )
 }

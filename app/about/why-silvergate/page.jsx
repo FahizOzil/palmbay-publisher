@@ -4,6 +4,7 @@ import React from 'react'
 import YouHaveAStory from './YouHaveAStory'
 import Pics from './Pics'
 import ContactForm from './ContactForm'
+import FewReasons from './FewReasons'
 
 const page = () => {
   return (
@@ -20,6 +21,7 @@ const page = () => {
       <YouHaveAStory/>
       <Pics/>
       <ContactForm/>
+      <FewReasons/>
     </div>
   )
 }

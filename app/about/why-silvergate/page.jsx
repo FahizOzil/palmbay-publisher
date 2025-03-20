@@ -5,6 +5,8 @@ import YouHaveAStory from './YouHaveAStory'
 import Pics from './Pics'
 import ContactForm from './ContactForm'
 import FewReasons from './FewReasons'
+import Alli from './Alli'
+import Numbers from './Numbers'
 
 const page = () => {
   return (
@@ -22,6 +24,8 @@ const page = () => {
       <Pics/>
       <ContactForm/>
       <FewReasons/>
+      <Alli/>
+      <Numbers/>
     </div>
   )
 }

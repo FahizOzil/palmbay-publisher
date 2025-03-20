@@ -4,6 +4,8 @@ import React from 'react'
 import ContactBanner from '@/app/Components/ContactBanner'
 import Footer from '@/app/Components/Footer'
 import OneStopSilver from './OneStopSilver'
+import AuthorCentric from './AuthorCentric'
+import Simplify from './Simplify'
 
 const page = () => {
   return (
@@ -18,6 +20,8 @@ const page = () => {
         </div>
       </div>
       <OneStopSilver/>
+      <AuthorCentric/>
+      <Simplify/>
       <ContactBanner/>
       <Footer/>
     </div>

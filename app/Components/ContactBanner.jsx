@@ -3,7 +3,7 @@ import { font } from "./font/font";
 
 const ContactBanner = () => {
   return (
-    <div className="customgreen mt-24 px-6 py-16 md:py-24">
+    <div className="customgreen px-6 py-16 md:py-24">
       {/* Top Image (Position Adjusted for Responsiveness) */}
       <div className="flex justify-center md:justify-start">
         <img src="/ring.png" className="w-20 md:w-32" alt="Decorative Ring" />

@@ -2,6 +2,7 @@ import { font } from '@/app/Components/font/font'
 import Navbar from '@/app/Components/Navbar'
 import React from 'react'
 import YouHaveAStory from './YouHaveAStory'
+import Pics from './Pics'
 
 const page = () => {
   return (
@@ -16,6 +17,7 @@ const page = () => {
         </div>
       </div>
       <YouHaveAStory/>
+      <Pics/>
     </div>
   )
 }

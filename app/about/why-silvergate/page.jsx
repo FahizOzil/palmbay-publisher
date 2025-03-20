@@ -3,6 +3,7 @@ import Navbar from '@/app/Components/Navbar'
 import React from 'react'
 import YouHaveAStory from './YouHaveAStory'
 import Pics from './Pics'
+import ContactForm from './ContactForm'
 
 const page = () => {
   return (
@@ -18,6 +19,7 @@ const page = () => {
       </div>
       <YouHaveAStory/>
       <Pics/>
+      <ContactForm/>
     </div>
   )
 }

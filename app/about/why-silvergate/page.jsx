@@ -1,6 +1,7 @@
 import { font } from '@/app/Components/font/font'
 import Navbar from '@/app/Components/Navbar'
 import React from 'react'
+import YouHaveAStory from './YouHaveAStory'
 
 const page = () => {
   return (
@@ -14,6 +15,7 @@ const page = () => {
           <img src='/why-silvergate.webp'/>
         </div>
       </div>
+      <YouHaveAStory/>
     </div>
   )
 }

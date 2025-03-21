@@ -63,7 +63,7 @@ const FictionGenrePage = () => {
             {/* Image */}
             <div className="flex justify-center">
               <img
-                src="/Design-img.png"
+                src="/Design-img.png.png"
                 alt="Person working on a laptop"
                 className="w-full max-w-md rounded-lg"
               />

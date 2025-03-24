@@ -20,7 +20,7 @@ const page = () => {
       >
         <div className="relative h-full flex flex-col justify-center items-center text-black px-4">
           <h1 className="text-3xl md:text-5xl mt-36 font-bold text-center">
-            Non-Fiction Genre Book Writing
+            Non-Fiction Genre Book Publishing
           </h1>
           <p className="text-lg md:text-xl text-center mt-4 max-w-3xl">
             Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Silver Gate Publishing to guide you along the way.

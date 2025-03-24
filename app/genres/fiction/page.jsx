@@ -15,7 +15,7 @@ const FictionGenrePage = () => {
       >
         <div className="absolute inset-0 h-full flex flex-col justify-center items-center text-black px-4">
           <h1 className="text-3xl md:text-5xl font-bold text-center">
-            Fiction Genre Book Writing
+            Fiction Genre Book Publishing
           </h1>
           <p className="text-lg md:text-xl text-center mt-4 max-w-3xl">
             The fiction genre allows writers to share creative stories with readers. Fiction books feature imaginary characters, plot elements, or settings.

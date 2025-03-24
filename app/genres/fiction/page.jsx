@@ -10,7 +10,7 @@ const FictionGenrePage = () => {
     <div className={`${font.className} min-h-screen flex flex-col`}>
       <Navbar />
       <div
-        className="relative w-full min-h-[20rem] bg-cover bg-center"
+        className="relative w-full min-h-[30rem] bg-cover bg-center"
         style={{ backgroundImage: "url('/whitewood.png')" }}
       >
         <div className="absolute inset-0 h-full flex flex-col justify-center items-center text-black px-4">

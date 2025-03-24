@@ -46,7 +46,7 @@ const Navbar = () => {
       items: [
         { name: "Fiction", href: "/genres/fiction" },
         { name: "Non-Fiction", href: "/genres/non-fiction" },
-        { name: "Sci-Fi", href: "/genres/sci-fi" },
+        { name: "Business", href: "/genres/business" },
         { name: "Romance", href: "/genres/romance" }
       ]
     }

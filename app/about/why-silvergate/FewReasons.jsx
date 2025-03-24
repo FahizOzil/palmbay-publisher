@@ -47,7 +47,7 @@ const FewReasons = () => {
         <div className='flex mt-24 justify-center items-center space-x-8'>
             <div className='flex flex-col'>
                 <h1 className='text-4xl green-text'>Keep 100% of Your Royalties</h1>
-                <p className='text-xl mt-6 max-w-xl'>Authors who work with Palmetto Publishing maintain 100% creative control of their book as well as 100% of the royalties and rights associated with it. We provide competitive payouts to our authors as compared to industry standards, putting more capital in your pocket to market your book and expand your audience.</p>
+                <p className='text-xl mt-6 max-w-xl'>Authors who work with Silver Gate Publishing maintain 100% creative control of their book as well as 100% of the royalties and rights associated with it. We provide competitive payouts to our authors as compared to industry standards, putting more capital in your pocket to market your book and expand your audience.</p>
             </div>
             <img src='/Your-Royalties.webp' className='h-56'/>
         </div>

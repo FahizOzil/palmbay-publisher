@@ -17,7 +17,7 @@ const BookFormattingServices = () => {
             {/* Card Section - Positioned Below the Button */}
             <div className="mt-12 flex justify-center space-x-8">
               <div className="bg-white p-6 rounded-tl-4xl w-[70%] rounded-br-4xl shadow-lg  text-center">
-                <img src='/palmetto-interior.png.webp' className='w-[15rem] mx-auto'/>
+                <img src='/Silver Gate-interior.png.webp' className='w-[15rem] mx-auto'/>
                 <p className="text-black text-4xl pt-8 font-semibold">Silver Gate</p>
                 <p className="green-text text-3xl pt-2 ">Starting At $599</p>
                 <p className='text-xl text-left max-w-sm pt-4'><span className='text-4xl text-teal-600'>&#x2022;&nbsp;</span>Interior layout & design</p>

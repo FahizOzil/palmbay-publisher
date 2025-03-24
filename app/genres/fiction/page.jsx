@@ -29,7 +29,7 @@ const FictionGenrePage = () => {
             The fiction genre allows writers to share creative stories with readers. Fiction books feature imaginary characters, plot elements, or settings. This flexible genre can depict invented characters falling in love, retell historical events, or take readers on a tour of a fantastical world — sometimes all in the same book.
           </p>
           <p className="text-black text-lg leading-relaxed mt-4">
-            How to write a fiction novel and publishing that novel requires creativity, effort, and time. Luckily, there are plenty of resources available to help you develop your book from a simple idea to a polished product. The experts at Palmetto Publishing can assist you with every step of the publishing process for your fiction book.
+            How to write a fiction novel and publishing that novel requires creativity, effort, and time. Luckily, there are plenty of resources available to help you develop your book from a simple idea to a polished product. The experts at Silver Gate Publishing can assist you with every step of the publishing process for your fiction book.
           </p>
         </section>
 

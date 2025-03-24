@@ -73,7 +73,7 @@ const SelfPublishingSection = () => {
       {/* Middle Section - Main Content */}
       <div className="w-full text-xl md:w-2/4">
         <p className="text-gray-700">
-        As technology continues to reshape how we consume literature, self-publishing has become a powerful avenue for writers looking for greater control, flexibility, and direct access to their audience. However, publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Palmetto Publishing to guide you along the way. In this complete guide, we’ll explore how to publish your own book and how Palmetto can help every step of the way.
+        As technology continues to reshape how we consume literature, self-publishing has become a powerful avenue for writers looking for greater control, flexibility, and direct access to their audience. However, publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Silver Gate Publishing to guide you along the way. In this complete guide, we’ll explore how to publish your own book and how Silver Gate can help every step of the way.
         </p>
         <h2 id="traditional-vs-self" className="text-4xl text-gray-900 mt-6">
           Traditional Publishing vs. Self-Publishing
@@ -197,7 +197,7 @@ const SelfPublishingSection = () => {
         BETA TESTING
         </h3>
         <p className="mt-2 text-gray-700">
-        Beta readers are volunteers who read your manuscript and offer feedback. We don’t provide beta readers at Palmetto, but if you can find one, they can provide valuable feedback to refine your final draft. The Write Life recommends beta readers who are:
+        Beta readers are volunteers who read your manuscript and offer feedback. We don’t provide beta readers at Silver Gate, but if you can find one, they can provide valuable feedback to refine your final draft. The Write Life recommends beta readers who are:
         </p>
         <p className='mt-4 text-xl text-gray-700'><span className='text-yellow-600 text-3xl'>&#x2022;&nbsp;</span>Part of your target audience. If you wrote a YA novel, ask a friend’s teenager to be your beta reader. If you wrote a nonfiction book for entrepreneurs, choose a business owner.</p>
         <p className='mt-4 text-xl text-gray-700'><span className='text-yellow-600 text-3xl'>&#x2022;&nbsp;</span>Not too close to you. Family members and friends make enthusiastic beta readers. But they’re inclined to boost your ego. Acquaintances, coworkers, and friends of friends are more objective.</p>
@@ -261,13 +261,13 @@ const SelfPublishingSection = () => {
         ISBN
         </h3>
         <p className="mt-2 text-gray-700">
-        Securing an ISBN is a fundamental aspect of book metadata. These identifiers are assigned to individual books and are essential for proper cataloging and identification in the publishing industry. Palmetto will help you obtain your ISBN.
+        Securing an ISBN is a fundamental aspect of book metadata. These identifiers are assigned to individual books and are essential for proper cataloging and identification in the publishing industry. Silver Gate will help you obtain your ISBN.
         </p>
         <h3 className="text-2xl uppercase text-yellow-600 mt-6">
         BISAC Codes
         </h3>
         <p className="mt-2 text-gray-700">
-        BISAC codes help categorize your book by genre and subject. Choosing the most relevant BISAC codes increases your book’s visibility in online retailers and libraries, making it easier for readers to find. Palmetto will discuss these codes with you to help you choose one that accurately represents the content in your book.
+        BISAC codes help categorize your book by genre and subject. Choosing the most relevant BISAC codes increases your book’s visibility in online retailers and libraries, making it easier for readers to find. Silver Gate will discuss these codes with you to help you choose one that accurately represents the content in your book.
         </p>
         <p className='text-yellow-600 mt-12 text-3xl text-center'>Step</p>
         <p className='text-yellow-600 mt-2 text-5xl text-center'>— 05 —</p>
@@ -316,7 +316,7 @@ const SelfPublishingSection = () => {
         When you handle distribution, you keep more in your pocket per sale, but all the logistics and negotiations fall on your shoulders. It can be extremely stressful, especially if you lack industry experience.
         </p>
         <p className="mt-6 text-gray-700">
-        Another option is to outsource your distribution. If you print through Palmetto, we work with retailers on your behalf. Palmetto distributes print books to more than 40,000 retail stores and libraries across the world, including Barnes & Noble and Amazon. E-books also make it to the top platforms, including:
+        Another option is to outsource your distribution. If you print through Silver Gate, we work with retailers on your behalf. Silver Gate distributes print books to more than 40,000 retail stores and libraries across the world, including Barnes & Noble and Amazon. E-books also make it to the top platforms, including:
         </p>
         <p className='text-yellow-600 mt-12 text-3xl text-center'>Step</p>
         <p className='text-yellow-600 mt-2 text-5xl text-center'>— 07 —</p>
@@ -363,7 +363,7 @@ const SelfPublishingSection = () => {
         Your website is where you can tell your story as the author. Talk about your “why.” What made you decide to write your book? What inspired your story? Sharing details about yourself can help you create genuine connections with your readers.
         </p>
         <p className="mt-6 text-gray-700">
-        You can design and publish your website yourself or hire an expert. Palmetto’s designers are ready to help. You can also check out this blog for more advice on improving your website.
+        You can design and publish your website yourself or hire an expert. Silver Gate’s designers are ready to help. You can also check out this blog for more advice on improving your website.
         </p>
         <h3 className="text-2xl uppercase text-yellow-600 mt-6">
         Press Releases
@@ -372,7 +372,7 @@ const SelfPublishingSection = () => {
         Traditional media still matters. With a good press release, you can get interviews and write-ups from local and industry journalists, podcasters, and bloggers.
         </p>
         <p className="mt-6 text-gray-700">
-        Palmetto offers press release writing and distribution a la carte or as part of a book marketing package. Drawing on a network of more than 780,000 media outlets, Palmetto’s professionals will send your announcement to as many as 1,000 media outlets.
+        Silver Gate offers press release writing and distribution a la carte or as part of a book marketing package. Drawing on a network of more than 780,000 media outlets, Silver Gate’s professionals will send your announcement to as many as 1,000 media outlets.
         </p>
         <h3 className="text-2xl uppercase text-yellow-600 mt-6">
         Reviews
@@ -381,7 +381,7 @@ const SelfPublishingSection = () => {
         Reviews are another critical part of marketing because they can significantly influence potential readers. Positive reviews provide social proof of a book’s quality and act as endorsements that can build trust with readers. Word of mouth has a significant impact on book sales, and authentic reviews, whether on online platforms, blogs, or traditional media, contribute to organic promotion.
         </p>
         <p className="mt-6 text-gray-700">
-        We don’t offer review services at Palmetto, but we suggest including them in your marketing efforts. Consider asking your readers to go to your favorite platform to leave reviews for your book. You can also pay for book reviews through companies like Kirkus Reviews.
+        We don’t offer review services at Silver Gate, but we suggest including them in your marketing efforts. Consider asking your readers to go to your favorite platform to leave reviews for your book. You can also pay for book reviews through companies like Kirkus Reviews.
         </p>
         <h3 className="text-2xl uppercase text-yellow-600 mt-6">
         Author Events
@@ -429,10 +429,10 @@ const SelfPublishingSection = () => {
           Get Started With Publication
         </h2>
         <p className="mt-4 text-gray-700">
-        The world of self-publishing is much easier to navigate with a knowledgeable partner like Palmetto Publishing. Palmetto is a top-tier company with expert staff in all aspects of book publishing, from copy editing to book marketing.
+        The world of self-publishing is much easier to navigate with a knowledgeable partner like Silver Gate Publishing. Silver Gate is a top-tier company with expert staff in all aspects of book publishing, from copy editing to book marketing.
         </p>
         <p className="mt-6 text-gray-700">
-        Working with Silver Gate lets you focus on what you know best — your book and its audiences. You have the freedom to market and print with Palmetto or handle those aspects on your own, trusting us with only the essentials of interior formatting and cover design.
+        Working with Silver Gate lets you focus on what you know best — your book and its audiences. You have the freedom to market and print with Silver Gate or handle those aspects on your own, trusting us with only the essentials of interior formatting and cover design.
         </p>
         <p className="mt-6 text-gray-700">
         Reach out today to learn about our author services. You’ve worked hard on your book, and you deserve a publication process that’s as easy as possible.

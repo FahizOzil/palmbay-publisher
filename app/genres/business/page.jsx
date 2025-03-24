@@ -193,9 +193,9 @@ const page = () => {
           <div className="mt-6 space-y-6 w-full max-w-3xl">
             {/* Book Writing */}
             <div className="flex items-start">
-              <FaBook className="text-[#00C4B4] text-2xl mr-4 mt-1" />
               <div>
-                <h3 className="text-xl font-bold text-[#00C4B4]">Book Writing</h3>
+              <FaBook className="text-[#00C4B4] text-3xl mr-4 mt-1" />
+                <h3 className="text-xl font-bold mt-2 text-[#00C4B4]">Book Writing</h3>
                 <p className="text-lg mt-2">
                   We can help you stay on track to complete your book. Though we’re happy to help, we don’t ghostwrite or check your work for plagiarism. We can help you stay on track to complete your book by providing you with writing resources and blog posts on how to write books that can be read on our website or printed on the best business books of all time. Here’s what we can help you with:
                 </p>
@@ -222,9 +222,9 @@ const page = () => {
 
             {/* Book Editing */}
             <div className="flex items-start">
-              <FaEdit className="text-[#00C4B4] text-2xl mr-4 mt-1" />
               <div>
-                <h3 className="text-xl font-bold text-[#00C4B4]">Book Editing</h3>
+              <FaEdit className="text-[#00C4B4] text-3xl mr-4 mt-1" />
+                <h3 className="text-xl font-bold mt-2 text-[#00C4B4]">Book Editing</h3>
                 <p className="text-lg mt-2">
                   Publishing offers a variety of editing tactics to find the right one. Consider what you need for your book to be the best it can be. We offer editing services to help you polish your book for the business genre. We offer:
                 </p>
@@ -251,9 +251,9 @@ const page = () => {
 
             {/* Book Cover Design */}
             <div className="flex items-start">
-              <FaPaintBrush className="text-[#00C4B4] text-2xl mr-4 mt-1" />
               <div>
-                <h3 className="text-xl font-bold text-[#00C4B4]">Book Cover Design</h3>
+              <FaPaintBrush className="text-[#00C4B4] text-3xl mr-4 mt-1" />
+                <h3 className="text-xl font-bold text-[#00C4B4] mt-2">Book Cover Design</h3>
                 <p className="text-lg mt-2">
                   Your book cover design is a critical part of your book. We can help you with a high-quality cover that will attract readers. We can help you with a cover that will attract readers and help you with the process and design to complete your book. We can help you with:
                 </p>
@@ -268,9 +268,9 @@ const page = () => {
 
             {/* Book Formatting */}
             <div className="flex items-start">
-              <FaEye className="text-[#00C4B4] text-2xl mr-4 mt-1" />
               <div>
-                <h3 className="text-xl font-bold text-[#00C4B4]">Book Formatting</h3>
+              <FaEye className="text-[#00C4B4] text-3xl mr-4 mt-1" />
+                <h3 className="text-xl font-bold mt-2 text-[#00C4B4]">Book Formatting</h3>
                 <p className="text-lg mt-2">
                   Your book needs to be formatted from the first page to the last. A Palmetto Publishing book layout ensures that your book will be formatted correctly. We can help you with:
                 </p>
@@ -292,9 +292,9 @@ const page = () => {
 
             {/* Book Printing */}
             <div className="flex items-start">
-              <FaPrint className="text-[#00C4B4] text-2xl mr-4 mt-1" />
               <div>
-                <h3 className="text-xl font-bold text-[#00C4B4]">Book Printing</h3>
+              <FaPrint className="text-[#00C4B4] text-3xl mr-4 mt-1" />
+                <h3 className="text-xl font-bold mt-2 text-[#00C4B4]">Book Printing</h3>
                 <p className="text-lg mt-2">
                   Palmetto Publishing partners with high-quality printers for the best print-on-demand publishing. We can help you with the option of printing your book in hardcover or softcover. We can help you with:
                 </p>
@@ -316,18 +316,13 @@ const page = () => {
 
             {/* Book Marketing */}
             <div className="flex items-start">
-              <FaBullhorn className="text-[#00C4B4] text-2xl mr-4 mt-1" />
               <div>
-                <h3 className="text-xl font-bold text-[#00C4B4]">Book Marketing</h3>
+              <FaBullhorn className="text-[#00C4B4] text-3xl mr-4 mt-1" />
+                <h3 className="text-xl font-bold text-[#00C4B4] mt-2">Book Marketing</h3>
                 <p className="text-lg mt-2">
                   Writing and publishing a book is only part of the work. We can help you with marketing your book to ensure that more people will read your book. We can help you with:
                 </p>
-                <ul className="mt-2 space-y-2 text-lg">
-                  <li className="flex items-start">
-                    <span className="text-[#00C4B4] mr-2">•</span>
-                    <span>Marketing your book to ensure that more people will read your book</span>
-                  </li>
-                </ul>
+                
               </div>
             </div>
           </div>

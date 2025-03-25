@@ -48,6 +48,14 @@ body {
   background-color: #bd6042;
 }
 
+.green-text-bullets {
+  color: black; /* Keep the text color black */
+}
+
+.green-text-bullets li::marker {
+  color: green; /* Set the bullet color to green */
+}
+
 @font-face {
   font-family: 'apparel';
   src: url('/fonts/apparel.otf') format('opentype');

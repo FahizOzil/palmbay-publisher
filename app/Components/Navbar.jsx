@@ -47,7 +47,7 @@ const Navbar = () => {
         { name: "Fiction", href: "/genres/fiction" },
         { name: "Non-Fiction", href: "/genres/non-fiction" },
         { name: "Business", href: "/genres/business" },
-        { name: "Romance", href: "/genres/romance" }
+        { name: "How-To", href: "/genres/how-to" }
       ]
     }
   ];

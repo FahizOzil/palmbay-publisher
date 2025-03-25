@@ -30,7 +30,7 @@ const page = () => {
 
       <section className="mb-12 mt-12 px-14">
         <p className="text-black text-lg leading-relaxed">
-          Share your wisdom and grow your brand by publishing business books. Palmetto Publishing is the perfect partner for writers of all levels of experience. We help authors find self-publishing success and are proud of our work with clients who’ve published business books.
+          Share your wisdom and grow your brand by publishing business books. Silver Gate Publishing is the perfect partner for writers of all levels of experience. We help authors find self-publishing success and are proud of our work with clients who’ve published business books.
         </p>
         <p className="text-black text-lg leading-relaxed mt-4">
           Take advantage of our expertise at any stage of the writing journey. We believe you have something important to say. And we can’t wait to hear it and help you share it with the world.
@@ -272,7 +272,7 @@ const page = () => {
               <FaEye className="text-[#00C4B4] text-3xl mr-4 mt-1" />
                 <h3 className="text-xl font-bold mt-2 text-[#00C4B4]">Book Formatting</h3>
                 <p className="text-lg mt-2">
-                  Your book needs to be formatted from the first page to the last. A Palmetto Publishing book layout ensures that your book will be formatted correctly. We can help you with:
+                  Your book needs to be formatted from the first page to the last. A Silver Gate Publishing book layout ensures that your book will be formatted correctly. We can help you with:
                 </p>
                 <ul className="mt-2 space-y-2 text-lg">
                   <li className="flex items-start">
@@ -296,7 +296,7 @@ const page = () => {
               <FaPrint className="text-[#00C4B4] text-3xl mr-4 mt-1" />
                 <h3 className="text-xl font-bold mt-2 text-[#00C4B4]">Book Printing</h3>
                 <p className="text-lg mt-2">
-                  Palmetto Publishing partners with high-quality printers for the best print-on-demand publishing. We can help you with the option of printing your book in hardcover or softcover. We can help you with:
+                  Silver Gate Publishing partners with high-quality printers for the best print-on-demand publishing. We can help you with the option of printing your book in hardcover or softcover. We can help you with:
                 </p>
                 <ul className="mt-2 space-y-2 text-lg">
                   <li className="flex items-start">

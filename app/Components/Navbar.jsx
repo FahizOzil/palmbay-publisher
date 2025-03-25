@@ -47,7 +47,15 @@ const Navbar = () => {
         { name: "Fiction", href: "/genres/fiction" },
         { name: "Non-Fiction", href: "/genres/non-fiction" },
         { name: "Business", href: "/genres/business" },
-        { name: "How-To", href: "/genres/how-to" }
+        { name: "How-To", href: "/genres/how-to" },
+        { name: "Self Help", href: "/genres/self-help" },
+        { name: "Religious", href: "/genres/religious" },
+        { name: "Inspirational", href: "/genres/inspirational" },
+        { name: "Cook Books", href: "/genres/cook-book" },
+        { name: "Children's Books", href: "/genres/c-books" },
+        { name: "Biographies", href: "/genres/biography" },
+        { name: "Autobiographies", href: "/genres/autobiography" },
+        { name: "Art", href: "/genres/art" },
       ]
     }
   ];

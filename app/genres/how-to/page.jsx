@@ -316,7 +316,7 @@ const Page = () => {
                   <span className="font-semibold">Direct engagement with readers:</span> Self-publishing gives you direct access to your readers, allowing for better engagement and feedback. This connection can be very helpful for future projects.
                 </li>
                 <li>
-                  <span className="font-semibold">Higher royalties:</span> When you work with Palmetto, you keep 100% of your royalties from book sales.
+                  <span className="font-semibold">Higher royalties:</span> When you work with Silver Gate, you keep 100% of your royalties from book sales.
                 </li>
                 <li>
                   <span className="font-semibold">Quicker publishing:</span> Self-publishing with us usually takes around 8-12 weeks, which is significantly faster than traditional publishing.

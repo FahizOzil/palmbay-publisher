@@ -17,7 +17,6 @@ const Navbar = () => {
         { name: "Book Editing", href: "/services/book-editing" },
         { name: "Book Printing", href: "/services/book-printing" },
         { name: "Audiobook Publishing", href: "/services/audiobook-publishing" },
-        // { name: "Social Media Consulting", href: "/services/social-media" },
         { name: "Illustrations", href: "/services/illustrations" },
         { name: "Interior Formatting", href: "/services/book-formatting" },
         { name: "Book Distribution", href: "/services/book-distribution" },
@@ -85,16 +84,20 @@ const Navbar = () => {
                 {menu.title}
               </button>
 
-              {/* Dropdown */}
-              <ul 
-                className="absolute left-0 top-full bg-white text-black shadow-lg p-4 w-60 rounded-md opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible"
+              {/* Desktop Dropdown */}
+              <div 
+                className="fixed left-2 mt-8 right-2 top-[calc(2.5rem+48px)] bg-white text-black shadow-lg rounded-b-md opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible"
               >
-                {menu.items.map((item, i) => (
-                  <li key={i} className="p-2 hover:bg-gray-100 rounded-md">
-                    <a href={item.href} className="block text-lg">{item.name}</a>
-                  </li>
-                ))}
-              </ul>
+                <div className="max-w-7xl mx-auto p-6">
+                  <ul className="grid grid-cols-3 lg:grid-cols-3 gap-6">
+                    {menu.items.map((item, i) => (
+                      <li key={i} className="p-2 hover:bg-gray-100 rounded-md">
+                        <a href={item.href} className="block text-lg">{item.name}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </li>
           ))}
         </ul>
@@ -130,17 +133,21 @@ const Navbar = () => {
             </button>
             
             {/* Mobile Dropdown */}
-            <ul
-              className={`overflow-hidden bg-gray-800 rounded-md mt-2 p-2 transition-all duration-300 ${
-                openDropdown === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            <div
+              className={`overflow-hidden bg-gray-800 rounded-md mt-2 transition-all duration-300 ${
+                openDropdown === index ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
               }`}
             >
-              {menu.items.map((item, i) => (
-                <li key={i} className="px-4 py-2 hover:bg-gray-700 cursor-pointer rounded-md">
-                  <a href={item.href} className="block w-full">{item.name}</a>
-                </li>
-              ))}
-            </ul>
+              <div className="p-6">
+                <ul className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                  {menu.items.map((item, i) => (
+                    <li key={i} className="px-4 py-2 hover:bg-gray-700 cursor-pointer rounded-md">
+                      <a href={item.href} className="block w-full">{item.name}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         ))}
 

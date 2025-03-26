@@ -42,6 +42,69 @@ const page = () => {
         Self-publishing makes it easier than ever to get your children’s book into the hands of young readers. The experts at Palmetto Publishing offer a range of services to help streamline the publishing process.
         </p>
       </section>
+
+      <section className="py-12 px-14 custombg text-white">
+        <div className="flex flex-col md:flex-row items-start">
+          {/* Text Content */}
+          <div className="md:w-1/2 p-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Characteristics of Children’s Literature
+            </h2>
+            <div className="border-b-2 border-yellow-600 w-40 mb-6"></div>
+            <p className="text-lg leading-relaxed mb-4">
+            Children’s literature is a broad term that encompasses all books written for young readers. You can write fiction or non-fiction books in a variety of genres.
+            </p>
+            <ul className="list-disc list-inside mb-4">
+              <li className="mb-2">Accessible language tailored toward developing readers</li>
+              <li className="mb-2">Attractive illustrations</li>
+              <li className="mb-2">Humor</li>
+              <li className="mb-2">Imaginative narratives</li>
+              <li className="mb-2">Memorable characters</li>
+              <li className="mb-2">Educational Value</li>
+              <li className="mb-2">Being written for and about children</li>
+              <li className="mb-2">Empowered young protagonists</li>
+              <li className="mb-2">Depicting a range of human experiences and perspectives</li>
+              <li className="mb-2">Portraying dark topics like death or the Holocaust in child-appropriate stories</li>
+            </ul>
+            <p className="text-lg leading-relaxed">
+            Historically, children’s literature has mostly centered on narratives about white characters. Increasingly, children’s authors, educators, and publishers have recognized the need for more diverse stories that include a range of experiences and people. For example, Jessica Love’s picture book Julián Is A Mermaid centers on a queer, brown-skinned boy who fantasizes about becoming a mermaid.
+            </p>
+          </div>
+          {/* Image */}
+          <div className="md:w-1/2 p-6">
+            <img
+              src="/red-child.webp"
+              alt="Person holding a cookbook with food ingredients"
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        className="py-20 px-20 text-white customgreen bg-cover bg-center"
+      >
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left">
+          Age Category In Children's Literature
+        </h2>
+        <div className="border-b-2 border-yellow-500 w-16 mb-6 "></div>
+        <p className="text-lg leading-relaxed mb-4 text-left">
+        These books address young readers aged 2 to 7. Typically 32 pages long, they blend accessible text and bright illustrations. Developing readers can use these texts with the help of an adult or on their own
+        </p>
+        <p className="text-lg leading-relaxed mb-4 text-left">
+        Also known as “easy readers,” beginning reader books target children aged 5 to 8. They usually include more text than a picture book, but they still use simple language and sentence structures.
+        </p>
+        <p className="text-lg leading-relaxed mb-4 text-left">
+        Books targeted at children aged 8 to 12 fall into this category. These books have longer chapters with more sophisticated language, and they contain few or no illustrations. They are often published in series.
+        </p>
+        
+        <p className="text-lg leading-relaxed mt-4 text-left">
+        These stories are aimed at children aged 12 to 18. They explore heavier issues like mental illness, social injustices, and suicide, but they are often somewhat less explicit than adult narratives. Young adult fiction typically portrays the transition between childhood and adulthood, depicting teenage characters who experience their first romances and start high school.
+        </p>
+        <p className="text-lg leading-relaxed mt-4 text-left">
+        Of course, these age categories are simply loose guidelines. Children frequently read books above or below their age level, and many adults also read children’s literature. Books like Harry Potter and Stephanie Meyer’sTwilight series have huge appeal for crossover audiences.
+        </p>
+      </section>
+
       <ContactBanner/>
       <Footer/>
     </div>

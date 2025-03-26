@@ -4,6 +4,7 @@ import Footer from '@/app/Components/Footer'
 import Navbar from '@/app/Components/Navbar'
 import Solutions from '@/app/Components/Solutions'
 import React from 'react'
+import { FaBook, FaBullhorn, FaEdit } from 'react-icons/fa'
 
 const page = () => {
   return (
@@ -99,7 +100,7 @@ const page = () => {
         </div>
       </section>
 
-      {/* New Section: Publishing Art and Photography Books */}
+      {/* Section: Publishing Art and Photography Books */}
       <section className="py-20 px-14 customgreen text-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
@@ -115,6 +116,81 @@ const page = () => {
         </div>
       </section>
 
+      {/* New Section: Benefits of Self-Publishing */}
+      <section
+        className="py-20 px-14 text-black bg-cover bg-center"
+        style={{ backgroundImage: "url('/whitewood.png')" }}
+      >
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
+            Benefits of Self-Publishing
+          </h2>
+          <div className="border-b-2 border-yellow-600 w-40 mx-auto mb-6"></div>
+          <p className="text-lg leading-relaxed mb-6 text-center">
+            Self-publishing your art or photography books offers many opportunities. While publishing through a traditional publishing house brings downsides like long waiting times, low royalty earnings, and reduced creative control, self-publishing allows for:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <ul className="list-disc list-inside text-lg leading-relaxed">
+              <li className="mb-2">Faster publishing processes</li>
+              <li className="mb-2">Total creative control of content and design</li>
+              <li className="mb-2">
+                Publishing books for niche audiences that traditional publishers might not pick up
+              </li>
+            </ul>
+            <ul className="list-disc list-inside text-lg leading-relaxed">
+              <li className="mb-2">The ability to start marketing right away</li>
+              <li className="mb-2">The highest level of royalty earnings</li>
+              <li className="mb-2">Getting one’s name out there as a new author</li>
+            </ul>
+          </div>
+          <p className="text-lg leading-relaxed mt-6 text-center">
+            While self-publishing can be a challenging process that requires some initial investments, publishing independently carries immense possibilities for reward.
+          </p>
+        </div>
+      </section>
+        <section className="py-20 px-14 customorange text-black">
+                <h2 className="text-4xl md:text-5xl text-white font-bold mb-4 text-center">
+                  Get Started With Silver Gate
+                </h2>
+                <p className="text-lg leading-relaxed text-white mb-6 text-center max-w-4xl mx-auto">
+                  After you write your book, the next step is to publish your story and get it into the hands of interested readers. If you want to retain maximum control over your book, consider self-publishing it. This method allows you to make the final decisions about everything from the cover design to printing. Additionally, you can earn higher royalties than you would if you published your book with a traditional publisher. Self-publishing may sound intimidating, but the process can be easy and fast with the help of a top-tier publishing company like Silver Gate Publishing. We offer a variety of services to support writers through the self-publishing process, including:
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                  {/* Book Cover Design */}
+                  <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <FaBook className="text-4xl text-orange-600 mx-auto mb-4" />
+                    <h3 className="text-xl font-bold mb-2">Book Cover Design</h3>
+                    <p className="text-base leading-relaxed mb-4">
+                      We create genre-appropriate book covers that will catch readers’ attention. We offer several different packages to fit every budget and artistic need.
+                    </p>
+                    <button className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition">
+                      Learn More
+                    </button>
+                  </div>
+                  {/* Editing Services */}
+                  <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <FaEdit className="text-4xl text-orange-600 mx-auto mb-4" />
+                    <h3 className="text-xl font-bold mb-2">Editing Services</h3>
+                    <p className="text-base leading-relaxed mb-4">
+                      After you have spent countless hours writing and revising your book, your familiarity with the text can make it difficult to pick out content and grammar errors. Our book editing team will provide comprehensive feedback, from copyediting to in-depth developmental editing.
+                    </p>
+                    <button className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition">
+                      Learn More
+                    </button>
+                  </div>
+                  {/* Marketing */}
+                  <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <FaBullhorn className="text-4xl text-orange-600 mx-auto mb-4" />
+                    <h3 className="text-xl font-bold mb-2">Marketing</h3>
+                    <p className="text-base leading-relaxed mb-4">
+                      One of the most challenging aspects of publishing is making sure that readers can find and purchase your book. We provide book marketing services that make it easy for you to share your book with a diverse audience. For example, we can design intriguing back cover text and produce a custom author website.
+                    </p>
+                    <button className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition">
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </section>
       <ContactBanner />
       <Footer />
     </div>

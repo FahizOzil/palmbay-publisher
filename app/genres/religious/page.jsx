@@ -34,7 +34,7 @@ const page = () => {
           Many people want to gain a deeper understanding of religion and spirituality. Religious books help readers learn more about their faith and inspire a closer relationship with God. These narratives also allow authors to recount their spiritual journeys.
         </p>
         <p className="text-black text-lg leading-relaxed mt-4">
-          Writing a religious book can educate readers about your beliefs and faith, offering a uniquely emotional and spiritually fulfilling experience. However, you may also face challenges. Luckily, the skilled team at Palmetto Publishing can streamline the publishing process. Our experts have extensive experience self-publishing religious books and offer a broad range of self-publishing services to help you finish and share your story.
+          Writing a religious book can educate readers about your beliefs and faith, offering a uniquely emotional and spiritually fulfilling experience. However, you may also face challenges. Luckily, the skilled team at Silver Gate Publishing can streamline the publishing process. Our experts have extensive experience self-publishing religious books and offer a broad range of self-publishing services to help you finish and share your story.
         </p>
       </section>
 

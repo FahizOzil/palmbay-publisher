@@ -1,4 +1,6 @@
+import ContactBanner from '@/app/Components/ContactBanner'
 import { font } from '@/app/Components/font/font'
+import Footer from '@/app/Components/Footer'
 import Navbar from '@/app/Components/Navbar'
 import Solutions from '@/app/Components/Solutions'
 import React from 'react'
@@ -40,6 +42,8 @@ const page = () => {
         Self-publishing makes it easier than ever to get your children’s book into the hands of young readers. The experts at Palmetto Publishing offer a range of services to help streamline the publishing process.
         </p>
       </section>
+      <ContactBanner/>
+      <Footer/>
     </div>
   )
 }

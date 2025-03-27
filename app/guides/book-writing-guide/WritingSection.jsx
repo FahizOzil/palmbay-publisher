@@ -1,9 +1,10 @@
 "use client"
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ContactBanner from '@/app/Components/ContactBanner';
 import { font } from '@/app/Components/font/font';
 import Footer from '@/app/Components/Footer';
+import ContactForm from '@/app/Components/ContactForm';
 
 const WritingSection = () => {
   // Ensure scrollToSection only runs on the client side
@@ -15,6 +16,31 @@ const WritingSection = () => {
       }
     }
   };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+    const openModal = () => {
+      setIsModalOpen(true);
+    };
+  
+    const closeModal = () => {
+      setIsModalOpen(false);
+    };
+  
+    // Close modal on "Escape" key press
+    useEffect(() => {
+      const handleEsc = (event) => {
+        if (event.key === "Escape") {
+          closeModal();
+        }
+      };
+      if (isModalOpen) {
+        window.addEventListener("keydown", handleEsc);
+      }
+      return () => {
+        window.removeEventListener("keydown", handleEsc);
+      };
+    }, [isModalOpen]);
 
   // Log to check if the component mounts
   useEffect(() => {
@@ -250,7 +276,7 @@ const WritingSection = () => {
         <div className="w-full h-fit md:w-1/4 customgreen text-white p-6 rounded-lg shadow-md 
           sticky top-24 max-h-[80vh] overflow-auto call-box flex flex-col items-center text-center">
           <h3 className="text-2xl">Get Started On Your Publishing Journey</h3>
-          <button className="mt-4 button-gradient text-black px-6 py-2 rounded-md hover:bg-yellow-400">
+          <button onClick={openModal} className="mt-4 button-gradient text-black px-6 py-2 rounded-md hover:bg-yellow-400">
             GET STARTED!
           </button>
           <p className="mt-4">Or call us</p>
@@ -261,6 +287,19 @@ const WritingSection = () => {
       {/* Add fallbacks for ContactBanner and Footer */}
       {ContactBanner ? <ContactBanner /> : <div className="text-gray-700 p-4">ContactBanner failed to load</div>}
       {Footer ? <Footer /> : <div className="text-gray-700 p-4">Footer failed to load.</div>}
+        
+        {/* Modal */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 flex justify-center items-center z-50"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+          onClick={closeModal}
+        >
+          <div className="relative" onClick={(e) => e.stopPropagation()}>
+            <ContactForm onClose={closeModal} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

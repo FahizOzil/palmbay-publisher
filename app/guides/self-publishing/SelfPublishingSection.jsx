@@ -1,9 +1,10 @@
 "use client"
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { font } from '@/app/Components/font/font';
 import ContactBanner from '@/app/Components/ContactBanner';
 import Footer from '@/app/Components/Footer';
+import ContactForm from '@/app/Components/ContactForm';
 
 const SelfPublishingSection = () => {
   // Function to handle smooth scrolling
@@ -13,6 +14,32 @@ const SelfPublishingSection = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  // Close modal on "Escape" key press
+  useEffect(() => {
+    const handleEsc = (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    };
+    if (isModalOpen) {
+      window.addEventListener("keydown", handleEsc);
+    }
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [isModalOpen]);
+
 
   return (
     <div>
@@ -443,15 +470,30 @@ const SelfPublishingSection = () => {
       <div className="w-full h-fit md:w-1/4 customgreen text-white p-6 rounded-lg shadow-md 
         sticky top-24 max-h-[80vh] overflow-auto call-box flex flex-col items-center text-center">
         <h3 className="text-2xl">Get Started On Your Publishing Journey</h3>
-        <button className="mt-4 button-gradient text-black px-6 py-2 rounded-md hover:bg-yellow-400">
-          GET STARTED!
-        </button>
+        <button
+              onClick={openModal}
+              className="mt-4 mb-12 button-gradient mx-auto text-black px-6 py-2 rounded-md hover:bg-yellow-400"
+            >
+              GET STARTED!
+            </button>
         <p className="mt-4">Or call us</p>
         <p className="text-2xl">888 408 8965</p>
       </div>
     </div>
     <ContactBanner/>
     <Footer/>
+
+    {isModalOpen && (
+        <div
+          className="fixed inset-0 flex justify-center items-center z-50"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+          onClick={closeModal}
+        >
+          <div className="relative" onClick={(e) => e.stopPropagation()}>
+            <ContactForm onClose={closeModal} />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

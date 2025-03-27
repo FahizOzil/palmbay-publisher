@@ -1,67 +1,90 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaChevronDown, FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
 import { font } from "./font/font";
 import Link from "next/link";
+import ContactForm from "./ContactForm"; // Adjust the path if necessary
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  // Close modal on "Escape" key press
+  useEffect(() => {
+    const handleEsc = (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    };
+    if (isModalOpen) {
+      window.addEventListener("keydown", handleEsc);
+    }
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [isModalOpen]);
 
   const menuItems = [
-    { 
-      title: "Publishing Services", 
+    {
+      title: "Publishing Services",
       items: [
-        { name: "Cover Design", href: "/services/cover-design" },
-        { name: "Book Editing", href: "/services/book-editing" },
-        { name: "Book Printing", href: "/services/book-printing" },
-        { name: "Audiobook Publishing", href: "/services/audiobook-publishing" },
-        { name: "Illustrations", href: "/services/illustrations" },
-        { name: "Interior Formatting", href: "/services/book-formatting" },
-        { name: "Book Distribution", href: "/services/book-distribution" },
-        { name: "Marketing", href: "/services/marketing" }
-      ]
+        { name: "Cover Design", href: "/services/cover-design", icon: "/cd-icon.png" },
+        { name: "Book Editing", href: "/services/book-editing", icon: "/ed-icon.png" },
+        { name: "Book Printing", href: "/services/book-printing", icon: "/bp-icon.png" },
+        { name: "Audiobook Publishing", href: "/services/audiobook-publishing", icon: "/ab-icon.png" },
+        { name: "Illustrations", href: "/services/illustrations", icon: "/il-icon.png" },
+        { name: "Interior Formatting", href: "/services/book-formatting", icon: "/itf-icon.png" },
+        { name: "Book Distribution", href: "/services/book-distribution", icon: "/bd-icon.webp" },
+        { name: "Marketing", href: "/services/marketing", icon: "/m.png" },
+      ],
     },
-    { 
-      title: "Guides", 
+    {
+      title: "Guides",
       items: [
-        { name: "Self-Publishing Guide", href: "/guides/self-publishing" },
-        { name: "Marketing Guide", href: "/guides/marketing-tips" },
-        { name: "Book Writing Guide", href: "/guides/book-writing-guide" }
-      ]
+        { name: "How To Self-Publish A Book: The Complete Guide", href: "/guides/self-publishing", icon: "/yellow-dress.webp" },
+        { name: "The Complete Guide To Marketing A Book", href: "/guides/marketing-tips", icon: "/book-marketing-2.jpg.webp" },
+        { name: "The Complete Guide To Writing A Book", href: "/guides/book-writing-guide", icon: "/complete.webp" },
+      ],
     },
-    { 
-      title: "About Us", 
+    {
+      title: "About Us",
       items: [
-        { name: "Our Process", href: "/about/our-process" },
-        { name: "Why Silver Gate?", href: "/about/why-silvergate" },
-        { name: "FAQs", href: "/about/faqs" },
-        { name: "Contact Us", href: "/about/contact" }
-      ]
+        { name: "Our Process", href: "/about/our-process", icon: "/op-icon.png" },
+        { name: "Why Silver Gate?", href: "/about/why-silvergate", icon: "/ws-icon.png" },
+        { name: "FAQs", href: "/about/faqs", icon: "/fa-icon.png" },
+        { name: "Contact Us", href: "/about/contact", icon: "/cu-icon.png" },
+      ],
     },
-    { 
-      title: "Genres", 
+    {
+      title: "Genres",
       items: [
-        { name: "Fiction", href: "/genres/fiction" },
-        { name: "Non-Fiction", href: "/genres/non-fiction" },
-        { name: "Business", href: "/genres/business" },
-        { name: "How-To", href: "/genres/how-to" },
-        { name: "Self Help", href: "/genres/self-help" },
-        { name: "Religious", href: "/genres/religious" },
-        { name: "Inspirational", href: "/genres/inspirational" },
-        { name: "Cook Books", href: "/genres/cook-book" },
-        { name: "Children's Books", href: "/genres/c-books" },
-        { name: "Biographies", href: "/genres/biography" },
-        { name: "Autobiographies", href: "/genres/autobiography" },
-        { name: "Art", href: "/genres/art" },
-      ]
-    }
+        { name: "Fiction", href: "/genres/fiction", icon: "/f-icon.png" },
+        { name: "Non-Fiction", href: "/genres/non-fiction", icon: "/nf-icon.png" },
+        { name: "Business", href: "/genres/business", icon: "/b-icon.png" },
+        { name: "How-To", href: "/genres/how-to", icon: "/ht-icon.png" },
+        { name: "Self Help", href: "/genres/self-help", icon: "/sh-icon.png" },
+        { name: "Religious", href: "/genres/religious", icon: "/r-icon.png" },
+        { name: "Inspirational", href: "/genres/inspirational", icon: "/i-icon.png" },
+        { name: "Cook Books", href: "/genres/cook-book", icon: "/cb-icon'.png" },
+        { name: "Children's Books", href: "/genres/c-books", icon: "/cb-icon.png" },
+        { name: "Autobiographies", href: "/genres/autobiography", icon: "/abio-icon.png" },
+        { name: "Art", href: "/genres/art", icon: "/art-icon.png" },
+      ],
+    },
   ];
 
   return (
     <nav className={`${font.className} sticky top-0 z-50 w-full text-white`}>
-      
       {/* Top Bar with Phone */}
       <div className="customgreen w-full h-10 md:h-12 flex items-center justify-center md:justify-end px-4">
         <FaPhoneAlt className="text-lg md:text-xl mr-2" />
@@ -70,7 +93,6 @@ const Navbar = () => {
 
       {/* Navbar Container */}
       <div className="custombg shadow-black shadow-sm w-full py-4 flex justify-between items-center px-6 relative">
-        
         {/* Logo */}
         <Link href={"/"}>
           <img src="/logo1.png" alt="Logo" className="w-40 cursor-pointer md:w-60 h-12 md:h-16" />
@@ -85,14 +107,30 @@ const Navbar = () => {
               </button>
 
               {/* Desktop Dropdown */}
-              <div 
+              <div
                 className="fixed left-2 mt-8 right-2 top-[calc(2.5rem+48px)] bg-white text-black shadow-lg rounded-b-md opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible"
               >
                 <div className="max-w-7xl mx-auto p-6">
                   <ul className="grid grid-cols-3 lg:grid-cols-3 gap-6">
                     {menu.items.map((item, i) => (
                       <li key={i} className="p-2 hover:bg-gray-100 rounded-md">
-                        <a href={item.href} className="block text-lg">{item.name}</a>
+                        <a
+                          href={item.href}
+                          className={`block text-lg ${
+                            menu.title === "Guides" ? "flex flex-col items-center" : "flex items-center"
+                          }`}
+                        >
+                          {item.icon && (
+                            <img
+                              src={item.icon}
+                              alt={`${item.name} icon`}
+                              className={`${
+                                menu.title === "Guides" ? "w-80 h-56 mb-2" : "w-10 h-9 mr-2"
+                              }`}
+                            />
+                          )}
+                          {item.name}
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -110,11 +148,13 @@ const Navbar = () => {
           {mobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
-        {/* Get Started Button */}
-        <button className="hidden md:block button-gradient cursor-pointer px-8 py-3 rounded-md font-bold text-black hover:bg-yellow-400">
+        {/* Get Started Button (Desktop) */}
+        <button
+          onClick={openModal}
+          className="hidden md:block button-gradient cursor-pointer px-8 py-3 rounded-md font-bold text-black hover:bg-yellow-400"
+        >
           Get Started!
         </button>
-
       </div>
 
       {/* Mobile Menu */}
@@ -129,9 +169,14 @@ const Navbar = () => {
               className="flex items-center justify-between w-full py-2 text-lg focus:outline-none"
               onClick={() => setOpenDropdown(openDropdown === index ? null : index)}
             >
-              {menu.title} <FaChevronDown className={`ml-2 transform ${openDropdown === index ? "rotate-180" : "rotate-0"} transition-transform`} />
+              {menu.title}{" "}
+              <FaChevronDown
+                className={`ml-2 transform ${
+                  openDropdown === index ? "rotate-180" : "rotate-0"
+                } transition-transform`}
+              />
             </button>
-            
+
             {/* Mobile Dropdown */}
             <div
               className={`overflow-hidden bg-gray-800 rounded-md mt-2 transition-all duration-300 ${
@@ -142,7 +187,9 @@ const Navbar = () => {
                 <ul className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                   {menu.items.map((item, i) => (
                     <li key={i} className="px-4 py-2 hover:bg-gray-700 cursor-pointer rounded-md">
-                      <a href={item.href} className="block w-full">{item.name}</a>
+                      <a href={item.href} className="block w-full">
+                        {item.name}
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -151,12 +198,27 @@ const Navbar = () => {
           </div>
         ))}
 
-        {/* Mobile Get Started Button */}
-        <button className="button-gradient cursor-pointer px-8 py-3 rounded-md font-bold text-black hover:bg-yellow-400">
+        {/* Get Started Button (Mobile) */}
+        <button
+          onClick={openModal}
+          className="button-gradient cursor-pointer px-8 py-3 rounded-md font-bold text-black hover:bg-yellow-400"
+        >
           Get Started!
         </button>
       </div>
 
+      {/* Modal */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 flex justify-center items-center z-50"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+          onClick={closeModal}
+        >
+          <div className="relative" onClick={(e) => e.stopPropagation()}>
+            <ContactForm onClose={closeModal} />
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

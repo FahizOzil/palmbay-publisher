@@ -1,5 +1,6 @@
 import React from 'react'
 import { font } from './font/font'
+import Link from 'next/link'
 
 const Process = () => {
   return (
@@ -23,9 +24,9 @@ const Process = () => {
           <p className='pt-6 text-lg md:text-xl max-w-2xl'>
             Every author’s journey is unique, which is why we offer a customizable self-publishing process that puts you in the driver’s seat.
           </p>
-          <button className="button-gradient mt-8 px-6 py-3 text-lg md:text-xl rounded-md font-bold text-black transition duration-300 hover:bg-yellow-400">
+          <Link href="/about/our-process"><button className="button-gradient mt-8 px-6 py-3 text-lg md:text-xl rounded-md font-bold text-black transition duration-300 hover:bg-yellow-400">
             Our Process!
-          </button>
+          </button></Link>
         </div>
 
       </div>

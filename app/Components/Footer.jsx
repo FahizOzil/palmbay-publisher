@@ -41,7 +41,7 @@ const Footer = () => {
             <div className="flex flex-col items-start">
               <div className="flex items-center space-x-2 mb-4">
                 <FaPhoneAlt className="text-lg" />
-                <span className="font-bold text-lg">888 408 8965</span>
+                <span className="font-bold text-lg">310 564 9107</span>
               </div>
               <div className="flex space-x-4">
                 <FaInstagram className="text-xl cursor-pointer hover:text-gray-400" />

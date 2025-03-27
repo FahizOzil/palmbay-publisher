@@ -280,7 +280,7 @@ const WritingSection = () => {
             GET STARTED!
           </button>
           <p className="mt-4">Or call us</p>
-          <p className="text-2xl">888 408 8965</p>
+          <p className="text-2xl">310 564 9107</p>
         </div>
       </div>
 

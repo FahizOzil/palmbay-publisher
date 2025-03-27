@@ -20,18 +20,14 @@ const page = () => {
           {/* Left Column: Contact Info */}
           <div>
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Contact</h2>
-            <p className="text-teal-500 mb-6">(888) 408-8965</p>
+            <p className="text-teal-500 mb-6">310 564 9107</p>
 
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Address</h2>
             <p className="text-gray-600 mb-6">
-              1501 Bell Isle Avenue<br />
-              Suite 220<br />
-              Mount Pleasant, SC 29464
+            350 South Grand Avenue<br />
+            #4200<br />
+            Los Angeles, CA 90071.
             </p>
-
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Office Hours</h2>
-            <p className="text-gray-600 mb-2">Monday-Friday: 9am to 5pm EST</p>
-            <p className="text-gray-600 mb-6">Saturday-Sunday: Closed</p>
 
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Social</h2>
             <div className="flex space-x-4">

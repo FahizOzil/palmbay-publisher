@@ -163,9 +163,7 @@ const page = () => {
                     <p className="text-base leading-relaxed mb-4">
                       We create genre-appropriate book covers that will catch readers’ attention. We offer several different packages to fit every budget and artistic need.
                     </p>
-                    <button className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition">
-                      Learn More
-                    </button>
+                    
                   </div>
                   {/* Editing Services */}
                   <div className="bg-white p-6 rounded-lg shadow-lg text-center">
@@ -174,9 +172,7 @@ const page = () => {
                     <p className="text-base leading-relaxed mb-4">
                       After you have spent countless hours writing and revising your book, your familiarity with the text can make it difficult to pick out content and grammar errors. Our book editing team will provide comprehensive feedback, from copyediting to in-depth developmental editing.
                     </p>
-                    <button className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition">
-                      Learn More
-                    </button>
+                    
                   </div>
                   {/* Marketing */}
                   <div className="bg-white p-6 rounded-lg shadow-lg text-center">
@@ -185,9 +181,7 @@ const page = () => {
                     <p className="text-base leading-relaxed mb-4">
                       One of the most challenging aspects of publishing is making sure that readers can find and purchase your book. We provide book marketing services that make it easy for you to share your book with a diverse audience. For example, we can design intriguing back cover text and produce a custom author website.
                     </p>
-                    <button className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition">
-                      Learn More
-                    </button>
+                    
                   </div>
                 </div>
               </section>

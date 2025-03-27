@@ -195,7 +195,7 @@ const ContactForm = ({ onClose }) => {
 
       {/* Contact Info */}
       <p className="mt-4 text-lg text-center">Or Give Us A Call At</p>
-      <p className="text-xl mt-1 font-bold tracking-wider text-center">888 408 8965</p>
+      <p className="text-xl mt-1 font-bold tracking-wider text-center">310 564 9107</p>
     </div>
   );
 };

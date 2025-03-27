@@ -1,11 +1,41 @@
+"use client";
+
 import ContactBanner from '@/app/Components/ContactBanner';
 import { font } from '@/app/Components/font/font';
 import Footer from '@/app/Components/Footer';
 import Navbar from '@/app/Components/Navbar';
 import Solutions from '@/app/Components/Solutions';
 import React from 'react';
+import { useState, useEffect } from 'react';
+import ContactForm from '@/app/Components/ContactForm';
 
 const page = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  // Close modal on "Escape" key press
+  useEffect(() => {
+    const handleEsc = (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    };
+    if (isModalOpen) {
+      window.addEventListener("keydown", handleEsc);
+    }
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [isModalOpen]);
+
   return (
     <div className={`${font.className} min-h-screen flex flex-col`}>
       <Navbar />
@@ -343,7 +373,7 @@ const page = () => {
           <p className="text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
             Self-publishing a self-help book can be challenging, but the potential benefits make it worth your while. Partnering with a professional publishing company like Silver Gate Publishing allows you to focus on what you do best — writing. We take care of the editing, formatting, printing, and marketing processes for you so you can reap the rewards of your written work.
           </p>
-          <button className="button-gradient text-black font-semibold py-3 px-6 rounded-md hover:bg-[#b8972f] transition-colors">
+          <button onClick={openModal} className="button-gradient text-black font-semibold py-3 px-6 rounded-md hover:bg-[#b8972f] transition-colors">
             Get Started!
           </button>
         </div>
@@ -351,6 +381,18 @@ const page = () => {
 
       <ContactBanner />
       <Footer />
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 flex justify-center items-center z-50"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+          onClick={closeModal}
+        >
+          <div className="relative" onClick={(e) => e.stopPropagation()}>
+            <ContactForm onClose={closeModal} />
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };

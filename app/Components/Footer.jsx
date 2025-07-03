@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
 
           <div className="flex flex-col items-start">
-            <img src="/logo1.png" alt="Logo" className="w-60 mb-4" />
+            <img src="/logo-2.png" alt="Logo" className="w-60 mb-4" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 text-sm text-left">
@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
 
         <div className=" pt-16 text-xl text-left text-gray-400">
-          © 2025 Silver Gate Publishing. All rights reserved.
+          © 2025 Palm Bay Publishing. All rights reserved.
         </div>
       </div>
     </footer>

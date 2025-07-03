@@ -38,7 +38,7 @@ const Culture = () => {
                 <div className='flex pl-4 pt-0'>
                     <div className='flex flex-col'>
                         <h1 className='text-teal-700 text-4xl'>50%</h1>
-                        <p className='w-40'>Of Silver Gate Publishing Employees are pet owners</p>
+                        <p className='w-40'>Of Palm Bay Publishing Employees are pet owners</p>
                     </div>
                     <img src='/culture3.webp' className='h-24 pr-2 w-40'/>
                 </div>

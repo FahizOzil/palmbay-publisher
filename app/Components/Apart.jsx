@@ -7,18 +7,18 @@ const Apart = () => {
       {/* Background Image - NO Overlapping */}
       <div className="relative w-full min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('/whitewood.png')" }}>
         <div className="relative w-full h-full flex flex-col justify-center items-center text-black px-4 py-16">
-          
+
           {/* Section Title */}
           <h1 className="text-3xl md:text-5xl text-center font-bold">What Sets Us Apart</h1>
           <hr className="w-24 md:w-32 mt-6 border-2 border-yellow-600" />
-          
+
           <p className="pt-6 text-lg md:text-xl max-w-xl md:max-w-2xl text-center">
-            At Silver Gate Publishing, we put authors first and strive to give you the best publishing experience possible. By working with us, you’re guaranteed:
+            At Palm Bay Publishing, we put authors first and strive to give you the best publishing experience possible. By working with us, you’re guaranteed:
           </p>
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 px-4">
-            
+
             {/* Card 1 */}
             <div className="bg-white flex flex-col md:flex-row rounded-tl-4xl rounded-br-4xl p-6 md:p-8 shadow-lg">
               <div className="md:w-[50%] flex flex-col text-center md:text-left">

@@ -56,20 +56,20 @@ const Hero = () => {
 
   return (
     <div className={`${font.className} flex flex-col md:flex-row text-white justify-center items-center py-12 px-6 md:px-16 custombg`}>
-      
+
       {/* Left Section (Image & Text) */}
       <div className="w-full md:w-1/2 flex flex-col items-center text-center md:text-left">
-        <img 
-          src="/Books-covers.png.webp" 
+        <img
+          src="/Books-covers.png.webp"
           alt="Books Covers"
           className="w-full max-w-md md:max-w-lg object-cover"
         />
         <h1 className="text-3xl md:text-5xl mt-6 font-semibold leading-tight">
-          Bring Your Publishing Dream to Life with Silver Gate
+          Bring Your Publishing Dream to Life with Palm Bay
         </h1>
         <p className="mt-4 text-lg max-w-md md:max-w-lg">
-          Silver Gate Publishing empowers you to publish your words, your way. 
-          Our independent authors maintain full creative control, keep 100% of royalties, 
+          Palm Bay Publishing empowers you to publish your words, your way.
+          Our independent authors maintain full creative control, keep 100% of royalties,
           and have a dedicated publishing consultant and project manager to guide you every step of the journey.
         </p>
       </div>
@@ -77,7 +77,7 @@ const Hero = () => {
       {/* Right Section (Form) */}
       <div className="w-full md:w-1/2 flex flex-col items-center mt-10 md:mt-0">
         <div className="customgreen w-full max-w-md rounded-br-4xl rounded-tl-4xl py-8 px-6 md:px-8 flex flex-col items-center">
-          
+
           <h1 className="text-2xl md:text-3xl text-center">
             {step === 1 ? 'Start Publishing Today!' : 'Start Your Publishing Journey'}
           </h1>

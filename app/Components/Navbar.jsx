@@ -60,7 +60,7 @@ const Navbar = () => {
       title: "About Us",
       items: [
         { name: "Our Process", href: "/about/our-process", icon: "/op-icon.png" },
-        { name: "Why Silver Gate?", href: "/about/why-silvergate", icon: "/ws-icon.png" },
+        { name: "Why Palm Bay?", href: "/about/why-silvergate", icon: "/ws-icon.png" },
         { name: "FAQs", href: "/about/faqs", icon: "/fa-icon.png" },
         { name: "Contact Us", href: "/about/contact", icon: "/cu-icon.png" },
       ],
@@ -95,7 +95,7 @@ const Navbar = () => {
       <div className="custombg shadow-black shadow-sm w-full py-4 flex justify-between items-center px-6 relative">
         {/* Logo */}
         <Link href={"/"}>
-          <img src="/logo1.png" alt="Logo" className="w-40 cursor-pointer md:w-60 h-12 md:h-16" />
+          <img src="/logo-2.png" alt="Logo" className="w-40 cursor-pointer md:w-60 h-12 md:h-16" />
         </Link>
 
         {/* Desktop Menu */}

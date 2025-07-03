@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Process = () => {
   return (
     <div className={`${font.className} relative mt-12 w-full`}>
-      
+
       {/* Background Image */}
       <img src='/whitewood.png' className='w-full h-[25rem] object-cover' alt="Background" />
 
@@ -19,7 +19,7 @@ const Process = () => {
 
         {/* Right: Text & Button */}
         <div className='w-full md:w-[50%] flex flex-col items-center justify-center text-center px-4'>
-          <h1 className='text-3xl md:text-5xl font-bold'>The Silver Gate Process</h1>
+          <h1 className='text-3xl md:text-5xl font-bold'>The Palm Bay Process</h1>
           <hr className="w-24 md:w-32 mt-6 border-2 border-yellow-600" />
           <p className='pt-6 text-lg md:text-xl max-w-2xl'>
             Every author’s journey is unique, which is why we offer a customizable self-publishing process that puts you in the driver’s seat.
@@ -30,7 +30,7 @@ const Process = () => {
         </div>
 
       </div>
-      
+
     </div>
   )
 }

@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className=" pt-16 text-xl text-left text-gray-400">
+        <div className="text-xl text-left text-gray-400">
           © 2025 Palm Bay Publishing. All rights reserved.
         </div>
       </div>

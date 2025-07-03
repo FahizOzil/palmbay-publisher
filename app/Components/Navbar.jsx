@@ -95,7 +95,7 @@ const Navbar = () => {
       <div className="custombg shadow-black shadow-sm w-full py-4 flex justify-between items-center px-6 relative">
         {/* Logo */}
         <Link href={"/"}>
-          <img src="/logo-2.png" alt="Logo" className="w-40 cursor-pointer md:w-60 h-12 md:h-16" />
+          <img src="/logo-2.png" alt="Logo" className="w-40 cursor-pointer md:w-[150px] h-12 md:h-24" />
         </Link>
 
         {/* Desktop Menu */}

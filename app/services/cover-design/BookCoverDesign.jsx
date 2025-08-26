@@ -8,8 +8,8 @@ const BookCoverDesign = () => {
         <h1 className='text-3xl mt-10 md:text-5xl text-center'>Professional Book Cover Designs</h1>
 
         {/* Ensure h2 starts immediately below h1 */}
-        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Silver Gate Cover</h2>
-        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>Our Silver Gate Cover service is a clean and minimalistic design for genres like poetry, business, or religion, where emphasizing the text is paramount. It’s also a great choice for authors using existing artwork from a third-party designer or illustrator. This service option assumes minimal photo editing work but still packs a punch and effectively conveys your book’s tone to potential readers. </p>
+        <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Palm Bay Cover</h2>
+        <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>Our Palm Bay Cover service is a clean and minimalistic design for genres like poetry, business, or religion, where emphasizing the text is paramount. It’s also a great choice for authors using existing artwork from a third-party designer or illustrator. This service option assumes minimal photo editing work but still packs a punch and effectively conveys your book’s tone to potential readers. </p>
 
         <h2 className="mt-12 pl-28 text-left w-full green-text text-3xl max-w-[70%]">Custom Cover</h2>
         <p className='mt-2 pl-28 text-left w-full text-xl max-w-[70%]'>Our Custom Cover service is appropriate for all genres and offers more choice and flexibility. This service is our most popular option, giving our authors more creative freedom to choose between two unique concepts. Your book is one of a kind, and we want the same for your cover! With our talented designers and collaborative approach, we’ll bring your book to life with a cover that matches your vision. </p>

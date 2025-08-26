@@ -11,7 +11,7 @@ const Footer = () => {
 
           <div className="flex flex-col items-start">
             <img src="/logo-2.png" alt="Logo" className="w-60 mb-4" />
-          </div>
+          </div>    
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 text-sm text-left">
             <div className="text-xl">
@@ -41,7 +41,7 @@ const Footer = () => {
             <div className="flex flex-col items-start">
               <div className="flex items-center space-x-2 mb-4">
                 <FaPhoneAlt className="text-lg" />
-                <span className="font-bold text-lg">310 564 9107</span>
+                <a href="tel:+850 588-0888"><span className="font-bold text-lg">850 588-0888</span></a>
               </div>
               <div className="flex space-x-4">
                 <FaInstagram className="text-xl cursor-pointer hover:text-gray-400" />

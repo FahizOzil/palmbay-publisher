@@ -5,7 +5,7 @@ const Numbers = () => {
     <div className="w-full py-16 bg-cover bg-center" style={{ backgroundImage: "url('/whitewood.png')" }}>
       {/* Title */}
       <h2 className="text-center text-4xl md:text-5xl font-serif text-gray-800 mb-8">
-        Silver Gate Publishing by the Numbers
+        Palm Bay Publishing by the Numbers
       </h2>
       {/* Underline */}
       <div className="w-16 h-1 bg-yellow-600 mx-auto mb-12"></div>

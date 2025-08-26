@@ -53,14 +53,14 @@ const page = () => {
             Share your wisdom and grow your brand with industry specific books.
           </h2>
           <p className="text-lg md:text-xl text-center mt-2 max-w-3xl">
-            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Silver Gate Publishing to guide you along the way.
+            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Palm Bay Publishing to guide you along the way.
           </p>
         </div>
       </div>
 
       <section className="mb-12 mt-12 px-14">
         <p className="text-black text-lg leading-relaxed">
-          Share your wisdom and grow your brand by publishing How-To books. Silver Gate Publishing is the perfect partner for writers of all levels of experience. We help authors find self-publishing success and are proud of our work with clients who’ve published books.
+          Share your wisdom and grow your brand by publishing How-To books. Palm Bay Publishing is the perfect partner for writers of all levels of experience. We help authors find self-publishing success and are proud of our work with clients who’ve published books.
         </p>
         <p className="text-black text-lg leading-relaxed mt-4">
           Take advantage of our expertise at any stage of the writing journey. We believe you have something important to say. And we can’t wait to hear it and help you share it with the world.
@@ -82,10 +82,10 @@ const page = () => {
             Books in the self-help genre are popular choices for readers everywhere, bringing assistance and advice to numerous aspects of life. From mental health to finance books, self-help books bring real insight that readers can apply to their everyday lives, helping them reach their goals, overcome challenges, and more. Writing and publishing a self-help book is a challenging yet rewarding process, with the potential to help thousands of people and help you grow your career.
           </p>
           <p className="text-lg leading-relaxed mb-4">
-            While self-publishing a self-help book have many benefits, including total creative control, it can be hard to know where to start. Luckily, Silver Gate Publishing offers numerous publishing services for independent authors to guide them through the entire book publishing process.
+            While self-publishing a self-help book have many benefits, including total creative control, it can be hard to know where to start. Luckily, Palm Bay Publishing offers numerous publishing services for independent authors to guide them through the entire book publishing process.
           </p>
           <p className="text-lg leading-relaxed">
-            Read on to learn more about the self-help book genre, as well as how to publish self-help books and an overview of the industry-leading publishing services that Silver Gate Publishing offers.
+            Read on to learn more about the self-help book genre, as well as how to publish self-help books and an overview of the industry-leading publishing services that Palm Bay Publishing offers.
           </p>
 
           {/* Decorative Elements on the Right */}
@@ -268,7 +268,7 @@ const page = () => {
                 <li>Marketing your book</li>
               </ul>
               <p className="text-lg leading-relaxed">
-                Self-help books are usually self-published, which is a great way new authors to start their careers and reach niche audiences. Independent authors can follow these steps for self-publishing themselves or partner with experts to guide them through the process. Working with a professional publishing company like Silver Gate Publishing ensures your self-help book stands out from genre competitors.
+                Self-help books are usually self-published, which is a great way new authors to start their careers and reach niche audiences. Independent authors can follow these steps for self-publishing themselves or partner with experts to guide them through the process. Working with a professional publishing company like Palm Bay Publishing ensures your self-help book stands out from genre competitors.
               </p>
             </div>
           </div>
@@ -312,51 +312,51 @@ const page = () => {
         </div>
       </section>
 
-      {/* "How Silver Gate Can Help" Section */}
+      {/* "How Palm Bay Can Help" Section */}
       <section className="py-12 bg-white text-black">
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold text-center relative mb-6">
-            How Silver Gate Can Help
+            How Palm Bay Can Help
             <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-10px] w-12 h-0.5 bg-[#d4af37]"></span>
           </h1>
           <p className="text-lg text-center mb-10 max-w-4xl mx-auto">
-            Self-publishing your self-help book can be challenging because there are so many steps to get it just right. Not only do you have to write your book, but you must also learn how to format, print, and advertise it. Working with a professional publishing company like Silver Gate Publishing takes you through each of these steps with ease, helping your book succeed. Take a look at our industry-leading publishing services below to learn how we can help get your book into the hands of your readers fast.
+            Self-publishing your self-help book can be challenging because there are so many steps to get it just right. Not only do you have to write your book, but you must also learn how to format, print, and advertise it. Working with a professional publishing company like Palm Bay Publishing takes you through each of these steps with ease, helping your book succeed. Take a look at our industry-leading publishing services below to learn how we can help get your book into the hands of your readers fast.
           </p>
           <div className="space-y-6">
             <div>
               <h2 className="text-xl green-text font-semibold">Writing:</h2>
               <p className="text-base mt-4">
-                Silver Gate Publishing supports you right from the start. We provide countless free writing resources to guide you through the writing process for any genre, including self-help books. You can find helpful information on content writing, organization, storytelling, plot development, working through writer’s block, and so much more. Our guide, “Book Writing Process 101,” is a great place to start, as it provides many helpful tips for becoming a better writer.
+                Palm Bay Publishing supports you right from the start. We provide countless free writing resources to guide you through the writing process for any genre, including self-help books. You can find helpful information on content writing, organization, storytelling, plot development, working through writer’s block, and so much more. Our guide, “Book Writing Process 101,” is a great place to start, as it provides many helpful tips for becoming a better writer.
               </p>
             </div>
             <div>
               <h2 className="text-xl green-text font-semibold">Editing:</h2>
               <p className="text-base mt-4">
-                Calling on a second pair of eyes to edit your book is essential for a self-published author. Silver Gate provides book editing services to refine your self-help book. With this service, our team of professional editors will polish your work, checking for grammar, cohesion, tone, and typos, and assessing your work compared to market research for your genre.
+                Calling on a second pair of eyes to edit your book is essential for a self-published author. Palm Bay provides book editing services to refine your self-help book. With this service, our team of professional editors will polish your work, checking for grammar, cohesion, tone, and typos, and assessing your work compared to market research for your genre.
               </p>
             </div>
             <div>
               <h2 className="text-xl green-text font-semibold">Cover Design:</h2>
               <p className="text-base mt-4">
-                It’s no secret that people judge books by their covers — literally. Having an eye-catching cover on your self-help book is essential to reach more readers, and working with an expert cover designer can help. Silver Gate’s cover design services help authors create the perfect covers for their finished works, with consultations, revisions, and premium stock images included.
+                It’s no secret that people judge books by their covers — literally. Having an eye-catching cover on your self-help book is essential to reach more readers, and working with an expert cover designer can help. Palm Bay’s cover design services help authors create the perfect covers for their finished works, with consultations, revisions, and premium stock images included.
               </p>
             </div>
             <div>
               <h2 className="text-xl green-text font-semibold">Interior Formatting:</h2>
               <p className="text-base mt-4">
-                Interior formatting is what makes your book look professional and legible, so it’s important to get it right. Silver Gate’s interior formatting services ensure your self-help book is up to the genre’s standards. We offer à la carte services for your unique formatting needs, from e-books to custom formatting packages.
+                Interior formatting is what makes your book look professional and legible, so it’s important to get it right. Palm Bay’s interior formatting services ensure your self-help book is up to the genre’s standards. We offer à la carte services for your unique formatting needs, from e-books to custom formatting packages.
               </p>
             </div>
             <div>
               <h2 className="text-xl green-text font-semibold">Illustrations:</h2>
               <p className="text-base mt-4">
-                Silver Gate’s book illustration services are excellent for self-publishers who are looking to bring their stories to life. With this service, authors can choose from a variety of in-house illustrators to match their ideal artists. After consultations and revisions, the completed work is ready to be added to your page(s).
+                Palm Bay’s book illustration services are excellent for self-publishers who are looking to bring their stories to life. With this service, authors can choose from a variety of in-house illustrators to match their ideal artists. After consultations and revisions, the completed work is ready to be added to your page(s).
               </p>
             </div>
             <div>
               <h2 className="text-xl green-text font-semibold">Printing:</h2>
               <p className="text-base mt-4">
-                Once your self-help book is ready, it’s time to get it into your readers’ hands. Silver Gate Publishing takes pride in printing the highest quality books and providing a seamless, exceptional printing experience for independent authors, bringing your words to life on the canvas of a professionally printed book.
+                Once your self-help book is ready, it’s time to get it into your readers’ hands. Palm Bay Publishing takes pride in printing the highest quality books and providing a seamless, exceptional printing experience for independent authors, bringing your words to life on the canvas of a professionally printed book.
               </p>
             </div>
           </div>
@@ -371,7 +371,7 @@ const page = () => {
             <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-10px] w-12 h-0.5 bg-[#d4af37]"></span>
           </h1>
           <p className="text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
-            Self-publishing a self-help book can be challenging, but the potential benefits make it worth your while. Partnering with a professional publishing company like Silver Gate Publishing allows you to focus on what you do best — writing. We take care of the editing, formatting, printing, and marketing processes for you so you can reap the rewards of your written work.
+            Self-publishing a self-help book can be challenging, but the potential benefits make it worth your while. Partnering with a professional publishing company like Palm Bay Publishing allows you to focus on what you do best — writing. We take care of the editing, formatting, printing, and marketing processes for you so you can reap the rewards of your written work.
           </p>
           <button onClick={openModal} className="button-gradient text-black font-semibold py-3 px-6 rounded-md hover:bg-[#b8972f] transition-colors">
             Get Started!

@@ -40,14 +40,14 @@ const DesignServices = () => {
         *Our cover design services are automatically formatted for paperback books. Additional fees are required for converting to hardcover and/or e-book.
       </p>
       <div className="flex flex-col md:space-x-8 md:flex-row mt-16 justify-center items-center">
-        <img data-aos="fade-right" src="/cover1.webp" className="w-96 h-96" alt="Silver Gate Cover" />
+        <img data-aos="fade-right" src="/cover1.webp" className="w-96 h-96" alt="Palm Bay Cover" />
         <div className="flex flex-col justify-start items-start p-2">
           <h1 data-aos="fade-left" className="text-3xl md:text-5xl mt-6 md:max-w-xl text-left">
-            Silver Gate Cover
+            Palm Bay Cover
           </h1>
-          <p data-aos="fade-up" className="green-text text-3xl md:max-w-xl mt-4 text-left">
+          {/* <p data-aos="fade-up" className="green-text text-3xl md:max-w-xl mt-4 text-left">
             Starting at $599
-          </p>
+          </p> */}
           <div className="space-y-2 mt-4 text-xl text-left">
             <p data-aos="fade-up-right">
               <span className="green-text">•</span> 1 Cover concept with front, spine, and back design
@@ -75,9 +75,9 @@ const DesignServices = () => {
           <h1 data-aos="fade-left" className="text-3xl md:text-5xl mt-6 md:max-w-xl text-left">
             Custom Cover
           </h1>
-          <p data-aos="fade-up" className="green-text text-3xl md:max-w-xl mt-4 text-left">
+          {/* <p data-aos="fade-up" className="green-text text-3xl md:max-w-xl mt-4 text-left">
             Starting at $699
-          </p>
+          </p> */}
           <div className="space-y-2 mt-4 text-xl text-left">
             <p data-aos="fade-up-right">
               <span className="green-text">•</span> 2 Cover concepts with front, spine, and back design
@@ -107,9 +107,9 @@ const DesignServices = () => {
           <h1 data-aos="fade-left" className="text-3xl md:text-5xl mt-6 md:max-w-xl text-left">
             Complex Cover
           </h1>
-          <p data-aos="fade-up" className="green-text text-3xl md:max-w-xl mt-4 text-left">
+          {/* <p data-aos="fade-up" className="green-text text-3xl md:max-w-xl mt-4 text-left">
             Starting at $899
-          </p>
+          </p> */}
           <div className="space-y-2 mt-4 text-xl text-left">
             <p data-aos="fade-up-right">
               <span className="green-text">•</span> 3 Cover concepts with front, spine, and back design
@@ -137,9 +137,9 @@ const DesignServices = () => {
           <h1 data-aos="fade-left" className="text-3xl md:text-5xl mt-6 md:max-w-xl text-left">
             Illustrated Cover
           </h1>
-          <p data-aos="fade-up" className="green-text text-3xl md:max-w-xl mt-4 text-left">
+          {/* <p data-aos="fade-up" className="green-text text-3xl md:max-w-xl mt-4 text-left">
             Starting at $899
-          </p>
+          </p> */}
           <div className="space-y-2 mt-4 text-xl text-left">
             <p data-aos="fade-up-right">
               <span className="green-text">•</span> 1 Cover concept & Illustration with front, spine, and back design

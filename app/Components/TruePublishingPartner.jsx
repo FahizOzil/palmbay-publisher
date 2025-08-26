@@ -23,7 +23,7 @@ const TruePublishingPartner = () => {
       </p>
       <p className="text-xl pt-8 max-w-5xl text-center">
         It’s time to share your work with the world. Contact Palm Bay Publishing through the button below or call us at{' '}
-        <span className="text-xl font-bold">310 564 9107</span> to begin your publishing journey today!
+        <span className="text-xl font-bold">850 588-0888</span> to begin your publishing journey today!
       </p>
       <button
         onClick={openModal}

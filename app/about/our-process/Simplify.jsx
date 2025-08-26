@@ -15,14 +15,14 @@ const Simplify = () => {
     
             {/* Heading */}
             <h1 className="text-4xl md:text-5xl mt-8 font-bold text-center">
-            How Silver Gate Simplifies the Process
+            How Palm Bay Simplifies the Process
             </h1>
 
             <p className="mt-6 text-lg md:text-2xl max-w-4xl text-center tracking-wide leading-relaxed">
-            At Silver Gate, we understand that self-publishing can be overwhelming. That’s why we’ve developed a streamlined process to simplify the experience for our authors. By setting our authors up with a dedicated publishing consultant & project manager, a personalized publishing plan, and organizing regular check-ins and digital proofs, we ensure they are fully guided through the process, even as they keep complete creative control.
+            At Palm Bay, we understand that self-publishing can be overwhelming. That’s why we’ve developed a streamlined process to simplify the experience for our authors. By setting our authors up with a dedicated publishing consultant & project manager, a personalized publishing plan, and organizing regular check-ins and digital proofs, we ensure they are fully guided through the process, even as they keep complete creative control.
             </p>
             <p className="mt-6 text-lg md:text-2xl max-w-4xl text-center tracking-wide leading-relaxed">
-            Ready to get started on your self-publishing journey with Silver Gate? Contact us today to connect with a publishing consultant and learn more about how we can help bring your book to life. We’re excited to work with you!
+            Ready to get started on your self-publishing journey with Palm Bay? Contact us today to connect with a publishing consultant and learn more about how we can help bring your book to life. We’re excited to work with you!
             </p>
     
           </div>

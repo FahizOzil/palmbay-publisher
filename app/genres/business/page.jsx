@@ -23,14 +23,14 @@ const page = () => {
             Business Genre Book Publishing
           </h1>
           <p className="text-lg md:text-xl text-center mt-4 max-w-3xl">
-            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Silver Gate Publishing to guide you along the way.
+            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Palm Bay Publishing to guide you along the way.
           </p>
         </div>
       </div>
 
       <section className="mb-12 mt-12 px-14">
         <p className="text-black text-lg leading-relaxed">
-          Share your wisdom and grow your brand by publishing business books. Silver Gate Publishing is the perfect partner for writers of all levels of experience. We help authors find self-publishing success and are proud of our work with clients who’ve published business books.
+          Share your wisdom and grow your brand by publishing business books. Palm Bay Publishing is the perfect partner for writers of all levels of experience. We help authors find self-publishing success and are proud of our work with clients who’ve published business books.
         </p>
         <p className="text-black text-lg leading-relaxed mt-4">
           Take advantage of our expertise at any stage of the writing journey. We believe you have something important to say. And we can’t wait to hear it and help you share it with the world.
@@ -175,18 +175,18 @@ const page = () => {
         </div>
       </div>
 
-      {/* How Silver Gate Publishing Can Help You Master the Business Genre Section */}
+      {/* How Palm Bay Publishing Can Help You Master the Business Genre Section */}
       <div className="w-full min-h-[40rem] bg-white py-12">
         <div className="flex flex-col justify-center items-center text-black px-4 md:px-8">
           {/* Heading and Underline */}
           <h2 className="text-4xl md:text-5xl font-bold text-center text-[#1A2A44]">
-            How Silver Gate Publishing Can Help You Master the Business Genre
+            How Palm Bay Publishing Can Help You Master the Business Genre
           </h2>
           <div className="w-16 h-1 bg-[#D4AF37] mt-4"></div>
 
           {/* Paragraph */}
           <p className="text-lg md:text-xl text-center mt-6 max-w-3xl">
-            We help you whether you’re just starting a project or are in the final stages of your book. We’re here to help you master the business genre. Work with Silver Gate Publishing to take your business book from concept to reality. We have the expertise to help you succeed.
+            We help you whether you’re just starting a project or are in the final stages of your book. We’re here to help you master the business genre. Work with Palm Bay Publishing to take your business book from concept to reality. We have the expertise to help you succeed.
           </p>
 
           {/* List with Icons */}
@@ -272,7 +272,7 @@ const page = () => {
               <FaEye className="text-[#00C4B4] text-3xl mr-4 mt-1" />
                 <h3 className="text-xl font-bold mt-2 text-[#00C4B4]">Book Formatting</h3>
                 <p className="text-lg mt-2">
-                  Your book needs to be formatted from the first page to the last. A Silver Gate Publishing book layout ensures that your book will be formatted correctly. We can help you with:
+                  Your book needs to be formatted from the first page to the last. A Palm Bay Publishing book layout ensures that your book will be formatted correctly. We can help you with:
                 </p>
                 <ul className="mt-2 space-y-2 text-lg">
                   <li className="flex items-start">
@@ -296,7 +296,7 @@ const page = () => {
               <FaPrint className="text-[#00C4B4] text-3xl mr-4 mt-1" />
                 <h3 className="text-xl font-bold mt-2 text-[#00C4B4]">Book Printing</h3>
                 <p className="text-lg mt-2">
-                  Silver Gate Publishing partners with high-quality printers for the best print-on-demand publishing. We can help you with the option of printing your book in hardcover or softcover. We can help you with:
+                  Palm Bay Publishing partners with high-quality printers for the best print-on-demand publishing. We can help you with the option of printing your book in hardcover or softcover. We can help you with:
                 </p>
                 <ul className="mt-2 space-y-2 text-lg">
                   <li className="flex items-start">

@@ -16,7 +16,7 @@ const page = () => {
         <div className="absolute inset-0 flex flex-col justify-center items-center text-black px-4 text-center">
           <p className="text-3xl md:text-6xl">Audio Book Services</p>
           <p className="pt-4 text-md md:text-xl max-w-3xl">
-          Silver Gate offers an audiobook self-publishing service that helps authors successfully transform their written works into engaging, professionally narrated audiobooks. Learn more about our service below and how an audiobook can benefit your readers.
+          Palm Bay offers an audiobook self-publishing service that helps authors successfully transform their written works into engaging, professionally narrated audiobooks. Learn more about our service below and how an audiobook can benefit your readers.
           </p>
           {/* <p className="pt-8 text-xl italic max-w-3xl">*Cover Design and Interior Formatting are required services.</p>    */}
           <button className="mt-8 button-gradient cursor-pointer px-8 py-3 rounded-md font-bold text-black hover:bg-yellow-400">

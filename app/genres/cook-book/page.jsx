@@ -23,7 +23,7 @@ const page = () => {
             Share your wisdom and grow your brand with industry specific books.
           </h2>
           <p className="text-lg md:text-xl text-center mt-2 max-w-3xl">
-            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Silver Gate Publishing to guide you along the way.
+            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Palm Bay Publishing to guide you along the way.
           </p>
         </div>
       </div>
@@ -39,7 +39,7 @@ const page = () => {
           If you’re an avid baker or cook, writing and publishing a cookbook can allow you to share your yummy creations with food-loving readers. However, the cookbook genre poses unique challenges for aspiring writers. You’ll need the right recipes, marketing campaign, photography, and publishing company to succeed in this competitive genre.
         </p>
         <p className="text-black text-center max-w-4xl text-lg leading-relaxed mt-4">
-          Fortunately, you don’t have to do everything alone. The experts at Silver Gate Publishing have extensive experience helping authors self-publish cookbooks. We can help you take your cookbook from a beginning concept to a mouthwatering final product.
+          Fortunately, you don’t have to do everything alone. The experts at Palm Bay Publishing have extensive experience helping authors self-publish cookbooks. We can help you take your cookbook from a beginning concept to a mouthwatering final product.
         </p>
       </section>
 
@@ -129,16 +129,16 @@ const page = () => {
         </div>
       </section>
 
-      {/* Section: Why Publish with Silver Gate Publishing? */}
+      {/* Section: Why Publish with Palm Bay Publishing? */}
       <section className="py-12 px-14 custombg text-white">
         <div className="flex flex-col md:flex-row items-start">
           {/* Text Content */}
           <div className="md:w-1/2 p-6">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Why Publish with Silver Gate Publishing?
+              Why Publish with Palm Bay Publishing?
             </h2>
             <p className="text-lg leading-relaxed">
-              When you choose to self-publish with Silver Gate Publishing, you’re not just getting help with the printing process — we guide you through your entire publishing journey. We can help you publish your cookbook in both printed and e-book formats, letting you reach every type of reader. With us, you can distribute your book across all major online platforms like Amazon, Apple Books, and Barnes & Noble, making it easy for readers to find and purchase it in the format they prefer.
+              When you choose to self-publish with Palm Bay Publishing, you’re not just getting help with the printing process — we guide you through your entire publishing journey. We can help you publish your cookbook in both printed and e-book formats, letting you reach every type of reader. With us, you can distribute your book across all major online platforms like Amazon, Apple Books, and Barnes & Noble, making it easy for readers to find and purchase it in the format they prefer.
             </p>
           </div>
           {/* Image */}

@@ -19,7 +19,7 @@ const Alli = () => {
             </h1>
 
             <p className="mt-6 text-lg md:text-2xl max-w-4xl text-center tracking-wide leading-relaxed">
-            Silver Gate Publishing has been thoroughly vetted by the Alliance of Independent Authors (ALLi). Our services have received an “Excellent (Partner Member)” rating from ALLi, endorsing the high quality of our services and the ethical standards of our business practices. Learn more about ALLi’s self-publishing industry standards here.
+            Palm Bay Publishing has been thoroughly vetted by the Alliance of Independent Authors (ALLi). Our services have received an “Excellent (Partner Member)” rating from ALLi, endorsing the high quality of our services and the ethical standards of our business practices. Learn more about ALLi’s self-publishing industry standards here.
             </p>
     
           </div>

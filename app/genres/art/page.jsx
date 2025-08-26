@@ -24,7 +24,7 @@ const page = () => {
             Share your wisdom and grow your brand with industry specific books.
           </h2>
           <p className="text-lg md:text-xl text-center mt-2 max-w-3xl">
-            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Silver Gate Publishing to guide you along the way.
+            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Palm Bay Publishing to guide you along the way.
           </p>
         </div>
       </div>
@@ -35,7 +35,7 @@ const page = () => {
           The art and photography genre provides a wonderful outlet for artists to showcase their work. Art and photography books come in various forms, with some containing in-depth knowledge of art history, while others exist simply for stylish additions to coffee tables. Publishing an art or photography book comes with unique requirements and strategies for ensuring the book’s success.
         </p>
         <p className="text-black text-center max-w-4xl text-lg leading-relaxed mt-4">
-          Self-publishing brings numerous benefits to authors, but completing this process alone has challenges. Silver Gate Publishing strives to help authors successfully self-publish with the assistance of our book editing, formatting, cover design, and marketing services. Read on to learn more about the art and photography genre, publishing an art book, and how you can self-publish the right way.
+          Self-publishing brings numerous benefits to authors, but completing this process alone has challenges. Palm Bay Publishing strives to help authors successfully self-publish with the assistance of our book editing, formatting, cover design, and marketing services. Read on to learn more about the art and photography genre, publishing an art book, and how you can self-publish the right way.
         </p>
       </section>
 
@@ -111,7 +111,7 @@ const page = () => {
             Every genre has its unique must-haves and successful publishing strategies, including the art and photography genre. Authors should know content standards, formatting, and more when creating or publishing art books. For example, readers of art and photography books expect to see higher-quality images than any other book type. Additionally, don’t neglect the written content as an afterthought. Organize any necessary guides or instructions, so readers don’t get confused about how to handle your work. Art and photography books require the most attention to cover design, as many readers buy from this genre solely for decoration. Overall, art and photography authors should strive to make their books beautiful and readable. You don’t want them to read like a textbook.
           </p>
           <p className="text-lg leading-relaxed text-center">
-            Authors need to understand the best practices for this genre when publishing art and photography books. For example, following specific formatting standards for each sub-genre of art books. Many art books also require a table of contents, citations, correctly formatted captions, and a glossary. Working with a professional publishing company like Silver Gate Publishing when putting the final touches on your book ensures that it will shine in your specific genre.
+            Authors need to understand the best practices for this genre when publishing art and photography books. For example, following specific formatting standards for each sub-genre of art books. Many art books also require a table of contents, citations, correctly formatted captions, and a glossary. Working with a professional publishing company like Palm Bay Publishing when putting the final touches on your book ensures that it will shine in your specific genre.
           </p>
         </div>
       </section>
@@ -150,10 +150,10 @@ const page = () => {
       </section>
         <section className="py-20 px-14 customorange text-black">
                 <h2 className="text-4xl md:text-5xl text-white font-bold mb-4 text-center">
-                  Get Started With Silver Gate
+                  Get Started With Palm Bay
                 </h2>
                 <p className="text-lg leading-relaxed text-white mb-6 text-center max-w-4xl mx-auto">
-                  After you write your book, the next step is to publish your story and get it into the hands of interested readers. If you want to retain maximum control over your book, consider self-publishing it. This method allows you to make the final decisions about everything from the cover design to printing. Additionally, you can earn higher royalties than you would if you published your book with a traditional publisher. Self-publishing may sound intimidating, but the process can be easy and fast with the help of a top-tier publishing company like Silver Gate Publishing. We offer a variety of services to support writers through the self-publishing process, including:
+                  After you write your book, the next step is to publish your story and get it into the hands of interested readers. If you want to retain maximum control over your book, consider self-publishing it. This method allows you to make the final decisions about everything from the cover design to printing. Additionally, you can earn higher royalties than you would if you published your book with a traditional publisher. Self-publishing may sound intimidating, but the process can be easy and fast with the help of a top-tier publishing company like Palm Bay Publishing. We offer a variety of services to support writers through the self-publishing process, including:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                   {/* Book Cover Design */}

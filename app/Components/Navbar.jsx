@@ -38,47 +38,47 @@ const Navbar = () => {
     {
       title: "Publishing Services",
       items: [
-        { name: "Cover Design", href: "/services/cover-design", icon: "/cd-icon.png" },
-        { name: "Book Editing", href: "/services/book-editing", icon: "/ed-icon.png" },
-        { name: "Book Printing", href: "/services/book-printing", icon: "/bp-icon.png" },
-        { name: "Audiobook Publishing", href: "/services/audiobook-publishing", icon: "/ab-icon.png" },
-        { name: "Illustrations", href: "/services/illustrations", icon: "/il-icon.png" },
-        { name: "Interior Formatting", href: "/services/book-formatting", icon: "/itf-icon.png" },
-        { name: "Book Distribution", href: "/services/book-distribution", icon: "/bd-icon.webp" },
-        { name: "Marketing", href: "/services/marketing", icon: "/m.png" },
+        { name: "Cover Design", href: "/services/cover-design.html", icon: "/cd-icon.png" },
+        { name: "Book Editing", href: "/services/book-editing.html", icon: "/ed-icon.png" },
+        { name: "Book Printing", href: "/services/book-printing.html", icon: "/bp-icon.png" },
+        { name: "Audiobook Publishing", href: "/services/audiobook-publishing.html", icon: "/ab-icon.png" },
+        { name: "Illustrations", href: "/services/illustrations.html", icon: "/il-icon.png" },
+        { name: "Interior Formatting", href: "/services/book-formatting.html", icon: "/itf-icon.png" },
+        { name: "Book Distribution", href: "/services/book-distribution.html", icon: "/bd-icon.webp" },
+        { name: "Marketing", href: "/services/marketing.html", icon: "/m.png" },
       ],
     },
     {
       title: "Guides",
       items: [
-        { name: "How To Self-Publish A Book: The Complete Guide", href: "/guides/self-publishing", icon: "/yellow-dress.webp" },
-        { name: "The Complete Guide To Marketing A Book", href: "/guides/marketing-tips", icon: "/book-marketing-2.jpg.webp" },
-        { name: "The Complete Guide To Writing A Book", href: "/guides/book-writing-guide", icon: "/complete.webp" },
+        { name: "How To Self-Publish A Book: The Complete Guide", href: "/guides/self-publishing.html", icon: "/yellow-dress.webp" },
+        { name: "The Complete Guide To Marketing A Book", href: "/guides/marketing-tips.html", icon: "/book-marketing-2.jpg.webp" },
+        { name: "The Complete Guide To Writing A Book", href: "/guides/book-writing-guide.html", icon: "/complete.webp" },
       ],
     },
     {
       title: "About Us",
       items: [
-        { name: "Our Process", href: "/about/our-process", icon: "/op-icon.png" },
-        { name: "Why Palm Bay?", href: "/about/why-silvergate", icon: "/ws-icon.png" },
-        { name: "FAQs", href: "/about/faqs", icon: "/fa-icon.png" },
-        { name: "Contact Us", href: "/about/contact", icon: "/cu-icon.png" },
+        { name: "Our Process", href: "/about/our-process.html", icon: "/op-icon.png" },
+        { name: "Why Palm Bay?", href: "/about/why-palmbay.html", icon: "/ws-icon.png" },
+        { name: "FAQs", href: "/about/faqs.html", icon: "/fa-icon.png" },
+        { name: "Contact Us", href: "/about/contact.html", icon: "/cu-icon.png" },
       ],
     },
     {
       title: "Genres",
       items: [
-        { name: "Fiction", href: "/genres/fiction", icon: "/f-icon.png" },
-        { name: "Non-Fiction", href: "/genres/non-fiction", icon: "/nf-icon.png" },
-        { name: "Business", href: "/genres/business", icon: "/b-icon.png" },
-        { name: "How-To", href: "/genres/how-to", icon: "/ht-icon.png" },
-        { name: "Self Help", href: "/genres/self-help", icon: "/sh-icon.png" },
-        { name: "Religious", href: "/genres/religious", icon: "/r-icon.png" },
-        { name: "Inspirational", href: "/genres/inspirational", icon: "/i-icon.png" },
-        { name: "Cook Books", href: "/genres/cook-book", icon: "/cb-icon'.png" },
-        { name: "Children's Books", href: "/genres/c-books", icon: "/cb-icon.png" },
-        { name: "Autobiographies", href: "/genres/autobiography", icon: "/abio-icon.png" },
-        { name: "Art", href: "/genres/art", icon: "/art-icon.png" },
+        { name: "Fiction", href: "/genres/fiction.html", icon: "/f-icon.png" },
+        { name: "Non-Fiction", href: "/genres/non-fiction.html", icon: "/nf-icon.png" },
+        { name: "Business", href: "/genres/business.html", icon: "/b-icon.png" },
+        { name: "How-To", href: "/genres/how-to.html", icon: "/ht-icon.png" },
+        { name: "Self Help", href: "/genres/self-help.html", icon: "/sh-icon.png" },
+        { name: "Religious", href: "/genres/religious.html", icon: "/r-icon.png" },
+        { name: "Inspirational", href: "/genres/inspirational.html", icon: "/i-icon.png" },
+        { name: "Cook Books", href: "/genres/cook-book.html", icon: "/cb-icon'.png" },
+        { name: "Children's Books", href: "/genres/c-books.html", icon: "/cb-icon.png" },
+        { name: "Autobiographies", href: "/genres/autobiography.html", icon: "/abio-icon.png" },
+        { name: "Art", href: "/genres/art.html", icon: "/art-icon.png" },
       ],
     },
   ];
@@ -88,7 +88,7 @@ const Navbar = () => {
       {/* Top Bar with Phone */}
       <div className="customgreen w-full h-10 md:h-12 flex items-center justify-center md:justify-end px-4">
         <FaPhoneAlt className="text-lg md:text-xl mr-2" />
-        <p className="text-sm md:text-xl font-extrabold tracking-wider">+310 564 9107</p>
+       <a href="tel:+8505880888"><p className="text-sm md:text-xl font-extrabold tracking-wider">+850 588-0888</p></a>
       </div>
 
       {/* Navbar Container */}

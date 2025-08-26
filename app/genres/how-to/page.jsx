@@ -18,7 +18,7 @@ const Page = () => {
             How-To Genre Book Publishing
           </h1>
           <p className="text-lg md:text-xl text-center mt-4 max-w-3xl">
-            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Silver Gate Publishing to guide you along the way.
+            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Palm Bay Publishing to guide you along the way.
           </p>
         </div>
       </div>
@@ -316,7 +316,7 @@ const Page = () => {
                   <span className="font-semibold">Direct engagement with readers:</span> Self-publishing gives you direct access to your readers, allowing for better engagement and feedback. This connection can be very helpful for future projects.
                 </li>
                 <li>
-                  <span className="font-semibold">Higher royalties:</span> When you work with Silver Gate, you keep 100% of your royalties from book sales.
+                  <span className="font-semibold">Higher royalties:</span> When you work with Palm Bay, you keep 100% of your royalties from book sales.
                 </li>
                 <li>
                   <span className="font-semibold">Quicker publishing:</span> Self-publishing with us usually takes around 8-12 weeks, which is significantly faster than traditional publishing.

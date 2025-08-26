@@ -23,7 +23,7 @@ const page = () => {
             Share your wisdom and grow your brand with industry specific books.
           </h2>
           <p className="text-lg md:text-xl text-center mt-2 max-w-3xl">
-            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Silver Gate Publishing to guide you along the way.
+            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Palm Bay Publishing to guide you along the way.
           </p>
         </div>
       </div>
@@ -34,7 +34,7 @@ const page = () => {
           The inspirational book genre has been on the rise in recent years, with authors writing stories to inspire and uplift readers around the world. Inspirational books come in a variety of different forms, overlapping with fiction, nonfiction, religious, and potentially any other genre out there. Like with any genre, publishing work in the inspirational genre comes with unique protocols that authors should be aware of to ensure success.
         </p>
         <p className="text-black text-lg leading-relaxed mt-4">
-          Publishing one’s book is no easy feat, and deciding the best publishing route for you can be difficult. Luckily, Silver Gate Publishing provides countless resources to guide you through the process. Silver Gate helps authors get their books into the hands of their readers through our informative articles on everything writing and publishing, our book writing and self-publishing services, and our expert guidance. Continue reading to learn more about the inspirational genre, publishing an inspirational book, and whether self-publishing is right for you.
+          Publishing one’s book is no easy feat, and deciding the best publishing route for you can be difficult. Luckily, Palm Bay Publishing provides countless resources to guide you through the process. Palm Bay helps authors get their books into the hands of their readers through our informative articles on everything writing and publishing, our book writing and self-publishing services, and our expert guidance. Continue reading to learn more about the inspirational genre, publishing an inspirational book, and whether self-publishing is right for you.
         </p>
       </section>
       {/* Section: What Qualifies As Inspirational? */}
@@ -121,17 +121,17 @@ const page = () => {
           Overall, self-publishing is a rewarding method of publishing your inspirational novel, allowing you to reach your audience fast.
         </p>
         <h3 className="text-xl font-semibold mb-2 green-text text-left max-w-4xl mx-auto">
-          How Silver Gate Publishing can help
+          How Palm Bay Publishing can help
         </h3>
         <p className="text-lg leading-relaxed mb-4 text-left max-w-4xl mx-auto">
-          Whether you’re an entrepreneur, a pastor, or a writer, Silver Gate Publishing can guide you on the path to successfully self-publish and market your inspirational book. Silver Gate Publishing provides a wide range of self-publishing services to help authors like you share your story with the world, including editing, cover design, interior formatting, illustrations, printing, and marketing.
+          Whether you’re an entrepreneur, a pastor, or a writer, Palm Bay Publishing can guide you on the path to successfully self-publish and market your inspirational book. Palm Bay Publishing provides a wide range of self-publishing services to help authors like you share your story with the world, including editing, cover design, interior formatting, illustrations, printing, and marketing.
         </p>
         <div className="mb-6">
           <h3 className="text-xl font-semibold mb-2 green-text text-left max-w-4xl mx-auto">
             Writing and Editing
           </h3>
           <p className="text-lg leading-relaxed text-left max-w-4xl mx-auto">
-            Silver Gate Publishing supports authors from the initial stages of crafting their book, including the writing stage. While writing your book, you can get guidance through Silver Gate Publishing’s book writing process, which includes writing workshops, one-on-one coaching, and editing services to help you polish your manuscript. Silver Gate Publishing also offers professional editing services to ensure your book is polished and ready for the final version, including grammar, syntax, structure, and overall clarity of your manuscript.
+            Palm Bay Publishing supports authors from the initial stages of crafting their book, including the writing stage. While writing your book, you can get guidance through Palm Bay Publishing’s book writing process, which includes writing workshops, one-on-one coaching, and editing services to help you polish your manuscript. Palm Bay Publishing also offers professional editing services to ensure your book is polished and ready for the final version, including grammar, syntax, structure, and overall clarity of your manuscript.
           </p>
         </div>
         <div className="mb-6">
@@ -139,7 +139,7 @@ const page = () => {
             Editing
           </h3>
           <p className="text-lg leading-relaxed text-left max-w-4xl mx-auto">
-            Silver Gate Publishing supports authors from the initial stages of crafting their book, including the writing stage. While writing your book, you can get guidance through Silver Gate Publishing’s book writing process, which includes writing workshops, one-on-one coaching, and editing services to help you polish your manuscript. Silver Gate Publishing also offers professional editing services to ensure your book is polished and ready for the final version, including grammar, syntax, structure, and overall clarity of your manuscript.
+            Palm Bay Publishing supports authors from the initial stages of crafting their book, including the writing stage. While writing your book, you can get guidance through Palm Bay Publishing’s book writing process, which includes writing workshops, one-on-one coaching, and editing services to help you polish your manuscript. Palm Bay Publishing also offers professional editing services to ensure your book is polished and ready for the final version, including grammar, syntax, structure, and overall clarity of your manuscript.
           </p>
         </div>
         <div className="mb-6">
@@ -147,7 +147,7 @@ const page = () => {
             Cover Design
           </h3>
           <p className="text-lg leading-relaxed text-left max-w-4xl mx-auto">
-            Ultimately, readers will judge a book by its cover, so a strong cover design is key to attracting potential readers. A well-designed cover can make your book stand out on the shelf. Silver Gate Publishing’s graphic designers can help you create a professional, eye-catching cover that reflects the tone and theme of your inspirational book, ensuring it appeals to your target audience.
+            Ultimately, readers will judge a book by its cover, so a strong cover design is key to attracting potential readers. A well-designed cover can make your book stand out on the shelf. Palm Bay Publishing’s graphic designers can help you create a professional, eye-catching cover that reflects the tone and theme of your inspirational book, ensuring it appeals to your target audience.
           </p>
         </div>
         <div className="mb-6">
@@ -155,7 +155,7 @@ const page = () => {
             Interior Formatting
           </h3>
           <p className="text-lg leading-relaxed text-left max-w-4xl mx-auto">
-            Silver Gate Publishing also provides interior formatting services to ensure your book looks professional and is easy to read. This includes formatting the text, headings, and images to create a cohesive and visually appealing layout. Silver Gate Publishing offers interior formatting services to ensure your book meets industry standards, including proper margins, fonts, and spacing.
+            Palm Bay Publishing also provides interior formatting services to ensure your book looks professional and is easy to read. This includes formatting the text, headings, and images to create a cohesive and visually appealing layout. Palm Bay Publishing offers interior formatting services to ensure your book meets industry standards, including proper margins, fonts, and spacing.
           </p>
         </div>
         <div className="mb-6">
@@ -163,7 +163,7 @@ const page = () => {
             Illustrations
           </h3>
           <p className="text-lg leading-relaxed text-left max-w-4xl mx-auto">
-            Illustrations can bring your inspirational book to life, adding a visual element to your story. Silver Gate Publishing can help you create custom illustrations that match the tone and theme of your book, ensuring they enhance the overall reading experience.
+            Illustrations can bring your inspirational book to life, adding a visual element to your story. Palm Bay Publishing can help you create custom illustrations that match the tone and theme of your book, ensuring they enhance the overall reading experience.
           </p>
         </div>
         <div className="mb-6">
@@ -171,7 +171,7 @@ const page = () => {
             Printing
           </h3>
           <p className="text-lg leading-relaxed text-left max-w-4xl mx-auto">
-            Silver Gate Publishing provides professional printing services to ensure your completed work is printed to the highest quality. We offer a variety of printing options, including hardcover, paperback, and eBook formats, allowing you to choose the best option for your book.
+            Palm Bay Publishing provides professional printing services to ensure your completed work is printed to the highest quality. We offer a variety of printing options, including hardcover, paperback, and eBook formats, allowing you to choose the best option for your book.
           </p>
         </div>
         <div className="mb-6">
@@ -179,7 +179,7 @@ const page = () => {
             Marketing
           </h3>
           <p className="text-lg leading-relaxed text-left max-w-4xl mx-auto">
-            Silver Gate Publishing provides expert marketing assistance to spread the word about your book! We have FREE Publicity Media Kits, Press Releases, and more to help you get the word out about your book. Silver Gate Publishing also offers marketing services, such as social media promotion, email campaigns, and website creation, to help you reach your target audience and sell more books.
+            Palm Bay Publishing provides expert marketing assistance to spread the word about your book! We have FREE Publicity Media Kits, Press Releases, and more to help you get the word out about your book. Palm Bay Publishing also offers marketing services, such as social media promotion, email campaigns, and website creation, to help you reach your target audience and sell more books.
           </p>
         </div>
       </section>
@@ -194,7 +194,7 @@ const page = () => {
         </h2>
         <div className="border-b-2 border-yellow-500 w-16 mb-6 mx-auto"></div>
         <p className="text-lg leading-relaxed text-center max-w-4xl mx-auto">
-          Writing and publishing an inspirational book is no easy feat, but working with a self-publishing service provider like Silver Gate Publishing can guide you along the way. We help you through this crucial process so your book makes its way to your reader’s hands in no time.
+          Writing and publishing an inspirational book is no easy feat, but working with a self-publishing service provider like Palm Bay Publishing can guide you along the way. We help you through this crucial process so your book makes its way to your reader’s hands in no time.
         </p>
       </section>
 

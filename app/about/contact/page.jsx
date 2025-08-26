@@ -10,7 +10,7 @@ const page = () => {
       <Navbar />
       <div className="relative w-full min-h-[25rem] bg-cover bg-center" style={{ backgroundImage: "url('/whitewood.png')" }}>
         <div className="absolute left-0 h-full flex flex-col justify-center items-center text-black px-4">
-          <p className="text-3xl text-center pl-20 md:text-6xl">Contact Silver Gate Publishing</p>
+          <p className="text-3xl text-center pl-20 md:text-6xl">Contact Palm Bay Publishing</p>
         </div>
       </div>
 
@@ -20,7 +20,7 @@ const page = () => {
           {/* Left Column: Contact Info */}
           <div>
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Contact</h2>
-            <p className="text-teal-500 mb-6">310 564 9107</p>
+            <p className="text-teal-500 mb-6">850 588-0888</p>
 
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Address</h2>
             <p className="text-gray-600 mb-6">

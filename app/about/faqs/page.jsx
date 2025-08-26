@@ -24,26 +24,26 @@ const FAQSection = () => {
 
   const faqData = [
     {
-      category: "About Silver Gate Publishing",
+      category: "About Palm Bay Publishing",
       questions: [
         {
-          question: "What is Silver Gate Publishing?",
-          answer: "Silver Gate Publishing is a self-publishing company that helps authors bring their books to life with professional services like editing, design, and marketing."
+          question: "What is Palm Bay Publishing?",
+          answer: "Palm Bay Publishing is a self-publishing company that helps authors bring their books to life with professional services like editing, design, and marketing."
         },
         {
-          question: "How long has Silver Gate Publishing been in business?",
-          answer: "Silver Gate Publishing has been assisting authors for over a decade, with a strong track record of successful publications."
+          question: "How long has Palm Bay Publishing been in business?",
+          answer: "Palm Bay Publishing has been assisting authors for over a decade, with a strong track record of successful publications."
         },
         {
-          question: "What makes Silver Gate Publishing different from other publishers?",
+          question: "What makes Palm Bay Publishing different from other publishers?",
           answer: "We focus on personalized support, offering tailored solutions for each author while maintaining full creative control for you."
         },
         {
-          question: "Where is Silver Gate Publishing located?",
+          question: "Where is Palm Bay Publishing located?",
           answer: "We are based in Mount Pleasant, South Carolina, but we work with authors from all over the world."
         },
         {
-          question: "Can I trust Silver Gate Publishing with my manuscript?",
+          question: "Can I trust Palm Bay Publishing with my manuscript?",
           answer: "Absolutely! We prioritize confidentiality and have a team of experienced professionals dedicated to your project’s success."
         }
       ]
@@ -53,7 +53,7 @@ const FAQSection = () => {
       questions: [
         {
           question: "What is self-publishing?",
-          answer: "Self-publishing is when an author takes on the responsibility of publishing their book, often with the help of a service provider like Silver Gate Publishing."
+          answer: "Self-publishing is when an author takes on the responsibility of publishing their book, often with the help of a service provider like Palm Bay Publishing."
         },
         {
           question: "How much does self-publishing cost?",
@@ -65,7 +65,7 @@ const FAQSection = () => {
         },
         {
           question: "Do I retain the rights to my book?",
-          answer: "Yes, with self-publishing through Silver Gate, you retain full rights to your work."
+          answer: "Yes, with self-publishing through Palm Bay, you retain full rights to your work."
         },
         {
           question: "What are the benefits of self-publishing?",
@@ -77,7 +77,7 @@ const FAQSection = () => {
       category: "Services Questions",
       questions: [
         {
-          question: "What services does Silver Gate Publishing offer?",
+          question: "What services does Palm Bay Publishing offer?",
           answer: "We provide editing, design, formatting, illustrations, printing, marketing, and distribution services."
         },
         {
@@ -300,11 +300,11 @@ const page = () => {
       >
         <div className="absolute inset-0 h-full flex flex-col justify-center items-center text-black px-4">
           <p className="text-3xl text-center md:text-6xl">
-            Silver Gate Publishing<br />
+            Palm Bay Publishing<br />
             Frequently Asked Questions
           </p>
           <p className="text-center text-xl mt-6 max-w-4xl">
-            While we generally try to avoid platitudes in our writing, this feels like a good place to reaffirm that there’s no such thing as a dumb question. Writing and publishing a book can feel intimidating for first-time authors, so consider this an open invitation to give us a call and fire away with as many questions as you’d like. Whether you’re looking for more information about Silver Gate's publishing solutions or general self-publishing best practices, we’re an open book (pun intended).
+            While we generally try to avoid platitudes in our writing, this feels like a good place to reaffirm that there’s no such thing as a dumb question. Writing and publishing a book can feel intimidating for first-time authors, so consider this an open invitation to give us a call and fire away with as many questions as you’d like. Whether you’re looking for more information about Palm Bay's publishing solutions or general self-publishing best practices, we’re an open book (pun intended).
           </p>
         </div>
       </div>

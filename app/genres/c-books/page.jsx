@@ -24,7 +24,7 @@ const page = () => {
             Share your wisdom and grow your brand with industry specific books.
           </h2>
           <p className="text-lg md:text-xl text-center mt-2 max-w-3xl">
-            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Silver Gate Publishing to guide you along the way.
+            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Palm Bay Publishing to guide you along the way.
           </p>
         </div>
       </div>
@@ -40,7 +40,7 @@ const page = () => {
           Children’s books may target kid audiences, but that doesn’t mean that they’re easy or quick to produce. To write a quality children’s book, you will need commitment, time, and insight into which stories will resonate with young audiences. You will also need to design, edit, and publish your book.
         </p>
         <p className="text-black text-center max-w-4xl text-lg leading-relaxed mt-4">
-          Self-publishing makes it easier than ever to get your children’s book into the hands of young readers. The experts at Silver Gate Publishing offer a range of services to help streamline the publishing process.
+          Self-publishing makes it easier than ever to get your children’s book into the hands of young readers. The experts at Palm Bay Publishing offer a range of services to help streamline the publishing process.
         </p>
       </section>
 
@@ -159,13 +159,13 @@ const page = () => {
         </p>
       </section>
 
-      {/* New Section: Get Started With Silver Gate */}
+      {/* New Section: Get Started With Palm Bay */}
       <section className="py-20 px-14 customorange text-black">
         <h2 className="text-4xl md:text-5xl text-white font-bold mb-4 text-center">
-          Get Started With Silver Gate
+          Get Started With Palm Bay
         </h2>
         <p className="text-lg leading-relaxed text-white mb-6 text-center max-w-4xl mx-auto">
-          After you write your book, the next step is to publish your story and get it into the hands of interested readers. If you want to retain maximum control over your book, consider self-publishing it. This method allows you to make the final decisions about everything from the cover design to printing. Additionally, you can earn higher royalties than you would if you published your book with a traditional publisher. Self-publishing may sound intimidating, but the process can be easy and fast with the help of a top-tier publishing company like Silver Gate Publishing. We offer a variety of services to support writers through the self-publishing process, including:
+          After you write your book, the next step is to publish your story and get it into the hands of interested readers. If you want to retain maximum control over your book, consider self-publishing it. This method allows you to make the final decisions about everything from the cover design to printing. Additionally, you can earn higher royalties than you would if you published your book with a traditional publisher. Self-publishing may sound intimidating, but the process can be easy and fast with the help of a top-tier publishing company like Palm Bay Publishing. We offer a variety of services to support writers through the self-publishing process, including:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {/* Book Cover Design */}

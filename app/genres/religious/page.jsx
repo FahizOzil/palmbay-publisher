@@ -23,7 +23,7 @@ const page = () => {
             Share your wisdom and grow your brand with industry specific books.
           </h2>
           <p className="text-lg md:text-xl text-center mt-2 max-w-3xl">
-            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Silver Gate Publishing to guide you along the way.
+            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Palm Bay Publishing to guide you along the way.
           </p>
         </div>
       </div>
@@ -34,7 +34,7 @@ const page = () => {
           Many people want to gain a deeper understanding of religion and spirituality. Religious books help readers learn more about their faith and inspire a closer relationship with God. These narratives also allow authors to recount their spiritual journeys.
         </p>
         <p className="text-black text-lg leading-relaxed mt-4">
-          Writing a religious book can educate readers about your beliefs and faith, offering a uniquely emotional and spiritually fulfilling experience. However, you may also face challenges. Luckily, the skilled team at Silver Gate Publishing can streamline the publishing process. Our experts have extensive experience self-publishing religious books and offer a broad range of self-publishing services to help you finish and share your story.
+          Writing a religious book can educate readers about your beliefs and faith, offering a uniquely emotional and spiritually fulfilling experience. However, you may also face challenges. Luckily, the skilled team at Palm Bay Publishing can streamline the publishing process. Our experts have extensive experience self-publishing religious books and offer a broad range of self-publishing services to help you finish and share your story.
         </p>
       </section>
 
@@ -195,13 +195,13 @@ const page = () => {
         </p>
       </section>
 
-      {/* Section: Self-Publishing Your Religious Book With Silver Gate Publishing */}
+      {/* Section: Self-Publishing Your Religious Book With Palm Bay Publishing */}
       <section
         className="py-20 px-20 text-black bg-cover bg-center"
         style={{ backgroundImage: "url('/whitewood.png')" }}
       >
         <h2 className="text-4xl md:text-5xl max-w-4xl font-bold mb-4 text-left">
-          Self-Publishing Your Religious Book With Silver Gate Publishing
+          Self-Publishing Your Religious Book With Palm Bay Publishing
         </h2>
         <div className="border-b-2 border-yellow-500 w-24 mb-6"></div>
         <div className="mb-6">
@@ -229,7 +229,7 @@ const page = () => {
           </p>
         </div>
         <p className="text-lg leading-relaxed mt-4 text-left">
-          Religious book writing and publishing will help you share your faith with others. Silver Gate Publishing makes self-publishing your religious book affordable and straightforward. Our top-tier team provides numerous services for self-published authors, such as:
+          Religious book writing and publishing will help you share your faith with others. Palm Bay Publishing makes self-publishing your religious book affordable and straightforward. Our top-tier team provides numerous services for self-published authors, such as:
         </p>
       </section>
 

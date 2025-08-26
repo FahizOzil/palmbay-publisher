@@ -49,7 +49,7 @@ const Page = () => {
             Elevate your writing to the next level with a professionally designed and formatted book interior.
           </p>
           <p className="pt-6 text-xl max-w-3xl">
-            Silver Gate Publishing draws from decades of collective experience to help you develop the layout of your interior pages so they perfectly speak to your readers. Learn more about how we can unlock your manuscript’s potential, transforming it into a polished masterpiece.
+            Palm Bay Publishing draws from decades of collective experience to help you develop the layout of your interior pages so they perfectly speak to your readers. Learn more about how we can unlock your manuscript’s potential, transforming it into a polished masterpiece.
           </p>
           <button
             onClick={openModal}

@@ -39,9 +39,9 @@ const EditingServices = () => {
           <h1 data-aos="fade-left" className="text-3xl md:text-5xl mt-6 md:max-w-xl text-left">
             Copy Editing
           </h1>
-          <p data-aos="fade-up" className="green-text text-3xl md:max-w-xl mt-4 text-left">
+          {/* <p data-aos="fade-up" className="green-text text-3xl md:max-w-xl mt-4 text-left">
             Starting at $360
-          </p>
+          </p> */}
           <div className="space-y-2 mt-4 text-xl text-left">
             <p data-aos="fade-up-right">
               <span className="green-text">•</span> for up to 10k words, then $.036 per word
@@ -66,9 +66,9 @@ const EditingServices = () => {
           <h1 data-aos="fade-left" className="text-3xl md:text-5xl mt-6 md:max-w-xl text-left">
             Line Editing
           </h1>
-          <p data-aos="fade-up" className="green-text text-3xl md:max-w-xl mt-4 text-left">
+          {/* <p data-aos="fade-up" className="green-text text-3xl md:max-w-xl mt-4 text-left">
             Starting at $440
-          </p>
+          </p> */}
           <div className="space-y-2 mt-4 text-xl text-left">
             <p data-aos="fade-up-right">
               <span className="green-text">•</span> for up to 10k words, then $.044 per word
@@ -98,9 +98,9 @@ const EditingServices = () => {
           <h1 data-aos="fade-left" className="text-3xl md:text-5xl mt-6 md:max-w-xl text-left">
             Developmental Editing
           </h1>
-          <p data-aos="fade-up" className="green-text text-3xl md:max-w-xl mt-4 text-left">
+          {/* <p data-aos="fade-up" className="green-text text-3xl md:max-w-xl mt-4 text-left">
             Starting at $900
-          </p>
+          </p> */}
           <div className="space-y-2 mt-4 text-xl text-left">
             <p data-aos="fade-up-right">
               <span className="green-text">•</span> for up to 10k words, then $.09 per word

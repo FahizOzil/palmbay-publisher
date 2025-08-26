@@ -136,7 +136,7 @@ const WritingSection = () => {
         {/* Middle Section - Main Content */}
         <div className="w-full text-xl md:w-2/4">
           <p className="text-gray-700">
-            Writing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of creative decisions, editing stages, and publishing options to navigate before your book reaches its readers. Count on Silver Gate Publishing to guide you along the way.
+            Writing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of creative decisions, editing stages, and publishing options to navigate before your book reaches its readers. Count on Palm Bay Publishing to guide you along the way.
           </p>
           <p className="mt-4 text-gray-700">
             To bring your story to life in today’s competitive literary world, it’s essential to understand the writing process. You’ve got a story to tell, and now it’s time to turn that idea into a manuscript that captivates your audience.
@@ -195,7 +195,7 @@ const WritingSection = () => {
             Researching your primary chosen genre will provide you with inspiration as to how to write a compelling story. Though your novel will likely fall into a distinct genre, you don’t need to feel bound to every convention of that genre; many novels contain elements typical of multiple genres.
           </p>
           <p className="mt-4 text-gray-700">
-            Read books like yours to understand what readers expect. What do you find when you open a book from that aisle of the library? Silver Gate’s authors write in a wide range of genres, and you can find their titles in our bookstore for inspiration.
+            Read books like yours to understand what readers expect. What do you find when you open a book from that aisle of the library? Palm Bay’s authors write in a wide range of genres, and you can find their titles in our bookstore for inspiration.
           </p>
 
           <h2 id="first-draft" className="text-5xl text-gray-900 mt-12">
@@ -235,7 +235,7 @@ const WritingSection = () => {
             Now that your book has gone through several people for feedback, it’s time to pass your manuscript to a professional editor. A professional editor will look at your manuscript and turn it into a polished product.
           </p>
           <p className="mt-4 text-gray-700">
-            Editors know industry standards and what resonates with readers, and they’ll make sure your book is as good as it can be. They’ll also catch errors that a writer or beta reader can easily miss. Silver Gate Publishing offers various editing services, from comprehensive developmental editing to copy editing.
+            Editors know industry standards and what resonates with readers, and they’ll make sure your book is as good as it can be. They’ll also catch errors that a writer or beta reader can easily miss. Palm Bay Publishing offers various editing services, from comprehensive developmental editing to copy editing.
           </p>
 
           <h2 id="design-book" className="text-5xl text-gray-900 mt-12">
@@ -245,30 +245,30 @@ const WritingSection = () => {
             You’re not done quite yet. After all, your goal was writing a book, not a manuscript. Technically, you can convert a text document into an e-book on your own, but a professional book design gives your book an edge.
           </p>
           <p className="mt-4 text-gray-700">
-            Covers matter—amateurish designs can deter readers from investing their time and money in your book. Silver Gate’s book interior formatting ensures the best reading experience for all your soon-to-be fans. Add any necessary images to the book, and consider using a professional illustrator for high-impact areas like the title page.
+            Covers matter—amateurish designs can deter readers from investing their time and money in your book. Palm Bay’s book interior formatting ensures the best reading experience for all your soon-to-be fans. Add any necessary images to the book, and consider using a professional illustrator for high-impact areas like the title page.
           </p>
 
           <h2 id="publish-book" className="text-5xl text-gray-900 mt-12">
             Publish Your Book
           </h2>
           <p className="mt-4 text-gray-700">
-            You’re ready to send your baby out into the world. Self-publishing can be a nerve-wracking process, but there are things you can do to increase your chances of success. Publishing with Silver Gate also gives you access to our on-demand book printing.
+            You’re ready to send your baby out into the world. Self-publishing can be a nerve-wracking process, but there are things you can do to increase your chances of success. Publishing with Palm Bay also gives you access to our on-demand book printing.
           </p>
           <p className="mt-4 text-gray-700">
-            Order only the copies you want for yourself, and then let us handle printing needs as they arise. If you want people to love your book, you have to let them know it exists first. Silver Gate’s book marketing packages prepare you for a successful launch.
+            Order only the copies you want for yourself, and then let us handle printing needs as they arise. If you want people to love your book, you have to let them know it exists first. Palm Bay’s book marketing packages prepare you for a successful launch.
           </p>
 
           <h2 id="collaborate-experts" className="text-5xl text-gray-900 mt-12">
             Collaborate With Publishing Experts
           </h2>
           <p className="mt-4 text-gray-700">
-            When you partner with Silver Gate Publishing, you open the door to a dynamic process that brings your creation to life. Your journey begins with a consultation call with your dedicated publishing consultant. We’re not just interested in your book; we’re invested in your vision.
+            When you partner with Palm Bay Publishing, you open the door to a dynamic process that brings your creation to life. Your journey begins with a consultation call with your dedicated publishing consultant. We’re not just interested in your book; we’re invested in your vision.
           </p>
           <p className="mt-4 text-gray-700">
-            Silver Gate Publishing is a top-tier publishing company offering quality services for independent authors—including editing, cover design, formatting, distribution, and printing. We collaborate closely with authors to bring their literary dreams to life through tailored packages.
+            Palm Bay Publishing is a top-tier publishing company offering quality services for independent authors—including editing, cover design, formatting, distribution, and printing. We collaborate closely with authors to bring their literary dreams to life through tailored packages.
           </p>
           <p className="mt-4 text-gray-700">
-            Your journey with us is collaborative. Every step of the way, we value your insights, champion your creativity, and encourage your active participation. Writing a book can be challenging, but you don’t have to do it alone. Reach out to Silver Gate Publishing today to get started.
+            Your journey with us is collaborative. Every step of the way, we value your insights, champion your creativity, and encourage your active participation. Writing a book can be challenging, but you don’t have to do it alone. Reach out to Palm Bay Publishing today to get started.
           </p>
         </div>
 
@@ -280,7 +280,7 @@ const WritingSection = () => {
             GET STARTED!
           </button>
           <p className="mt-4">Or call us</p>
-          <p className="text-2xl">310 564 9107</p>
+          <p className="text-2xl">850 588-0888</p>
         </div>
       </div>
 

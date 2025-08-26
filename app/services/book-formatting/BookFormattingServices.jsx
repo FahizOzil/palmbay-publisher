@@ -44,9 +44,9 @@ const BookFormattingServices = () => {
         {/* Card Section - Positioned Below the Button */}
         <div className="mt-12 flex justify-center space-x-8">
           <div className="bg-white p-6 rounded-tl-4xl w-[70%] rounded-br-4xl shadow-lg text-center">
-            <img src="/Silver Gate-interior.png.webp" className="w-[15rem] mx-auto" alt="Silver Gate Interior" />
-            <p className="text-black text-4xl pt-8 font-semibold">Silver Gate</p>
-            <p className="green-text text-3xl pt-2">Starting At $599</p>
+            <img src="/SilverGate-interior.png.webp" className="w-[15rem] mx-auto" alt="Palm Bay Interior" />
+            <p className="text-black text-4xl pt-8 font-semibold">Palm Bay</p>
+            {/* <p className="green-text text-3xl pt-2">Starting At $599</p> */}
             <p className="text-xl text-left max-w-sm pt-4">
               <span className="text-4xl text-teal-600">• </span>Interior layout & design
             </p>
@@ -59,17 +59,17 @@ const BookFormattingServices = () => {
             <p className="text-xl text-left max-w-sm pt-4">
               <span className="text-4xl text-teal-600">• </span>1 round of up to 25 text changes
             </p>
-            <button
+            {/* <button
               onClick={openModal}
               className="text-3xl text-center button-gradient py-4 rounded-full max-w-sm mt-8"
             >
               From $599
-            </button>
+            </button> */}
           </div>
           <div className="bg-white p-6 rounded-tl-4xl w-[70%] rounded-br-4xl shadow-lg text-center">
             <img src="/custom-interior.png.webp" className="w-[15rem] mx-auto" alt="Custom Interior" />
             <p className="text-black text-4xl pt-8 font-semibold">Custom Interior</p>
-            <p className="green-text text-3xl pt-2">Starting At $699</p>
+            {/* <p className="green-text text-3xl pt-2">Starting At $699</p> */}
             <p className="text-xl text-left max-w-sm pt-4">
               <span className="text-4xl text-teal-600">• </span>Interior layout & design
             </p>
@@ -82,36 +82,36 @@ const BookFormattingServices = () => {
             <p className="text-xl text-left max-w-sm pt-4">
               <span className="text-4xl text-teal-600">• </span>2 rounds of up to 50 text changes
             </p>
-            <button
+            {/* <button
               onClick={openModal}
               className="text-3xl text-center button-gradient py-4 rounded-full max-w-sm mt-8"
             >
               From $699
-            </button>
+            </button> */}
           </div>
         </div>
         <div className="mt-12 flex justify-center mb-12 space-x-8">
           <div className="bg-white p-6 rounded-tl-4xl w-[80%] rounded-br-4xl shadow-lg text-center">
             <img src="/ereader.png.webp" className="w-[10rem] mx-auto" alt="E-Book Conversion" />
             <p className="text-black text-4xl pt-8 font-semibold">E-Book Conversion</p>
-            <p className="green-text text-3xl pt-2">Starting At $399</p>
+            {/* <p className="green-text text-3xl pt-2">Starting At $399</p> */}
             <p className="text-xl text-left max-w-sm pt-4">
               <span className="text-4xl text-teal-600">• </span>EPUB file that can be used on most e-book devices and platforms such as Kindle, Nook, and iBook
             </p>
             <p className="text-xl text-left max-w-sm pt-4">
               <span className="text-4xl text-teal-600">• </span>Can create both Flowable and Fixed Layout e-book
             </p>
-            <button
+            {/* <button
               onClick={openModal}
               className="text-3xl text-center button-gradient py-4 rounded-full max-w-sm mt-8"
             >
               From $399
-            </button>
+            </button> */}
           </div>
           <div className="bg-white p-6 rounded-tl-4xl w-[80%] rounded-br-4xl shadow-lg text-center">
             <img src="/complex-plus-interior.png.webp" className="w-[15rem] mx-auto" alt="Complex Plus Interior" />
             <p className="text-black text-4xl pt-8 font-semibold">Complex Plus</p>
-            <p className="green-text text-3xl pt-2">Starting At $1,699</p>
+            {/* <p className="green-text text-3xl pt-2">Starting At $1,699</p> */}
             <p className="text-xl text-left max-w-sm pt-4">
               <span className="text-4xl text-teal-600">• </span>Consultation with design mock-up before interior creation
             </p>
@@ -130,12 +130,12 @@ const BookFormattingServices = () => {
             <p className="text-xl text-left max-w-sm pt-4">
               <span className="text-4xl text-teal-600">• </span>3 rounds of changes
             </p>
-            <button
+            {/* <button
               onClick={openModal}
               className="text-3xl text-center button-gradient py-4 rounded-full max-w-sm mt-8"
             >
               From $1,699
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

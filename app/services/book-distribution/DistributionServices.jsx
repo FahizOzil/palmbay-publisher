@@ -4,7 +4,7 @@ import React from 'react'
 const DistributionServices = () => {
   return (
     <div className={`${font.className} flex flex-col mt-20 justify-center items-center text-black px-4 text-center`}>
-              <p className="text-3xl md:text-6xl max-w-xl">Silver Gate Publishing Book
+              <p className="text-3xl md:text-6xl max-w-xl">Palm Bay Publishing Book
               Distribution Services</p>
               <div className='flex flex-col md:space-x-8 md:flex-row mt-16 justify-center items-center'>
                 <img data-aos="fade-right" src='/reading-book-man.webp' className='w-96 h-auto' />
@@ -27,7 +27,7 @@ const DistributionServices = () => {
             </div>
              <div className='mt-12 flex flex-col w-full justify-center items-center'>
                 <hr className='border-2 border-yellow-600 w-[70%]'/>
-                <p className='mt-12 text-3xl md:text-5xl'>Distribution with Silver Gate Publishing</p>
+                <p className='mt-12 text-3xl md:text-5xl'>Distribution with Palm Bay Publishing</p>
                 <p className='text-xl pt-4 max-w-xl'>We understand the significant time and effort invested in creating your manuscript, so we make distribution easy for you. After collaborating with our team on your editing, cover design, and formatting, it’s time to get your book into the hands of your readers. We’re dedicated to delivering your book to the right audience, making the transition from your desk to readers a smooth and gratifying experience.</p>
              </div>
         </div>

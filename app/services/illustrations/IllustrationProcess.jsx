@@ -5,7 +5,7 @@ const IllustrationProcess = () => {
   return (
     <div className={`${font.className} flex flex-col justify-center items-center`}>
             <hr className='text-yellow-600 border-2 w-[70%] mt-20' />
-            <h1 className='text-3xl mt-10 md:text-5xl text-center'>How Silver Gate Publishing Prepares For Your Book</h1>
+            <h1 className='text-3xl mt-10 md:text-5xl text-center'>How Palm Bay Publishing Prepares For Your Book</h1>
             <p className='mt-6 text-xl text-center max-w-4xl'>We stand by our authors side as your work nears publication, ensuring every element aligns with your vision. The culmination of your dedication and creativity deserves nothing less than excellence, and we orchestrate the final steps with unwavering precision. Before deeming your work ready for publication, we’ll work with you to complete the following steps:</p>
     
             {/* Ensure h2 starts immediately below h1 */}

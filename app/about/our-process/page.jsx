@@ -13,7 +13,7 @@ const page = () => {
       <Navbar />
       <div className="relative w-full min-h-[30rem] bg-cover bg-center" style={{ backgroundImage: "url('/whitewood.png')" }}>
         <div className="absolute left-0 w-[50%] h-full flex flex-col justify-center items-center text-black px-4">
-          <p className="text-3xl pl-20 md:text-6xl">The Self-Publishing Process with Silver Gate</p>
+          <p className="text-3xl pl-20 md:text-6xl">The Self-Publishing Process with Palm Bay</p>
         </div>
         <div className="absolute right-0 w-[50%] h-full flex flex-col justify-center items-center text-black px-4">
           <img src='/process.webp' className='h-80'/>

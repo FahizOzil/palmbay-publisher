@@ -144,7 +144,7 @@ const MarketingSection = () => {
         {/* Middle Section - Main Content */}
         <div className="w-full text-xl md:w-2/4">
           <p className="text-gray-700">
-            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options before your book finds its audience. Count on Silver Gate Publishing to guide you along the way.
+            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options before your book finds its audience. Count on Palm Bay Publishing to guide you along the way.
           </p>
           <p className="mt-4 text-gray-700">
             To stand out in today’s competitive book market, it’s essential to know how to market a book. You’ve done the hard work and finally completed your masterpiece. Now, it’s time to turn that work into a product that actually reaches your audience.
@@ -217,7 +217,7 @@ const MarketingSection = () => {
             Your site also needs to be cleanly laid out with sections and headlines. Plus, the text needs to be easy to read. Readable online content has short paragraphs and snappy sentences. If you’re a flowery prose writer, have someone else read your website content or plug it into a site like the Hemingway App, which will scan for easy readability. You may love words, but search engines prefer simplicity.
           </p>
           <p className="mt-4 text-gray-700">
-            Websites also love fresh content, so add to your website regularly. You can cover anything related to your topic, from “trends in 21st-century science fiction” for the sci-fi author to “best fertilizers of the year” for the nonfiction gardening guru. Silver Gate Publishing offers an Author Website for $1,499 to create the perfect custom website for you and your work.
+            Websites also love fresh content, so add to your website regularly. You can cover anything related to your topic, from “trends in 21st-century science fiction” for the sci-fi author to “best fertilizers of the year” for the nonfiction gardening guru. Palm Bay Publishing offers an Author Website for $1,499 to create the perfect custom website for you and your work.
           </p>
 
           <h2 id="online-marketing" className="text-5xl text-gray-900 mt-12">
@@ -246,7 +246,7 @@ const MarketingSection = () => {
             Google “social media demographics” to learn where your reader base hangs out, then set up accounts there. Post to those accounts regularly. Add bi-weekly or weekly reminders to your calendar if it helps. You can also boost your presence by purchasing ads on your favorite platforms. For authors, especially new ones, we think it’s best to start with the most popular platforms before seeking your audience on more obscure channels.
           </p>
           <p className="mt-4 text-gray-700">
-            Social media marketing for authors can be an effective use of your time. When you present an enticing story engagingly via the right medium for people to find it, then there is no limit to how big you can scale your social media marketing. Silver Gate Publishing offers social media service plans that provide a comprehensive and strategic approach to establishing, growing, and sustaining your online presence.
+            Social media marketing for authors can be an effective use of your time. When you present an enticing story engagingly via the right medium for people to find it, then there is no limit to how big you can scale your social media marketing. Palm Bay Publishing offers social media service plans that provide a comprehensive and strategic approach to establishing, growing, and sustaining your online presence.
           </p>
 
           <h2 id="amazon" className="text-5xl text-gray-900 mt-12">
@@ -256,7 +256,7 @@ const MarketingSection = () => {
             Start by optimizing your book’s Amazon page with an eye-catching cover, captivating description, and appropriate keywords. Amazon makes it easy for authors to advertise their books on its platform. When you log into your account, set up a campaign for your book and choose the best keywords to target for your novel or genre.
           </p>
           <p className="mt-4 text-gray-700">
-            Not sure what keywords will work best? Automatic targeting lets Amazon choose your keywords for you. The downside is that Amazon will only advertise books sold on its platform. Silver Gate Publishing can help ensure your book is available on digital platforms like Amazon, with search-engine-optimized book descriptions and appropriate BISAC categorizations.
+            Not sure what keywords will work best? Automatic targeting lets Amazon choose your keywords for you. The downside is that Amazon will only advertise books sold on its platform. Palm Bay Publishing can help ensure your book is available on digital platforms like Amazon, with search-engine-optimized book descriptions and appropriate BISAC categorizations.
           </p>
 
           <h2 id="paid-ads" className="text-5xl text-gray-900 mt-12">
@@ -289,10 +289,10 @@ const MarketingSection = () => {
             You can connect with media outlets to gain exposure through radio, podcast, and magazine interviews. A press release helps get the word out on your upcoming book launch, and it’s a great way to attract attention. It can also lead to other kinds of media exposure.
           </p>
           <p className="mt-4 text-gray-700">
-            Press releases require a specific format that top publishers expect to see. If you publish through Silver Gate Publishing, you’ll have access to press release writing and distribution services. Silver Gate has more than 780,000 media contacts and can share your book’s press release with up to 1,000 outlets.
+            Press releases require a specific format that top publishers expect to see. If you publish through Palm Bay Publishing, you’ll have access to press release writing and distribution services. Palm Bay has more than 780,000 media contacts and can share your book’s press release with up to 1,000 outlets.
           </p>
           <p className="mt-4 text-gray-700">
-            Utilizing a vast web of carefully selected media contacts, Silver Gate Publishing can unveil your masterpiece to the world. By distributing and presenting marketing materials to just the right media outlets, we can get your book in front of eager readers most likely to engage with it and drum up the buzz it needs to succeed.
+            Utilizing a vast web of carefully selected media contacts, Palm Bay Publishing can unveil your masterpiece to the world. By distributing and presenting marketing materials to just the right media outlets, we can get your book in front of eager readers most likely to engage with it and drum up the buzz it needs to succeed.
           </p>
 
           <h2 id="guerilla-marketing" className="text-5xl text-gray-900 mt-12">
@@ -312,26 +312,26 @@ const MarketingSection = () => {
             How Much Does It Cost to Market the Book?
           </h2>
           <p className="mt-4 text-gray-700">
-            There’s no magic number for the cost of a book marketing campaign. Silver Gate has seen independent authors do it for less than $200, relying mostly on free options and networking. Other authors spend thousands on book editing, design, and marketing services to get truly impressive results.
+            There’s no magic number for the cost of a book marketing campaign. Palm Bay has seen independent authors do it for less than $200, relying mostly on free options and networking. Other authors spend thousands on book editing, design, and marketing services to get truly impressive results.
           </p>
           <p className="mt-4 text-gray-700">
             Many authors are concerned about the book marketing cost. After all, you don’t want to spend thousands of dollars advertising a book that may only sell a few copies. However, investing a little money into your marketing campaign can help set your book up for success.
           </p>
           <p className="mt-4 text-gray-700">
-            The experts at Silver Gate Publishing offer affordable book marketing services to help you share your book with readers. You can choose services based on your budget and needs, with packages starting at $249 for marketing copy and comprehensive promotional packages available up to $2,299.
+            The experts at Palm Bay Publishing offer affordable book marketing services to help you share your book with readers. You can choose services based on your budget and needs, with packages starting at $249 for marketing copy and comprehensive promotional packages available up to $2,299.
           </p>
 
           <h2 id="collaborate-experts" className="text-5xl text-gray-900 mt-12">
             Collaborate With the Book Marketing Experts
           </h2>
           <p className="mt-4 text-gray-700">
-            When you partner with Silver Gate Publishing for your book marketing services, you open the door to a dynamic process that propels your creation into the spotlight. Your journey begins with a consultation call with your dedicated publishing consultant. We’re not just interested in your book; we’re invested in your vision.
+            When you partner with Palm Bay Publishing for your book marketing services, you open the door to a dynamic process that propels your creation into the spotlight. Your journey begins with a consultation call with your dedicated publishing consultant. We’re not just interested in your book; we’re invested in your vision.
           </p>
           <p className="mt-4 text-gray-700">
-            By delving into your goals, genre nuances, target audience aspirations, and the essence of your creation, we lay the foundation for a marketing strategy tailored uniquely to you. Silver Gate Publishing is a top-tier publishing company offering quality book marketing services for independent authors — including marketing copy, press releases, author websites, and more.
+            By delving into your goals, genre nuances, target audience aspirations, and the essence of your creation, we lay the foundation for a marketing strategy tailored uniquely to you. Palm Bay Publishing is a top-tier publishing company offering quality book marketing services for independent authors — including marketing copy, press releases, author websites, and more.
           </p>
           <p className="mt-4 text-gray-700">
-            Your journey with us is collaborative. Every step of the way, we value your insights, champion your creativity, and encourage your active participation. Book marketing can be challenging, but you don’t have to do it alone. Reach out to Silver Gate Publishing today to get started.
+            Your journey with us is collaborative. Every step of the way, we value your insights, champion your creativity, and encourage your active participation. Book marketing can be challenging, but you don’t have to do it alone. Reach out to Palm Bay Publishing today to get started.
           </p>
         </div>
 
@@ -343,7 +343,7 @@ const MarketingSection = () => {
             GET STARTED!
           </button>
           <p className="mt-4">Or call us</p>
-          <p className="text-2xl">310 564 9107</p>
+          <p className="text-2xl">850 588-0888</p>
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Script from "next/script"; // ✅ import Script
 import { font } from "@/app/Components/font/font";
 import Navbar from "@/app/Components/Navbar";
 import DesignServices from "./DesignServices";
@@ -14,20 +15,13 @@ import ContactForm from "@/app/Components/ContactForm"; // Adjust the path if ne
 const Page = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   // Close modal on "Escape" key press
   useEffect(() => {
     const handleEsc = (event) => {
-      if (event.key === "Escape") {
-        closeModal();
-      }
+      if (event.key === "Escape") closeModal();
     };
     if (isModalOpen) {
       window.addEventListener("keydown", handleEsc);
@@ -47,7 +41,11 @@ const Page = () => {
         <div className="absolute inset-0 flex flex-col justify-center items-center text-black px-4 text-center">
           <p className="text-3xl md:text-6xl">Book Cover Design</p>
           <p className="pt-4 text-md md:text-xl max-w-3xl">
-            Silver Gate Publishing offers four different professional book cover design services tailored to meet the needs of any independent author based on their budget and design preferences. Learn more about our services below and how we can help you design a captivating book cover.
+            Palm Bay Publishing offers four different professional book cover
+            design services tailored to meet the needs of any independent author
+            based on their budget and design preferences. Learn more about our
+            services below and how we can help you design a captivating book
+            cover.
           </p>
           <p className="pt-8 text-xl italic max-w-3xl">
             *Cover Design and Interior Formatting are required services.
@@ -79,6 +77,21 @@ const Page = () => {
           </div>
         </div>
       )}
+
+      {/* ✅ Tawk.to Live Chat (only loads on this page) */}
+      <Script id="tawk-to" strategy="afterInteractive">
+        {`
+          var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+          (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/68aded95a8e039192a6ad8d1/1j3jmg46o';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+          })();
+        `}
+      </Script>
     </div>
   );
 };

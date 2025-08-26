@@ -5,7 +5,7 @@ const AuthorCentric = () => {
   return (
     <div className={`${font.className} flex flex-col justify-center items-center p-20`}>
             <h1 className='text-5xl text-center'>Our Author-Centric Publishing Process At<br/>
-            <span className='green-text'>Silver Gate Publishing</span></h1>
+            <span className='green-text'>Palm Bay Publishing</span></h1>
             <hr className='w-[10%] border-2 border-yellow-600 mt-8'/>
             <p className='text-center mt-8 text-xl max-w-4xl'>Every author’s journey is unique, which is why we offer a customizable self-publishing process that puts you in the driver’s seat. Here’s a breakdown of the steps involved in publishing your book with us:</p>
             <div className='flex mt-24 justify-center items-center space-x-8'>

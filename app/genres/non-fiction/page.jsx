@@ -23,7 +23,7 @@ const page = () => {
             Non-Fiction Genre Book Publishing
           </h1>
           <p className="text-lg md:text-xl text-center mt-4 max-w-3xl">
-            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Silver Gate Publishing to guide you along the way.
+            Publishing a book can feel like a monumental task, especially when you do it on your own. There’s a whole world of design choices, marketing strategies, and printing options that you need to navigate before your book finds its audience. Count on Palm Bay Publishing to guide you along the way.
           </p>
         </div>
       </div>
@@ -138,7 +138,7 @@ const page = () => {
               <li className="flex items-start">
                 <span className="text-teal-600 mr-2">•</span>
                 <span>
-                  You can find other examples of great non-fiction books by exploring Silver Gate Publishing’s non-fiction genre collection.
+                  You can find other examples of great non-fiction books by exploring Palm Bay Publishing’s non-fiction genre collection.
                 </span>
               </li>
             </ul>

@@ -41,7 +41,7 @@ const Footer = () => {
             <div className="flex flex-col items-start">
               <div className="flex items-center space-x-2 mb-4">
                 <FaPhoneAlt className="text-lg" />
-                <a href="tel:+850 588-0888"><span className="font-bold text-lg">850 588-0888</span></a>
+                <a href="tel:+850 588-0888"><span className="font-bold text-lg">(850) 588-0888</span></a>
               </div>
               <div className="flex space-x-4">
                 <FaInstagram className="text-xl cursor-pointer hover:text-gray-400" />
@@ -54,8 +54,29 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="text-xl text-left text-gray-400">
-          © 2025 Palm Bay Publishing. All rights reserved.
+        {/* Legal Links */}
+        <div className="mt-8 pt-6 border-t border-gray-600">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+            <div className="text-sm text-gray-400">
+              © 2025 Palm Bay Publishing. All rights reserved.
+            </div>
+            <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-sm">
+              <a href="/privacy-policy.html" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
+                Privacy Policy
+              </a>
+              <a href="/terms-conditions.html" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
+                Terms & Conditions
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Disclaimer Text */}
+        <div className="mt-4 text-xs text-gray-500 text-center md:text-left">
+          <p>
+            <strong>Disclaimer:</strong> We operate as an independent entity that specializes in book writing and publishing services. 
+            We solely use these logos and trademarks for identification purposes only.
+          </p>
         </div>
       </div>
     </footer>

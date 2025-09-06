@@ -24,7 +24,7 @@ const About = () => {
 
         {/* Heading */}
         <h1 className="text-4xl md:text-5xl mt-8 font-bold text-center">
-          About Us
+          Why Choose Us as Your Publishing Partner
         </h1>
 
         {/* Short Description */}
@@ -34,12 +34,8 @@ const About = () => {
 
         {/* Detailed Description */}
         <p className="mt-6 text-lg md:text-2xl max-w-4xl text-center tracking-wide leading-relaxed">
-          We’re a self-publishing company that provides independent authors with the publishing 
-          solutions, tools, and expertise they need to succeed. We help bring your work into the 
-          hands and screens of readers by assisting you with all of your publishing and marketing 
-          needs. We transform your manuscript into a world-class book that can be enjoyed and 
-          shared across a multitude of platforms. We strongly believe your book should reflect 
-          your words your way, so our authors retain full creative control and 100% of royalties.
+          As a leading book publishing company, we offer independent authors the publishing solutions, tools, and expertise necessary to thrive. Our manuscript publishing services ensure your work reaches readers across multiple platforms, both in print and digital formats. We take pride in transforming your manuscript into a world-class book that can be shared and enjoyed by all. At our core, we believe your book should represent your vision, so we empower our authors with full creative control and 100% of the royalties. Let us help you publish a book that stands out.
+
         </p>
 
       </div>

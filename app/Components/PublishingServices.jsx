@@ -33,7 +33,7 @@ const PublishingServices = () => {
   return (
     <div className={`${font.className} flex flex-col items-center p-12 bg-white`}>
       {/* Section Title */}
-      <h1 className="text-3xl md:text-5xl mt-12 text-center">Publishing Services</h1>
+      <h1 className="text-3xl md:text-5xl mt-12 text-black text-center">Publishing Services</h1>
       <hr className="w-24 md:w-32 mt-6 border-2 border-yellow-600" />
 
       {/* Cards Grid */}

@@ -28,7 +28,7 @@ const Culture = () => {
                     <img src='/culture4.webp' className='h-24  w-40'/>
                     <div className='flex flex-col'>
                         <h1 className='text-teal-700 pl-4 text-4xl'>30%</h1>
-                        <p className='pl-4 w-52'>of silvergate employees have their own website and books.</p>
+                        <p className='pl-4 w-52'>of palmbay publishers employees have their own website and books.</p>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@ const Culture = () => {
                 <div className='flex pl-4 pt-4'>
                     <div className='flex flex-col'>
                         <h1 className='text-teal-700  text-4xl'>33%</h1>
-                        <p className=' w-40'>of silvergate employees have a cat.</p>
+                        <p className=' w-40'>of palmbay publishers employees have a cat.</p>
                     </div>
                     <img src='/culture4.webp' className='h-24 pr-2 w-40'/>
                 </div>

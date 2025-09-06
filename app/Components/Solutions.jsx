@@ -51,7 +51,7 @@ const Solutions = ({ word }) => {
   return (
     <div className={`${font.className} flex flex-col overflow-hidden items-center text-center px-6 py-16 bg-white`}>
       {/* Heading Section */}
-      <h1 className="text-3xl md:text-5xl font-semibold">
+      <h1 className="text-3xl text-black md:text-5xl font-semibold">
         {word} Solutions For Every Genre
       </h1>
       <hr className="w-24 md:w-32 mt-4 border-2 border-yellow-600" />

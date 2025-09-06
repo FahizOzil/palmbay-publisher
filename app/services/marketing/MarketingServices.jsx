@@ -3,7 +3,7 @@ import React from 'react'
 
 const MarketingServices = () => {
   return (
-    <div className={`${font.className} flex flex-col mt-20 justify-center items-center text-black px-4 text-center`}>
+    <div className={`${font.className} flex flex-col mt-20 justify-center items-center bg-white text-black px-4 text-center`}>
               <p className="text-3xl md:text-6xl max-w-xl">A Collaborative Approach to
               Marketing Your Book</p>
               <p className="pt-4 text-md md:text-xl max-w-3xl">

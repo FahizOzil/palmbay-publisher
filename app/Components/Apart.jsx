@@ -26,7 +26,7 @@ const Apart = () => {
                 <p className="text-lg md:text-xl text-black mt-4">throughout the entire publishing process</p>
               </div>
               <div className="md:w-[50%] flex justify-center items-center mt-4 md:mt-0">
-                <img src="/comms.webp" className="w-32 md:w-40 h-28 md:h-36" alt="Communication" />
+                <img src="/comms.webp" className="w-32 md:w-40 h-28 md:h-36 md:mt-19" alt="Communication" />
               </div>
             </div>
 

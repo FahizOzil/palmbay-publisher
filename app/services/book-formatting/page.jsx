@@ -43,7 +43,7 @@ const Page = () => {
         className="relative w-full min-h-[40rem] bg-cover bg-center"
         style={{ backgroundImage: "url('/whitewood.png')" }}
       >
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-black px-4 text-center">
+        <div className="absolute inset-0 flex flex-col justify-center items-center bg-white text-black px-4 text-center">
           <p className="text-3xl md:text-6xl">Book Formatting Services</p>
           <p className="pt-4 text-md md:text-xl max-w-3xl">
             Elevate your writing to the next level with a professionally designed and formatted book interior.
@@ -53,7 +53,7 @@ const Page = () => {
           </p>
           <button
             onClick={openModal}
-            className="mt-8 button-gradient cursor-pointer px-8 py-3 rounded-md font-bold text-black hover:bg-yellow-400"
+            className="mt-8 button-gradient cursor-pointer px-8 py-3 rounded-md font-bold bg-white text-black hover:bg-yellow-400"
           >
             Get Started!
           </button>

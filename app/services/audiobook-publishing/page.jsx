@@ -13,7 +13,7 @@ const page = () => {
     <div className={`${font.className}`}>
       <Navbar />
       <div className="relative  w-full min-h-[30rem] bg-cover bg-center" style={{ backgroundImage: "url('/whitewood.png')" }}>
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-black px-4 text-center">
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-black px-4 text-center bg-white">
           <p className="text-3xl md:text-6xl">Audio Book Services</p>
           <p className="pt-4 text-md md:text-xl max-w-3xl">
           Palm Bay offers an audiobook self-publishing service that helps authors successfully transform their written works into engaging, professionally narrated audiobooks. Learn more about our service below and how an audiobook can benefit your readers.

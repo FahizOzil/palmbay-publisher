@@ -44,7 +44,7 @@ const Page = () => {
         className="relative w-full min-h-[30rem] bg-cover bg-center"
         style={{ backgroundImage: "url('/whitewood.png')" }}
       >
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-black px-4 text-center">
+        <div className="absolute inset-0 flex flex-col justify-center items-center bg-white text-black px-4 text-center">
           <p className="text-3xl md:text-6xl">Book Editing Services</p>
           <p className="pt-4 text-md md:text-xl max-w-3xl">
             Elevate your book with Palm Bay’s comprehensive book editing services. Our experienced editors proofread and edit your manuscript, carefully reviewing its structure, tone, and textual flow to ensure a polished outcome. With a keen eye for detail, they also thoroughly check for grammar, punctuation, and spelling errors, resulting in a professional, high-quality manuscript ready to be printed. Learn more about all of our professional editing services below!

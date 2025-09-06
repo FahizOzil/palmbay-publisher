@@ -18,7 +18,7 @@ const page = () => {
     <div className={`${font.className}`}>
       <Navbar />
       <div className="relative  w-full min-h-[40rem] bg-cover bg-center" style={{ backgroundImage: "url('/whitewood.png')" }}>
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-black px-4 text-center">
+        <div className="absolute inset-0 flex flex-col justify-center items-center bg-white text-black px-4 text-center">
           <p className="text-3xl md:text-6xl">Book Distributing Services</p>
           <p className="pt-4 text-md md:text-xl max-w-3xl">
           With Palm Bay Publishing, your book can be available to readers across every major platform in hardcover, paperback, audiobook, and eBook formats. In addition to traditional bulk printing, we offer print-on-demand services that allow authors to sell more books without the risks of maintaining inventory. Best of all, you get to keep 100% of your hard-earned royalties

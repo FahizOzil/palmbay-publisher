@@ -38,7 +38,7 @@ const Page = () => {
         className="relative w-full min-h-[30rem] bg-cover bg-center"
         style={{ backgroundImage: "url('/whitewood.png')" }}
       >
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-black px-4 text-center">
+        <div className="absolute inset-0 flex flex-col justify-center items-center bg-white text-black px-4 text-center bg-white">
           <p className="text-3xl md:text-6xl">Book Cover Design</p>
           <p className="pt-4 text-md md:text-xl max-w-3xl">
             Palm Bay Publishing offers four different professional book cover

@@ -1,3 +1,4 @@
+// Fixed hero component with proper EmailJS integration
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -9,7 +10,7 @@ const Hero = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalType, setModalType] = useState(''); // 'success' or 'error'
   const [mounted, setMounted] = useState(false);
-  const [emailjs, setEmailjs] = useState(null);
+  const [emailjsLoaded, setEmailjsLoaded] = useState(false); // Track EmailJS loading
   const [formData, setFormData] = useState({
     manuscriptReady: '',
     genre: '',
@@ -20,27 +21,32 @@ const Hero = () => {
     zipCode: '',
   });
 
-  // EmailJS configuration
+  // EmailJS configuration - MATCH YOUR CONTACT FORM
   const EMAILJS_SERVICE_ID = 'service_5fdp7dx';
-  const EMAILJS_PUBLIC_KEY = 'uN-2O3nbFXI273dvI'; 
+  const EMAILJS_TEMPLATE_ID = 'template_gk147gk'; // CHANGED TO MATCH CONTACT FORM
+  const EMAILJS_PUBLIC_KEY = 'uN-2O3nbFXI273dvI';
 
-  // Handle mounting and EmailJS import
+  // Load EmailJS script - SAME METHOD AS CONTACT FORM
   useEffect(() => {
     setMounted(true);
     
-    // Dynamically import EmailJS only on client side
-    const loadEmailJS = async () => {
-      try {
-        console.log('Loading EmailJS...');
-        const emailjsModule = await import('@emailjs/browser');
-        console.log('EmailJS module loaded:', emailjsModule);
-        
-        setEmailjs(emailjsModule.default);
-        emailjsModule.default.init(EMAILJS_PUBLIC_KEY);
-        console.log('EmailJS initialized with key:', EMAILJS_PUBLIC_KEY);
-      } catch (error) {
-        console.error('Failed to load EmailJS:', error);
+    const loadEmailJS = () => {
+      if (window.emailjs) {
+        setEmailjsLoaded(true);
+        return;
       }
+
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+      script.onload = () => {
+        window.emailjs.init(EMAILJS_PUBLIC_KEY);
+        setEmailjsLoaded(true);
+        console.log('EmailJS loaded and initialized successfully');
+      };
+      script.onerror = () => {
+        console.error('Failed to load EmailJS');
+      };
+      document.head.appendChild(script);
     };
 
     loadEmailJS();
@@ -62,63 +68,6 @@ const Hero = () => {
     }
   };
 
-  // Send email using EmailJS
-  // Replace your sendEmail function with this enhanced version for better debugging:
-
-const sendEmail = async (formData) => {
-  if (!emailjs) {
-    console.error('EmailJS not loaded');
-    throw new Error('EmailJS not loaded');
-  }
-
-  const templateParams = {
-    to_email: 'fahizozil17@gmail.com',
-    cc_email: 'pakalone8@gmail.com',
-    from_name: `${formData.firstName} ${formData.lastName}`,
-    from_email: formData.email,
-    phone: formData.phone,
-    zip_code: formData.zipCode,
-    manuscript_ready: formData.manuscriptReady,
-    genre: formData.genre,
-    subject: 'New Publishing Inquiry - Palm Bay Publishers',
-    message: `
-      New publishing inquiry received:
-      
-      Name: ${formData.firstName} ${formData.lastName}
-      Email: ${formData.email}
-      Phone: ${formData.phone}
-      Zip Code: ${formData.zipCode}
-      
-      Manuscript Ready: ${formData.manuscriptReady}
-      Genre: ${formData.genre}
-      
-      Please follow up with this potential client.
-    `
-  };
-
-  console.log('Attempting to send email with params:', templateParams);
-  console.log('Service ID:', EMAILJS_SERVICE_ID);
-  console.log('Template ID: template_default');
-
-  try {
-    const response = await emailjs.send(
-      EMAILJS_SERVICE_ID,
-      'template_default', // Make sure this template exists in your EmailJS account
-      templateParams
-    );
-    
-    console.log('EmailJS Success Response:', response);
-    return { success: true, response };
-  } catch (error) {
-    console.error('EmailJS Error Details:', {
-      message: error.message,
-      status: error.status,
-      text: error.text,
-      error: error
-    });
-    return { success: false, error };
-  }
-};
   // Handle form submission for step 2
   const handleStep2Submit = async (e) => {
     e.preventDefault();
@@ -134,37 +83,62 @@ const sendEmail = async (formData) => {
       return;
     }
 
-    if (!emailjs) {
-      setModalType('error');
-      setShowModal(true);
+    if (!emailjsLoaded) {
+      alert('Email service is still loading. Please try again in a moment.');
       return;
     }
 
     setIsLoading(true);
 
     try {
-      const result = await sendEmail(formData);
+      // Prepare template parameters - MATCH CONTACT FORM STRUCTURE
+      const templateParams = {
+        from_name: `${formData.firstName} ${formData.lastName}`,
+        from_email: formData.email,
+        phone: formData.phone,
+        zip_code: formData.zipCode,
+        manuscript_ready: formData.manuscriptReady,
+        genre: formData.genre,
+        to_name: 'Publishing Team',
+        message: `New publishing inquiry from ${formData.firstName} ${formData.lastName}. 
+        
+Contact Details:
+- Name: ${formData.firstName} ${formData.lastName}
+- Email: ${formData.email}
+- Phone: ${formData.phone}
+- Zip Code: ${formData.zipCode}
+
+Manuscript Information:
+- Manuscript Ready: ${formData.manuscriptReady}
+- Genre: ${formData.genre}`,
+      };
+
+      // Send email using EmailJS - SAME AS CONTACT FORM
+      const result = await window.emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      console.log('Email sent successfully:', result);
+      setModalType('success');
+      setShowModal(true);
       
-      if (result.success) {
-        setModalType('success');
-        setShowModal(true);
-        // Reset form after successful submission
-        setFormData({
-          manuscriptReady: '',
-          genre: '',
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          zipCode: '',
-        });
-        setStep(1);
-      } else {
-        setModalType('error');
-        setShowModal(true);
-      }
+      // Reset form after successful submission
+      setFormData({
+        manuscriptReady: '',
+        genre: '',
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        zipCode: '',
+      });
+      setStep(1);
+      
     } catch (error) {
-      console.error('Submission error:', error);
+      console.error('Error sending email:', error);
       setModalType('error');
       setShowModal(true);
     } finally {
@@ -226,7 +200,7 @@ const sendEmail = async (formData) => {
             We encountered an issue while submitting your inquiry. Please try again or contact us directly.
           </p>
           <p className="text-sm text-gray-500">
-            You can call us at <strong>850 588-0888</strong> for immediate assistance.
+            You can call us at <strong>850-588-0888</strong> for immediate assistance.
           </p>
         </div>
         <div className="flex space-x-3">
@@ -273,7 +247,7 @@ const sendEmail = async (formData) => {
               <div className="w-full p-3 border rounded-lg bg-gray-200 animate-pulse h-12"></div>
             </div>
             <p className="mt-4 text-lg">Or Give Us A Call At</p>
-            <p className="text-xl mt-1 font-bold tracking-wider">850 588-0888</p>
+            <p className="text-xl mt-1 font-bold tracking-wider">850-588-0888</p>
           </div>
         </div>
       </div>
@@ -305,6 +279,14 @@ const sendEmail = async (formData) => {
               {step === 1 ? 'Start Publishing Today!' : 'Start Your Publishing Journey'}
             </h1>
 
+            {/* Progress indicator */}
+            <div className="flex justify-center mb-6">
+              <div className="flex space-x-2">
+                <div className={`w-3 h-3 rounded-full ${step >= 1 ? 'bg-yellow-400' : 'bg-white/30'} transition-colors`}></div>
+                <div className={`w-3 h-3 rounded-full ${step >= 2 ? 'bg-yellow-400' : 'bg-white/30'} transition-colors`}></div>
+              </div>
+            </div>
+
             {/* Step 1: Initial Questions */}
             {step === 1 && (
               <form onSubmit={handleStep1Submit} className="space-y-4 mt-6 w-full">
@@ -313,12 +295,13 @@ const sendEmail = async (formData) => {
                   name="manuscriptReady"
                   value={formData.manuscriptReady}
                   onChange={handleChange}
-                  className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400"
+                  className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
+                  required
                 >
                   <option value="">Is Your Manuscript Ready?*</option>
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
-                  <option value="Need Help">Need Help</option>
+                  <option value="Yes">Yes, it's complete</option>
+                  <option value="No">No, still writing</option>
+                  <option value="Need Help">I need help finishing it</option>
                 </select>
 
                 {/* Genre Dropdown */}
@@ -326,22 +309,28 @@ const sendEmail = async (formData) => {
                   name="genre"
                   value={formData.genre}
                   onChange={handleChange}
-                  className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400"
+                  className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
+                  required
                 >
-                  <option value="">What is the Genre Of Your Book?</option>
+                  <option value="">What is the Genre Of Your Book?*</option>
                   <option value="Fiction">Fiction</option>
                   <option value="Non-Fiction">Non-Fiction</option>
-                  <option value="Sci-Fi">Sci-Fi</option>
+                  <option value="Mystery/Thriller">Mystery/Thriller</option>
                   <option value="Romance">Romance</option>
+                  <option value="Sci-Fi/Fantasy">Sci-Fi/Fantasy</option>
+                  <option value="Biography/Memoir">Biography/Memoir</option>
+                  <option value="Self-Help">Self-Help</option>
+                  <option value="Children's Book">Children's Book</option>
+                  <option value="Poetry">Poetry</option>
                   <option value="Other">Other</option>
                 </select>
 
                 {/* Button */}
                 <button
                   type="submit"
-                  className="button-gradient mt-6 w-full px-6 py-3 rounded-md font-bold text-black bg-yellow-500 hover:bg-yellow-400 transition-all"
+                  className="button-gradient mt-6 w-full px-6 py-3 rounded-md font-bold text-black bg-yellow-500 hover:bg-yellow-400 transition-all transform hover:scale-105"
                 >
-                  Get Started!
+                  Get Started! →
                 </button>
               </form>
             )}
@@ -356,7 +345,7 @@ const sendEmail = async (formData) => {
                     value={formData.firstName}
                     onChange={handleChange}
                     placeholder="First Name*"
-                    className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400"
+                    className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
                     required
                   />
                   <input
@@ -365,7 +354,7 @@ const sendEmail = async (formData) => {
                     value={formData.lastName}
                     onChange={handleChange}
                     placeholder="Last Name*"
-                    className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400"
+                    className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
                     required
                   />
                 </div>
@@ -375,8 +364,8 @@ const sendEmail = async (formData) => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Email*"
-                  className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400"
+                  placeholder="Email Address*"
+                  className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
                   required
                 />
 
@@ -386,7 +375,7 @@ const sendEmail = async (formData) => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="Phone Number*"
-                  className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400"
+                  className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
                   required
                 />
 
@@ -396,44 +385,54 @@ const sendEmail = async (formData) => {
                   value={formData.zipCode}
                   onChange={handleChange}
                   placeholder="Zip Code*"
-                  className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400"
+                  pattern="[0-9]{5}"
+                  maxLength="5"
+                  className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
                   required
                 />
-                <p className="text-sm text-white">
-                  Please enter a number from 00000 to 99999.
+                <p className="text-sm text-white/80">
+                  Please enter a valid 5-digit zip code (00000 to 99999).
                 </p>
 
-                <p className="text-sm text-white">
-                  Submitting your information indicates that you have read our{' '}
-                  <a href="/privacy-policy" className="underline hover:text-yellow-400">
+                <p className="text-sm text-white/80 bg-white/10 p-3 rounded-lg border border-white/20">
+                  📋 By submitting, you agree to our{' '}
+                  <a href="/privacy-policy" className="underline hover:text-yellow-400 transition-colors">
                     privacy policy
                   </a>{' '}
-                  and give us permission to call, email, and send text messages.
+                  and consent to be contacted by phone, email, and text.
                 </p>
 
                 <div className="flex space-x-4">
                   <button
                     type="button"
                     onClick={handleBack}
-                    className="w-full px-6 py-3 rounded-md font-bold text-black button-gradient transition-all"
+                    className="w-full px-6 py-3 rounded-md font-bold text-black bg-white/20 hover:bg-white/30 transition-all transform hover:scale-105"
                     disabled={isLoading}
                   >
-                    Back
+                    ← Back
                   </button>
+                  
                   <button
                     type="submit"
-                    className="w-full px-6 py-3 rounded-md font-bold text-black button-gradient transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-                    disabled={isLoading}
+                    className="w-full px-6 py-3 rounded-md font-bold text-black button-gradient bg-yellow-500 hover:bg-yellow-400 transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    disabled={isLoading || !emailjsLoaded}
                   >
-                    {isLoading ? 'Submitting...' : 'Submit'}
+                    {isLoading ? 'Sending...' : emailjsLoaded ? 'Submit →' : 'Loading...'}
                   </button>
                 </div>
               </form>
             )}
 
             {/* Contact Info */}
-            <p className="mt-4 text-lg">Or Give Us A Call At</p>
-            <p className="text-xl mt-1 font-bold tracking-wider">850 588-0888</p>
+            <div className="mt-6 text-center border-t border-white/20 pt-4">
+              <p className="text-lg">📞 Or Give Us A Call At</p>
+              <a 
+                href="tel:850-588-0888"
+                className="text-2xl mt-1 font-bold tracking-wider text-yellow-400 hover:text-yellow-300 transition-colors block"
+              >
+                850-588-0888
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -1,16 +1,17 @@
-// Fixed hero component with proper EmailJS integration
+// Updated hero component with redirect to thank you page
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { font } from './font/font';
 
 const Hero = () => {
+  const router = useRouter();
   const [step, setStep] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const [modalType, setModalType] = useState(''); // 'success' or 'error'
+  const [showErrorModal, setShowErrorModal] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [emailjsLoaded, setEmailjsLoaded] = useState(false); // Track EmailJS loading
+  const [emailjsLoaded, setEmailjsLoaded] = useState(false);
   const [formData, setFormData] = useState({
     manuscriptReady: '',
     genre: '',
@@ -23,10 +24,10 @@ const Hero = () => {
 
   // EmailJS configuration - MATCH YOUR CONTACT FORM
   const EMAILJS_SERVICE_ID = 'service_5fdp7dx';
-  const EMAILJS_TEMPLATE_ID = 'template_gk147gk'; // CHANGED TO MATCH CONTACT FORM
+  const EMAILJS_TEMPLATE_ID = 'template_gk147gk';
   const EMAILJS_PUBLIC_KEY = 'uN-2O3nbFXI273dvI';
 
-  // Load EmailJS script - SAME METHOD AS CONTACT FORM
+  // Load EmailJS script
   useEffect(() => {
     setMounted(true);
     
@@ -91,7 +92,7 @@ const Hero = () => {
     setIsLoading(true);
 
     try {
-      // Prepare template parameters - MATCH CONTACT FORM STRUCTURE
+      // Prepare template parameters
       const templateParams = {
         from_name: `${formData.firstName} ${formData.lastName}`,
         from_email: formData.email,
@@ -113,7 +114,7 @@ Manuscript Information:
 - Genre: ${formData.genre}`,
       };
 
-      // Send email using EmailJS - SAME AS CONTACT FORM
+      // Send email using EmailJS
       const result = await window.emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
@@ -122,10 +123,8 @@ Manuscript Information:
       );
 
       console.log('Email sent successfully:', result);
-      setModalType('success');
-      setShowModal(true);
       
-      // Reset form after successful submission
+      // Reset form data
       setFormData({
         manuscriptReady: '',
         genre: '',
@@ -137,10 +136,12 @@ Manuscript Information:
       });
       setStep(1);
       
+      // Redirect to thank you page
+      router.push('/thankyou.html');
+      
     } catch (error) {
       console.error('Error sending email:', error);
-      setModalType('error');
-      setShowModal(true);
+      setShowErrorModal(true);
     } finally {
       setIsLoading(false);
     }
@@ -151,41 +152,12 @@ Manuscript Information:
     setStep(1);
   };
 
-  // Close modal
-  const closeModal = () => {
-    setShowModal(false);
-    setModalType('');
+  // Close error modal
+  const closeErrorModal = () => {
+    setShowErrorModal(false);
   };
 
-  // Success Modal Component
-  const SuccessModal = () => (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 text-center">
-        <div className="mb-6">
-          <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-            <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-          </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
-          <p className="text-gray-600 mb-4">
-            Your publishing inquiry has been submitted successfully. Our team will review your information and get back to you within 24 hours.
-          </p>
-          <p className="text-sm text-gray-500">
-            We're excited to help you bring your story to life!
-          </p>
-        </div>
-        <button
-          onClick={closeModal}
-          className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-        >
-          Continue
-        </button>
-      </div>
-    </div>
-  );
-
-  // Error Modal Component
+  // Error Modal Component (keeping only error modal)
   const ErrorModal = () => (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 text-center">
@@ -205,7 +177,7 @@ Manuscript Information:
         </div>
         <div className="flex space-x-3">
           <button
-            onClick={closeModal}
+            onClick={closeErrorModal}
             className="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-6 rounded-lg transition-colors"
           >
             Try Again
@@ -437,9 +409,8 @@ Manuscript Information:
         </div>
       </div>
 
-      {/* Modals */}
-      {showModal && modalType === 'success' && <SuccessModal />}
-      {showModal && modalType === 'error' && <ErrorModal />}
+      {/* Error Modal (only show error modal, success redirects to thank you page) */}
+      {showErrorModal && <ErrorModal />}
     </>
   );
 };

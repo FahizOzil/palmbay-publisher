@@ -120,12 +120,12 @@ const ThankYouPage = () => {
             Back to Home
           </button>
           
-          <a
-            href="/services"
+          {/* <a
+            href="/"
             className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg inline-block"
           >
-            Explore Our Services
-          </a>
+            Explore Our Privacy Policy
+          </a> */}
         </div>
 
         {/* Auto-redirect notice */}

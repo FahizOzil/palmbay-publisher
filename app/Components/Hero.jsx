@@ -1,4 +1,4 @@
-// Updated hero component with redirect to thank you page
+// Simplified hero component with single form (no steps)
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -7,7 +7,6 @@ import { font } from './font/font';
 
 const Hero = () => {
   const router = useRouter();
-  const [step, setStep] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -59,23 +58,13 @@ const Hero = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Handle form submission for step 1
-  const handleStep1Submit = (e) => {
-    e.preventDefault();
-    if (formData.manuscriptReady && formData.genre) {
-      setStep(2);
-    } else {
-      alert('Please fill out both fields to proceed.');
-    }
-  };
-
-  // Handle form submission for step 2
-  const handleStep2Submit = async (e) => {
+  // Handle form submission
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Basic validation for step 2
-    const { firstName, lastName, email, phone, zipCode } = formData;
-    if (!firstName || !lastName || !email || !phone || !zipCode) {
+    // Validation for all fields
+    const { manuscriptReady, genre, firstName, lastName, email, phone, zipCode } = formData;
+    if (!manuscriptReady || !genre || !firstName || !lastName || !email || !phone || !zipCode) {
       alert('Please fill out all required fields.');
       return;
     }
@@ -134,7 +123,6 @@ Manuscript Information:
         phone: '',
         zipCode: '',
       });
-      setStep(1);
       
       // Redirect to thank you page
       router.push('/thankyou.html');
@@ -147,17 +135,12 @@ Manuscript Information:
     }
   };
 
-  // Go back to step 1
-  const handleBack = () => {
-    setStep(1);
-  };
-
   // Close error modal
   const closeErrorModal = () => {
     setShowErrorModal(false);
   };
 
-  // Error Modal Component (keeping only error modal)
+  // Error Modal Component
   const ErrorModal = () => (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 text-center">
@@ -217,6 +200,10 @@ Manuscript Information:
               <div className="w-full p-3 border rounded-lg bg-gray-200 animate-pulse h-12"></div>
               <div className="w-full p-3 border rounded-lg bg-gray-200 animate-pulse h-12"></div>
               <div className="w-full p-3 border rounded-lg bg-gray-200 animate-pulse h-12"></div>
+              <div className="w-full p-3 border rounded-lg bg-gray-200 animate-pulse h-12"></div>
+              <div className="w-full p-3 border rounded-lg bg-gray-200 animate-pulse h-12"></div>
+              <div className="w-full p-3 border rounded-lg bg-gray-200 animate-pulse h-12"></div>
+              <div className="w-full p-3 border rounded-lg bg-gray-200 animate-pulse h-12"></div>
             </div>
             <p className="mt-4 text-lg">Or Give Us A Call At</p>
             <p className="text-xl mt-1 font-bold tracking-wider">850-588-0888</p>
@@ -247,153 +234,120 @@ Manuscript Information:
         {/* Right Section (Form) */}
         <div className="w-full md:w-1/2 flex flex-col items-center mt-10 md:mt-0">
           <div className="customgreen w-full max-w-md rounded-br-4xl rounded-tl-4xl py-8 px-6 md:px-8 flex flex-col items-center">
-            <h1 className="text-2xl md:text-3xl text-center">
-              {step === 1 ? 'Start Publishing Today!' : 'Start Your Publishing Journey'}
-            </h1>
+            <h1 className="text-2xl md:text-3xl text-center mb-6">Start Publishing Today!</h1>
 
-            {/* Progress indicator */}
-            <div className="flex justify-center mb-6">
-              <div className="flex space-x-2">
-                <div className={`w-3 h-3 rounded-full ${step >= 1 ? 'bg-yellow-400' : 'bg-white/30'} transition-colors`}></div>
-                <div className={`w-3 h-3 rounded-full ${step >= 2 ? 'bg-yellow-400' : 'bg-white/30'} transition-colors`}></div>
-              </div>
-            </div>
+            {/* Single Form with All Fields */}
+            <form onSubmit={handleSubmit} className="space-y-4 w-full">
+              {/* Manuscript Dropdown */}
+              <select
+                name="manuscriptReady"
+                value={formData.manuscriptReady}
+                onChange={handleChange}
+                className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
+                required
+              >
+                <option value="">Is Your Manuscript Ready?*</option>
+                <option value="Yes">Yes, it's complete</option>
+                <option value="No">No, still writing</option>
+                <option value="Need Help">I need help finishing it</option>
+              </select>
 
-            {/* Step 1: Initial Questions */}
-            {step === 1 && (
-              <form onSubmit={handleStep1Submit} className="space-y-4 mt-6 w-full">
-                {/* Manuscript Dropdown */}
-                <select
-                  name="manuscriptReady"
-                  value={formData.manuscriptReady}
-                  onChange={handleChange}
-                  className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
-                  required
-                >
-                  <option value="">Is Your Manuscript Ready?*</option>
-                  <option value="Yes">Yes, it's complete</option>
-                  <option value="No">No, still writing</option>
-                  <option value="Need Help">I need help finishing it</option>
-                </select>
+              {/* Genre Dropdown */}
+              <select
+                name="genre"
+                value={formData.genre}
+                onChange={handleChange}
+                className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
+                required
+              >
+                <option value="">What is the Genre Of Your Book?*</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Non-Fiction">Non-Fiction</option>
+                <option value="Mystery/Thriller">Mystery/Thriller</option>
+                <option value="Romance">Romance</option>
+                <option value="Sci-Fi/Fantasy">Sci-Fi/Fantasy</option>
+                <option value="Biography/Memoir">Biography/Memoir</option>
+                <option value="Self-Help">Self-Help</option>
+                <option value="Children's Book">Children's Book</option>
+                <option value="Poetry">Poetry</option>
+                <option value="Other">Other</option>
+              </select>
 
-                {/* Genre Dropdown */}
-                <select
-                  name="genre"
-                  value={formData.genre}
-                  onChange={handleChange}
-                  className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
-                  required
-                >
-                  <option value="">What is the Genre Of Your Book?*</option>
-                  <option value="Fiction">Fiction</option>
-                  <option value="Non-Fiction">Non-Fiction</option>
-                  <option value="Mystery/Thriller">Mystery/Thriller</option>
-                  <option value="Romance">Romance</option>
-                  <option value="Sci-Fi/Fantasy">Sci-Fi/Fantasy</option>
-                  <option value="Biography/Memoir">Biography/Memoir</option>
-                  <option value="Self-Help">Self-Help</option>
-                  <option value="Children's Book">Children's Book</option>
-                  <option value="Poetry">Poetry</option>
-                  <option value="Other">Other</option>
-                </select>
-
-                {/* Button */}
-                <button
-                  type="submit"
-                  className="button-gradient mt-6 w-full px-6 py-3 rounded-md font-bold text-black bg-yellow-500 hover:bg-yellow-400 transition-all transform hover:scale-105"
-                >
-                  Get Started! →
-                </button>
-              </form>
-            )}
-
-            {/* Step 2: Contact Information */}
-            {step === 2 && (
-              <form onSubmit={handleStep2Submit} className="space-y-4 mt-6 w-full">
-                <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-                  <input
-                    type="text"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    placeholder="First Name*"
-                    className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    placeholder="Last Name*"
-                    className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
-                    required
-                  />
-                </div>
-
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Email Address*"
-                  className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
-                  required
-                />
-
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="Phone Number*"
-                  className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
-                  required
-                />
-
+              {/* Name Fields */}
+              <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                 <input
                   type="text"
-                  name="zipCode"
-                  value={formData.zipCode}
+                  name="firstName"
+                  value={formData.firstName}
                   onChange={handleChange}
-                  placeholder="Zip Code*"
-                  pattern="[0-9]{5}"
-                  maxLength="5"
+                  placeholder="First Name*"
                   className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
                   required
                 />
-                <p className="text-sm text-white/80">
-                  Please enter a valid 5-digit zip code (00000 to 99999).
-                </p>
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  placeholder="Last Name*"
+                  className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
+                  required
+                />
+              </div>
 
-                <p className="text-sm text-white/80 bg-white/10 p-3 rounded-lg border border-white/20">
-                  📋 By submitting, you agree to our{' '}
-                  <a href="/privacy-policy" className="underline hover:text-yellow-400 transition-colors">
-                    privacy policy
-                  </a>{' '}
-                  and consent to be contacted by phone, email, and text.
-                </p>
+              {/* Email */}
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email Address*"
+                className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
+                required
+              />
 
-                <div className="flex space-x-4">
-                  <button
-                    type="button"
-                    onClick={handleBack}
-                    className="w-full px-6 py-3 rounded-md font-bold text-black bg-white/20 hover:bg-white/30 transition-all transform hover:scale-105"
-                    disabled={isLoading}
-                  >
-                    ← Back
-                  </button>
-                  
-                  <button
-                    type="submit"
-                    className="w-full px-6 py-3 rounded-md font-bold text-black button-gradient bg-yellow-500 hover:bg-yellow-400 transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                    disabled={isLoading || !emailjsLoaded}
-                  >
-                    {isLoading ? 'Sending...' : emailjsLoaded ? 'Submit →' : 'Loading...'}
-                  </button>
-                </div>
-              </form>
-            )}
+              {/* Phone */}
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Phone Number*"
+                className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
+                required
+              />
+
+              {/* Zip Code */}
+              <input
+                type="text"
+                name="zipCode"
+                value={formData.zipCode}
+                onChange={handleChange}
+                placeholder="Zip Code*"
+                pattern="[0-9]{5}"
+                maxLength="5"
+                className="w-full p-3 border rounded-lg bg-white text-black focus:ring-2 focus:ring-yellow-400 transition-all"
+                required
+              />
+
+              {/* Privacy Notice */}
+              <p className="text-sm text-white/80 bg-white/10 p-3 rounded-lg border border-white/20">
+                📋 By submitting, you agree to our{' '}
+                <a href="/privacy-policy" className="underline hover:text-yellow-400 transition-colors">
+                  privacy policy
+                </a>{' '}
+                and consent to be contacted by phone, email, and text.
+              </p>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-full px-6 py-3 rounded-md font-bold text-black button-gradient bg-yellow-500 hover:bg-yellow-400 transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                disabled={isLoading || !emailjsLoaded}
+              >
+                {isLoading ? 'Sending...' : emailjsLoaded ? 'Get Started! →' : 'Loading...'}
+              </button>
+            </form>
 
             {/* Contact Info */}
             <div className="mt-6 text-center border-t border-white/20 pt-4">
@@ -409,7 +363,7 @@ Manuscript Information:
         </div>
       </div>
 
-      {/* Error Modal (only show error modal, success redirects to thank you page) */}
+      {/* Error Modal */}
       {showErrorModal && <ErrorModal />}
     </>
   );

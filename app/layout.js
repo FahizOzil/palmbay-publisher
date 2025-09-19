@@ -252,9 +252,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-
-
-         <DiscountPopup />
+         {/* <DiscountPopup /> */}
       </body>
     </html>
   );

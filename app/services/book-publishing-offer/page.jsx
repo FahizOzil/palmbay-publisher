@@ -1,1494 +1,1905 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MessageCircle, X, CheckCircle, AlertCircle } from 'lucide-react';
-import { ChevronLeft, ChevronRight, Users, TrendingUp, Megaphone } from 'lucide-react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import React, { useState , useEffect } from 'react';
+import Image from 'next/image';
+import {useConsultationModal} from "@/app/Components/ConsultationModal";
 
-const GlenfallHeroSection = () => {
-    // Form data section 
+
+const BookPublishingLP = () => {
+
+const { openModal, ConsultationModal } = useConsultationModal();
+const currentYear = new Date().getFullYear();
+
+    // hero section 
     const [formData, setFormData] = useState({
-        name: '',
+        fullName: '',
+        email: '',
+        contactNumber: '',
+        bookDetails: ''
+    });
+
+    //   end hero section 
+
+
+    // Our Process Section 
+    const [activeProcess, setActiveProcess] = useState(0);
+
+  const processes = [
+    {
+      id: 0,
+      title: "From Vision to Page: Ghostwriting Made Simple",
+      icon: "💭",
+      content: {
+        heading: "From Vision to Page: Ghostwriting Made Simple",
+        subtitle: "Turning Ideas into Narratives: We partner with you to weave your ideas into engaging stories.",
+        steps: [
+          "Listening to your story during a detailed consultation.",
+          "Developing an outline and writing the first draft.",
+          "Revisions based on your feedback.",
+          "Completing the manuscript to your satisfaction.",
+          "Delivering the final, finished story."
+        ]
+      }
+    },
+    {
+      id: 1,
+      title: "Your Book's Journey: From Pages to Publication",
+      icon: "📖",
+      content: {
+        heading: "Your Book's Journey: From Pages to Publication",
+        subtitle: "Professional Publishing Process: We handle every step of bringing your book to market.",
+        steps: [
+          "Manuscript evaluation and preparation.",
+          "Professional editing and proofreading.",
+          "Custom cover design and formatting.",
+          "ISBN registration and copyright filing.",
+          "Distribution setup across major platforms."
+        ]
+      }
+    },
+    {
+      id: 2,
+      title: "Amazon Publishing Process: Optimize for Success",
+      icon: "🚀",
+      content: {
+        heading: "Amazon Publishing Process: Optimize for Success",
+        subtitle: "Maximizing Your Amazon Presence: Strategic approach to Amazon publishing success.",
+        steps: [
+          "Amazon marketplace analysis and strategy.",
+          "Keyword optimization and category selection.",
+          "Professional listing creation and optimization.",
+          "Launch strategy and promotional planning.",
+          "Ongoing performance monitoring and adjustments."
+        ]
+      }
+    },
+    {
+      id: 3,
+      title: "Children's Book Publishing Process",
+      icon: "🎨",
+      content: {
+        heading: "Children's Book Publishing Process",
+        subtitle: "Bringing Children's Stories to Life: Specialized process for young readers.",
+        steps: [
+          "Age-appropriate content development and review.",
+          "Professional illustration and design coordination.",
+          "Child-friendly formatting and layout.",
+          "Educational value assessment and enhancement.",
+          "Distribution to children's book platforms."
+        ]
+      }
+    },
+    {
+      id: 4,
+      title: "Book Marketing Process",
+      icon: "📈",
+      content: {
+        heading: "Book Marketing Process",
+        subtitle: "Building Your Author Platform: Strategic marketing to reach your ideal readers.",
+        steps: [
+          "Target audience identification and analysis.",
+          "Multi-channel marketing strategy development.",
+          "Social media campaign creation and management.",
+          "Book review and media outreach coordination.",
+          "Performance tracking and strategy optimization."
+        ]
+      }
+    },
+    {
+      id: 5,
+      title: "Editing & Proofreading Process",
+      icon: "✏️",
+      content: {
+        heading: "Editing & Proofreading Process",
+        subtitle: "Polishing Your Manuscript: Professional editing for publication-ready content.",
+        steps: [
+          "Comprehensive manuscript review and assessment.",
+          "Structural and developmental editing.",
+          "Line editing for flow and clarity.",
+          "Copy editing for grammar and style.",
+          "Final proofreading and quality assurance."
+        ]
+      }
+    }
+  ];
+
+
+  // Cilent Review Section
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const testimonials = [
+    {
+      id: 1,
+      name: "Gilbert Arthur",
+      review: "I was looking for a writer who would give proper attention to my manuscript. I was really happy with the writer I was introduced with. She worked very diligently on my book. They understood my vision, and their creativity brought my story to life in ways I never imagined.",
+      rating: 5
+    },
+    {
+      id: 2,
+      name: "Javier Chester",
+      review: "I wanted to write a novel, but because of writer's block, I was unable to do that. I approached Palmbay Publisher book writing services for this job, and the novel they delivered to me was just amazing from the start till the end. The characters were well-developed and the plot was engaging throughout.",
+      rating: 5
+    },
+    {
+      id: 3,
+      name: "Dick Tilley",
+      review: "My wife's dream was to publish a book of her poems dating back from her childhood to present. Allen and his team made that dream come true. They made the whole process, from editing, formatting, correcting grammar and punctuation, smooth and stress-free for us.",
+      rating: 5
+    },
+    {
+      id: 4,
+      name: "Sarah Johnson",
+      review: "Palmbay Publisher exceeded my expectations in every way. Their professional editing team transformed my rough manuscript into a polished masterpiece. The attention to detail and commitment to quality was evident throughout the entire process.",
+      rating: 5
+    },
+    {
+      id: 5,
+      name: "Michael Rodriguez",
+      review: "Working with Palmbay Publisher was the best decision I made for my book. Their marketing team helped me reach audiences I never thought possible. The results speak for themselves - my book is now a bestseller in its category.",
+      rating: 5
+    },
+    {
+      id: 6,
+      name: "Emma Thompson",
+      review: "The ghostwriting service provided by Palmbay Publisher was exceptional. They captured my voice perfectly and turned my ideas into a compelling narrative. I couldn't be happier with the final result and the professional service I received.",
+      rating: 5
+    }
+  ];
+
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % Math.ceil(testimonials.length / 3));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % Math.ceil(testimonials.length / 3));
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + Math.ceil(testimonials.length / 3)) % Math.ceil(testimonials.length / 3));
+  };
+
+  const goToSlide = (slideIndex) => {
+    setCurrentSlide(slideIndex);
+  };
+
+  const StarRating = ({ rating }) => {
+    return (
+      <div className="flex space-x-1 mb-4">
+        {[...Array(5)].map((_, i) => (
+          <span
+            key={i}
+            className={`text-xl ${i < rating ? 'text-green-500' : 'text-gray-300'}`}
+          >
+            ★
+          </span>
+        ))}
+      </div>
+    );
+  };
+
+  const ReviewPlatformLogos = () => (
+    <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-200">
+      {/* Google Reviews */}
+      <div className="flex items-center space-x-2">
+        <div className="flex items-center">
+          <img src="/logo-review.png" alt="logo Review"  />
+        </div>
+      </div>
+
+      {/* Trustpilot */}
+      <div className="flex items-center space-x-2">
+        <div className="flex items-center">
+         <img src="/orm-2.webp" alt="Truspilot" />
+        </div>
+      </div>
+
+      {/* Reviews.io */}
+      <div className="flex items-center space-x-2">
+        <div className="flex items-center">
+       <img src="/logo-review2.png" alt="review.io" ></img>
+       </div>
+      </div>
+    </div>
+  );
+
+  const TestimonialCard = ({ testimonial }) => (
+    <div className="bg-white p-6 rounded-lg border-2 border-red-300 shadow-lg h-full flex flex-col">
+      {/* Quote Icon */}
+      <div className="text-red-500 text-4xl font-bold mb-4">"</div>
+      
+      {/* Review Text */}
+      <p className="text-gray-700 text-sm leading-relaxed mb-4 flex-grow">
+        {testimonial.review}
+      </p>
+      
+      {/* Customer Name */}
+      <div className="mt-auto">
+        <h4 className="text-red-600 font-bold text-lg mb-2">{testimonial.name}</h4>
+        <StarRating rating={testimonial.rating} />
+        <ReviewPlatformLogos />
+      </div>
+    </div>
+  );
+
+
+  //contact page 
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    // Simulate form submission (replace with your actual form handling)
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setSubmitStatus('success');
+      setFormData({
+        fullName: '',
         email: '',
         phone: '',
         message: ''
-    });
-    const [showThankYouModal, setShowThankYouModal] = useState(false);
-    const [showConsultationModal, setShowConsultationModal] = useState(false);
-    const [showErrorModal, setShowErrorModal] = useState(false);
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [errorMessage, setErrorMessage] = useState('');
-
-    // Fixed EmailJS configuration
-    const EMAILJS_SERVICE_ID = 'service_5fdp7dx';
-    const EMAILJS_TEMPLATE_ID = 'template_gk147gk';
-    const EMAILJS_PUBLIC_KEY = 'uN-2O3nbFXI273dvI';
-
-    // Load EmailJS on component mount
-    useEffect(() => {
-        const loadEmailJS = async () => {
-            if (!window.emailjs) {
-                try {
-                    const script = document.createElement('script');
-                    script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
-                    script.async = true;
-
-                    await new Promise((resolve, reject) => {
-                        script.onload = resolve;
-                        script.onerror = reject;
-                        document.head.appendChild(script);
-                    });
-
-                    window.emailjs.init(EMAILJS_PUBLIC_KEY);
-                } catch (error) {
-                    console.error('Failed to load EmailJS:', error);
-                }
-            }
-        };
-
-        loadEmailJS();
-    }, []);
-
-    const handleInputChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
-    };
-
-    const sendEmail = async (templateParams) => {
-        if (!window.emailjs) {
-            throw new Error('EmailJS not loaded. Please refresh the page and try again.');
-        }
-
-        try {
-            const response = await window.emailjs.send(
-                EMAILJS_SERVICE_ID,
-                EMAILJS_TEMPLATE_ID,
-                templateParams
-            );
-
-            if (response.status !== 200) {
-                throw new Error('Failed to send email. Please try again.');
-            }
-
-            return response;
-        } catch (error) {
-            console.error('EmailJS Error:', error);
-            throw new Error(error.text || error.message || 'Failed to send email. Please try again.');
-        }
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        setErrorMessage('');
-
-        try {
-            const templateParams = {
-                to_email: 'support@palmbaypublishers.com',
-                name: formData.name,
-                // from_email: formData.email,
-                // phone: formData.phone,
-                time: new Date().toLocaleString(),
-                message: `
-Name: ${formData.name}                
-Email: ${formData.email}
-Phone: ${formData.phone || 'Not provided'}
-
-Message:
-${formData.message}
-                `.trim(),
-                reply_to: formData.email
-            };
-
-            await sendEmail(templateParams);
-
-            // Show success modal and reset form
-            setShowThankYouModal(true);
-            setShowConsultationModal(false);
-            setFormData({
-                name: '',
-                email: '',
-                phone: '',
-                message: ''
-            });
-
-        } catch (error) {
-            setErrorMessage(error.message);
-            setShowErrorModal(true);
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
-
-    const closeModal = () => {
-        setShowThankYouModal(false);
-    };
-
-    const closeErrorModal = () => {
-        setShowErrorModal(false);
-        setErrorMessage('');
-    };
-
-    const openConsultationModal = () => {
-        setShowConsultationModal(true);
-    };
-
-    const closeConsultationModal = () => {
-        setShowConsultationModal(false);
-    };
-
-    // Enhanced Error Modal Component
-    const ErrorModal = () => (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full mx-4 relative">
-                <button
-                    onClick={closeErrorModal}
-                    className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
-                >
-                    <X className="w-5 h-5 sm:w-6 sm:h-6" />
-                </button>
-
-                <div className="text-center">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <AlertCircle className="w-6 h-6 sm:w-8 sm:h-8 text-red-500" />
-                    </div>
-
-                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Oops! Something went wrong</h3>
-                    <p className="text-sm sm:text-base text-gray-600 mb-6">
-                        {errorMessage || 'We couldn\'t send your message right now. Please try again or contact us directly.'}
-                    </p>
-
-                    <div className="space-y-3 mb-6">
-                        <div className="flex items-center justify-center space-x-2 text-orange-500">
-                            <Phone className="w-4 h-4" />
-                            <a href="tel:(850) 588-0888" className="font-semibold hover:underline text-sm sm:text-base">
-                                (850) 588-0888
-                            </a>
-                        </div>
-                        <div className="flex items-center justify-center space-x-2 text-orange-500">
-                            <Mail className="w-4 h-4" />
-                            <a href="mailto:support@palmbaypublishers.com" className="text-xs sm:text-sm hover:underline">
-                                support@palmbaypublishers.com
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
-                        <button
-                            onClick={closeErrorModal}
-                            className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 sm:px-6 py-2 rounded-lg transition-colors text-sm sm:text-base"
-                        >
-                            Close
-                        </button>
-                        <button
-                            onClick={() => {
-                                closeErrorModal();
-                                handleSubmit(new Event('submit'));
-                            }}
-                            className="flex-1 bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-6 py-2 rounded-lg transition-colors text-sm sm:text-base"
-                        >
-                            Try Again
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-
-    // Thank You Modal Component
-    const ThankYouModal = () => (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full mx-4 relative">
-                <button
-                    onClick={closeModal}
-                    className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
-                >
-                    <X className="w-5 h-5 sm:w-6 sm:h-6" />
-                </button>
-
-                <div className="text-center">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" />
-                    </div>
-
-                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
-                    <p className="text-sm sm:text-base text-gray-600 mb-6">
-                        Your message has been sent successfully. We'll get back to you within 24 hours.
-                    </p>
-
-                    <div className="space-y-3 mb-6">
-                        <div className="flex items-center justify-center space-x-2 text-orange-500">
-                            <Phone className="w-4 h-4" />
-                            <span className="font-semibold text-sm sm:text-base">(850) 588-0888</span>
-                        </div>
-                        <div className="flex items-center justify-center space-x-2 text-orange-500">
-                            <Mail className="w-4 h-4" />
-                            <span className="text-xs sm:text-sm">support@palmbaypublishers.com</span>
-                        </div>
-                    </div>
-
-                    <button
-                        onClick={closeModal}
-                        className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors text-sm sm:text-base"
-                    >
-                        Close
-                    </button>
-                </div>
-            </div>
-        </div>
-    );
-
-    // Consultation Modal Component
-    const ConsultationModal = () => (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 relative max-h-[90vh] overflow-y-auto">
-                {/* Header */}
-                <div className="bg-gradient-to-r from-orange-500 to-red-500 p-4 sm:p-6 rounded-t-2xl relative overflow-hidden">
-                    <button
-                        onClick={closeConsultationModal}
-                        className="absolute top-3 right-3 sm:top-4 sm:right-4 text-white hover:text-gray-200 transition-colors z-10"
-                    >
-                        <X className="w-5 h-5 sm:w-6 sm:h-6" />
-                    </button>
-
-                    {/* Decorative airplane */}
-                    <div className="absolute top-2 right-10 sm:right-12 text-white opacity-60">
-                        <svg className="w-6 h-6 sm:w-8 sm:h-8" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
-                        </svg>
-                    </div>
-
-                    <div className="text-white">
-                        <h3 className="text-xl sm:text-2xl font-bold mb-2">Get Your Free Consultation</h3>
-                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-4">
-                            <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-                        </div>
-                    </div>
-                </div>
-
-                {/* Form */}
-                <div className="p-4 sm:p-6">
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Enter Your Name"
-                            value={formData.name}
-                            onChange={handleInputChange}
-                            className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 text-black rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-colors text-sm sm:text-base"
-                            required
-                        />
-
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Enter Your Email"
-                            value={formData.email}
-                            onChange={handleInputChange}
-                            className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 text-black rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-colors text-sm sm:text-base"
-                            required
-                        />
-
-                        <input
-                            type="tel"
-                            name="phone"
-                            placeholder="Enter Your Phone Number"
-                            value={formData.phone}
-                            onChange={handleInputChange}
-                            className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-lg text-black focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-colors text-sm sm:text-base"
-                        />
-
-                        <textarea
-                            name="message"
-                            placeholder="Tell us about your book project"
-                            value={formData.message}
-                            onChange={handleInputChange}
-                            rows="4"
-                            className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 text-black rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none resize-none transition-colors text-sm sm:text-base"
-                        ></textarea>
-
-                        <button
-                            type="submit"
-                            disabled={isSubmitting}
-                            className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-orange-300 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg flex items-center justify-center space-x-2 font-medium transition-colors shadow-lg hover:shadow-xl disabled:cursor-not-allowed text-sm sm:text-base"
-                        >
-                            {isSubmitting ? (
-                                <>
-                                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                    <span>Sending...</span>
-                                </>
-                            ) : (
-                                <>
-                                    <span>Send</span>
-                                    <MessageCircle className="h-4 w-4" />
-                                </>
-                            )}
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    );
-
-    // Carousel state section 2
-    const [currentSlide, setCurrentSlide] = useState(0);
-
-    const projects = [
-        {
-            id: 1,
-            category: "PUBLISHING CAMPAIGN FOR APPLICATIONS OF GEOMETRIC ALGEBRA TO BLACK HOLES & HAWKING RADIATION BY SANDI SETIAWAN",
-            title: "A deep dive into the profound physics that govern black holes, Hawking radiation, and the universe.",
-            description: "When we teamed up with Sandi Setiawan to publish his groundbreaking work Applications of Geometric Algebra to Black Holes & Hawking Radiation, we knew this book was not just another scientific publication — it was an intricate exploration of theoretical physics, blending advanced mathematics with cutting-edge astrophysics. Our publishing efforts centered around presenting the book as a must-read for physicists, mathematicians, and science enthusiasts eager to understand the complex relationship between space, time, and the universe.",
-            bookCover: "/blackholes.png",
-            platforms: [
-                { name: "amazon", logo: "📚" },
-                { name: "facebook", logo: "📘" },
-                { name: "kindle", logo: "📖" }
-            ]
-        },
-        {
-            id: 2,
-            category: "Publishing Campaign for Mike Dimmer's Book Collection: Mastering Success, Personal Growth, and Life's Hidden Laws",
-            title: "From ancient wisdom to modern strategies, we helped elevate Mike Dimmer's books to the ",
-            description: "We partnered with Mike Dimmer to publish his trio of books: The A Plan, Above The Law, and the upcoming The Trick in Life. Each blends ancient wisdom with practical strategies for success. Our goal was to introduce these works to a wider audience and establish Mike as a leading figure in personal development. The publishing campaign boosted sales for The A Plan and Above The Law, growing Mike's social media following. Anticipation for The Trick in Life ensured a strong launch. These efforts solidified Mike Dimmer's presence in the self-help space, empowering readers to master success.",
-            bookCover: "/Above the Law.png",
-            platforms: [
-                { name: "amazon", logo: "📚" },
-                { name: "facebook", logo: "📘" },
-                { name: "kindle", logo: "📖" }
-            ]
-        },
-        {
-            id: 3,
-            category: "Publishing Campaign for Grocery Shopping Savings Secrets by Rob Rice Winter",
-            title: "Helping readers unlock the secrets to smarter, budget-friendly grocery shopping with actionable tips and tricks.",
-            description: "We had the opportunity to work with Rob Rice Winter on publishing Grocery Shopping Savings Secrets, helping readers transform their shopping habits. The campaign was a success, making the book a go-to resource for budget-conscious shoppers. It gained popularity on social media, with thousands engaging with Rob's tips. Influencer partnerships and a viral hashtag helped expand its reach. Sales spiked as readers embraced Rob's strategies, making Grocery Shopping Savings Secrets a must-have guide for those focused on saving money and shopping smart.",
-            bookCover: "/Rob Rice.png",
-            platforms: [
-                { name: "amazon", logo: "📚" },
-                { name: "facebook", logo: "📘" },
-                { name: "kindle", logo: "📖" }
-            ]
-        }
-    ];
+      });
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
 
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % projects.length);
-    };
-
-    const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + projects.length) % projects.length);
-    };
-
-    // Process Steps Data
-    const processSteps = [
-        {
-            number: "01",
-            title: "Manuscript Submission",
-            description: "Submit your manuscript along with a brief outline. Our team reviews your content and confirms the publishing requirements to get started.",
-            position: "top-left"
-        },
-        {
-            number: "02",
-            title: "Editing & Proofreading",
-            description: "Our professional editors refine your manuscript, ensuring clarity, grammar accuracy, and overall quality while maintaining your unique voice.",
-            position: "top-right"
-        },
-        {
-            number: "03",
-            title: "Book Design & Formatting",
-            description: "We design a professional cover and format your book for both print and digital platforms, ensuring it meets publishing standards.",
-            position: "left"
-        },
-        {
-            number: "04",
-            title: "Pre-Launch Setup",
-            description: "Before release, we prepare distribution channels, set up metadata, and optimize your book for maximum discoverability.",
-            position: "right"
-        },
-        {
-            number: "05",
-            title: "Book Publishing & Launch",
-            description: "Your book is published and made available on leading platforms like Amazon, Kindle, and other major retailers worldwide.",
-            position: "bottom-left"
-        },
-        {
-            number: "06",
-            title: "Post-Publishing Support",
-            description: "We continue supporting you with promotional guidance, sales tracking, and strategies to help your book gain momentum after launch.",
-            position: "bottom-right"
-        }
-    ];
-
-
-    const getPositionClasses = (position) => {
-        switch (position) {
-            case "top-left":
-                return "absolute top-8 left-8 max-w-xs text-left";
-            case "top-right":
-                return "absolute top-8 right-8 max-w-xs text-right";
-            case "left":
-                return "absolute top-1/2 left-8 -translate-y-1/2 max-w-xs text-left";
-            case "right":
-                return "absolute top-1/2 right-8 -translate-y-1/2 max-w-xs text-right";
-            case "bottom-left":
-                return "absolute bottom-8 left-8 max-w-xs text-left";
-            case "bottom-right":
-                return "absolute bottom-8 right-8 max-w-xs text-right";
-            default:
-                return "";
-        }
-    };
-
-    const getNumberPositionClasses = (position) => {
-        switch (position) {
-            case "top-left":
-                return "absolute top-20 left-32";
-            case "top-right":
-                return "absolute top-20 right-32";
-            case "left":
-                return "absolute top-1/2 left-24 -translate-y-1/2";
-            case "right":
-                return "absolute top-1/2 right-24 -translate-y-1/2";
-            case "bottom-left":
-                return "absolute bottom-20 left-32";
-            case "bottom-right":
-                return "absolute bottom-20 right-32";
-            default:
-                return "";
-        }
-    };
-
-    // Services Data
-    const services = [
-        {
-            id: 1,
-            title: "Author Network",
-            description: "The Palmbay Publishers Author Network provides essential resources for authors preparing to publish. Join our community to gain guidance on manuscript refinement, publishing options, and strategies to grow your author brand while connecting with readers and peers.",
-            img: "/serv1.jpg"
-        },
-        {
-            id: 2,
-            title: "Publishing & Distribution",
-            description: "Our publishing experts help transform your manuscript into a professionally designed book. From editing and cover design to distribution on Amazon, Kindle Direct Publishing, and global retailers, we ensure your book reaches readers everywhere.",
-            img: "/serv2.jpg"
-        },
-        {
-            id: 3,
-            title: "Publicity & Promotion",
-            description: "With our publicity services, Palmbay Publishers gets your book noticed. From media outreach to author spotlights and event promotions, we create buzz that builds credibility, enhances visibility, and forges meaningful connections with your audience.",
-            img: "/serv3.jpg"
-        },
-    ];
-
-
-    // FAQ Section
-    const [openFAQ, setOpenFAQ] = useState(null);
-
-    const faqs = [
-        {
-            id: 1,
-            question: "What is included in your book publishing services?",
-            answer: "Our publishing services cover every stage of the journey — including professional editing, cover design, interior formatting, ISBN assignment, eBook and print publishing, and worldwide distribution to platforms like Amazon, Barnes & Noble, and Apple Books."
-        },
-        {
-            id: 2,
-            question: "How much does it cost to publish a book?",
-            answer: "Publishing costs depend on the level of services you need. We offer flexible packages ranging from essential publishing support to premium full-service publishing. Contact us for a tailored quote based on your manuscript, format preferences, and publishing goals."
-        },
-        {
-            id: 3,
-            question: "How long does the publishing process take?",
-            answer: "The timeline varies depending on your manuscript's readiness and the services required. On average, the process can take 4–12 weeks from submission to publication. Complex projects (with editing, design, and marketing add-ons) may take longer."
-        },
-        {
-            id: 4,
-            question: "Do you work with both first-time and experienced authors?",
-            answer: "Yes! Whether you are a first-time writer or an established author, our publishing solutions are designed to meet your needs. We provide guidance and resources to debut authors while offering professional publishing support to seasoned writers."
-        }
-    ];
+//   Show case section 
+ const genres = [
+    {
+      id: 1,
+      name: 'Mystery',
+      // Replace with your actual image URL
+      icon: '/mystery-ss.webp', // Add your mystery icon image URL here
+      alt: 'Mystery genre icon'
+    },
+    {
+      id: 2,
+      name: 'Horror',
+      // Replace with your actual image URL
+      icon: '/horror-ss.webp', // Add your horror icon image URL here
+      alt: 'Horror genre icon'
+    },
+    {
+      id: 3,
+      name: 'Romance',
+      // Replace with your actual image URL
+      icon: '/romance-ss.webp', // Add your romance icon image URL here
+      alt: 'Romance genre icon'
+    },
+    {
+      id: 4,
+      name: "Children's Books",
+      // Replace with your actual image URL
+      icon: '/children-books.webp', // Add your children's books icon image URL here
+      alt: "Children's Books genre icon"
+    },
+    {
+      id: 5,
+      name: 'Fantasy',
+      // Replace with your actual image URL
+      icon: '/fantasy-ss.webp', // Add your fantasy icon image URL here
+      alt: 'Fantasy genre icon'
+    },
+    {
+      id: 6,
+      name: 'How-To Guides',
+      // Replace with your actual image URL
+      icon: '/how-to-guides.webp', // Add your how-to guides icon image URL here
+      alt: 'How-To Guides genre icon'
+    },
+    {
+      id: 7,
+      name: 'Drama',
+      // Replace with your actual image URL
+      icon: '/drama-ss.webp', // Add your drama icon image URL here
+      alt: 'Drama genre icon'
+    },
+    {
+      id: 8,
+      name: 'Crime',
+      // Replace with your actual image URL
+      icon: '/crime-ss.webp', // Add your crime icon image URL here
+      alt: 'Crime genre icon'
+    },
+    {
+      id: 9,
+      name: 'Biography',
+      // Replace with your actual image URL
+      icon: '/biography-ss.webp', // Add your biography icon image URL here
+      alt: 'Biography genre icon'
+    },
+    {
+      id: 10,
+      name: 'Health',
+      // Replace with your actual image URL
+      icon: '/health-ss.webp', // Add your health icon image URL here
+      alt: 'Health genre icon'
+    },
+    {
+      id: 11,
+      name: 'Travel',
+      // Replace with your actual image URL
+      icon: '/travel-ss.webp', // Add your travel icon image URL here
+      alt: 'Travel genre icon'
+    },
+    {
+      id: 12,
+      name: 'Philosophy',
+      // Replace with your actual image URL
+      icon: '/philosophy-ss.webp', // Add your philosophy icon image URL here
+      alt: 'Philosophy genre icon'
+    },
+    {
+      id: 13,
+      name: 'Science Fiction',
+      // Replace with your actual image URL
+      icon: '/science-fiction-ss.webp', // Add your science fiction icon image URL here
+      alt: 'Science Fiction genre icon'
+    },
+    {
+      id: 14,
+      name: 'Adventure',
+      // Replace with your actual image URL
+      icon: '/adventure-ss.webp', // Add your adventure icon image URL here
+      alt: 'Adventure genre icon'
+    },
+    {
+      id: 15,
+      name: 'Art',
+      // Replace with your actual image URL
+      icon: '/art-ss.webp', // Add your art icon image URL here
+      alt: 'Art genre icon'
+    },
+    {
+      id: 16,
+      name: 'Business',
+      // Replace with your actual image URL
+      icon: '/business-ss.webp', // Add your business icon image URL here
+      alt: 'Business genre icon'
+    }
+  ];
 
 
-    const toggleFAQ = (id) => {
-        setOpenFAQ(openFAQ === id ? null : id);
-    };
-
+   const features = [
+    {
+      id: 1,
+      title: 'Professionalism That Sets Us Apart:',
+      description: 'Our team of professionals contributes unparalleled expertise to every aspect of the book publishing process based on years of',
+      // Replace with your actual icon URL
+      icon: '/pros.png', // Add your professionalism icon image URL here
+      alt: 'Professionalism icon',
+      color: 'text-red-600' // Color for the title
+    },
+    {
+      id: 2,
+      title: 'Personalized Method:',
+      description: 'We recognize that each author and book is distinct. Because of this, we take a personalized approach, tailoring our services to',
+      // Replace with your actual icon URL
+      icon: '/per.png', // Add your personalized method icon image URL here
+      alt: 'Personalized method icon',
+      color: 'text-red-600'
+    },
+    {
+      id: 3,
+      title: 'Outstanding Quality:',
+      description: 'All of our services, from writing and editing to marketing and publishing, are committed to delivering exceptional',
+      // Replace with your actual icon URL
+      icon: '/qua.png', // Add your quality icon image URL here
+      alt: 'Outstanding quality icon',
+      color: 'text-red-600'
+    },
+    {
+      id: 4,
+      title: 'Results-Driven Strategies:',
+      description: 'We go above and beyond standard practices to create innovative, results-driven book marketing and promotion strategies. Our',
+      // Replace with your actual icon URL
+      icon: '/res.png', // Add your results-driven icon image URL here
+      alt: 'Results-driven strategies icon',
+      color: 'text-red-600'
+    }
+  ];
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-            {/* Thank You Modal */}
-            {showThankYouModal && <ThankYouModal />}
-
-            {/* Error Modal */}
-            {showErrorModal && <ErrorModal />}
-
-            {/* Consultation Modal */}
-            {showConsultationModal && <ConsultationModal />}
-
-            {/* Header */}
-            <header className="bg-white shadow-sm">
+        <>
+            {/* navbar Section  */}
+            <nav className="bg-white shadow-sm border-b border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center justify-between h-20 sm:h-24 lg:h-28 xl:h-32">
-                        {/* Logo */}
-                        <div className="flex items-center">
-                            <div className="flex-shrink-0 flex items-center space-x-2 sm:space-x-3">
-                                {/* Circular Logo Container */}
-                                <div className="relative">
-                                    <div className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 rounded-full overflow-hidden bg-white shadow-md ring-2 ring-orange-100 hover:ring-orange-200 transition-all duration-300">
-                                        <img
-                                            src="/logo-2.png"
-                                            alt="Palmbay Publishers Logo"
-                                            className="h-full w-full object-cover object-center hover:scale-105 transition-transform duration-300"
-                                        />
-                                    </div>
-                                    {/* Optional: Subtle glow effect */}
-                                    <div className="absolute inset-0 rounded-full bg-orange-500/10 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                                </div>
+                    <div className="flex justify-between items-center h-16 md:h-20">
+                        {/* Logo Section */}
+                     <img src="/logo-2.png" alt="Palmbay Publisher Logo" className="h-8 md:h-12 w-auto" />
 
-                                {/* Company Name - Hidden on very small screens */}
-                                <div className="hidden xs:block">
-                                    <div className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 leading-tight">
-                                        <span className="text-orange-500">PALMBAY</span>
-                                    </div>
-                                    <div className="text-xs sm:text-sm text-gray-600 tracking-wider leading-tight -mt-1">
-                                        PUBLISHING
-                                    </div>
-                                </div>
+                        {/* Contact and CTA Buttons */}
+                        <div className="flex items-center space-x-3">
+                            {/* Phone Number */}
+                            <div className="hidden sm:flex items-center bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors cursor-pointer">
+                                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span className="font-medium">+850 588-0888</span>
                             </div>
-                        </div>
 
-                        {/* Contact Info - Hidden on mobile */}
-                        <div className="hidden xl:flex items-center space-x-6 lg:space-x-8">
-                            <div className="flex items-center text-sm">
-                                <Mail className="h-4 w-4 text-orange-500 mr-2 flex-shrink-0" />
-                                <div>
-                                    <div className="text-gray-600 text-xs">Email Info:</div>
-                                    <a
-                                        href="mailto:support@palmbaypublishers.com"
-                                        className="text-orange-500 hover:text-orange-600 transition-colors"
-                                    >
-                                        <div className="font-medium">support@palmbaypublishers.com</div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="flex items-center text-sm">
-                                <Phone className="h-4 w-4 text-orange-500 mr-2 flex-shrink-0" />
-                                <div>
-                                    <div className="text-gray-600 text-xs">Call Now:</div>
-                                    <a
-                                        href="tel:(850) 588-0888"
-                                        className="text-orange-500 hover:text-orange-600 transition-colors"
-                                    >
-                                        <div className="font-medium">(850) 588-0888</div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                            {/* CTA Button */}
+                            <button onClick={openModal} className="bg-blue-600 text-white px-4 py-2 md:px-6 md:py-2 rounded-md hover:bg-blue-700 transition-colors font-medium text-sm md:text-base">
+                                Get Free Author Consultancy
+                            </button>
 
-                        {/* Mobile/Tablet Contact Button */}
-                        <div className="xl:hidden">
-                            <a
-                                href="tel:(850) 588-0888"
-                                className="bg-orange-500 hover:bg-orange-600 text-white px-3 sm:px-4 py-2 rounded-lg flex items-center space-x-2 text-sm transition-all duration-300 hover:shadow-lg transform hover:scale-105"
-                            >
-                                <Phone className="h-4 w-4" />
-                                <span className="hidden sm:inline font-medium">Call Now</span>
-                            </a>
+                            {/* Mobile Menu Button */}
+                            {/* <button className="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button> */}
                         </div>
-
-                        {/* Desktop Get Started Button */}
-                        <button
-                            onClick={openConsultationModal}
-                            className="hidden xl:flex bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg items-center space-x-2 transition-all duration-300 hover:shadow-lg transform hover:scale-105 font-medium"
-                        >
-                            <span>Get Started</span>
-                            <MessageCircle className="h-4 w-4" />
-                        </button>
                     </div>
                 </div>
-            </header>
 
-            {/* Hero Section */}
-            <section className="relative py-8 sm:py-12 lg:py-16 xl:py-20 overflow-hidden">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                {/* Mobile Menu (Hidden by default) */}
+                {/* <div className="lg:hidden border-t border-gray-200 bg-white">
+        <div className="px-4 py-2 space-y-1">
+          <div className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md cursor-pointer">Home</div>
+          <div className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md cursor-pointer">Services</div>
+          <div className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md cursor-pointer">Portfolio</div>
+          <div className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md cursor-pointer">Testimonials</div>
+          <div className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md cursor-pointer">About Us</div>
+          <div className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md cursor-pointer">Contact Us</div>
+          <div className="block px-3 py-2">
+            <div className="flex items-center justify-center bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors cursor-pointer">
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span className="font-medium">+850 588-0888</span>
+            </div>
+          </div>
+        </div>
+      </div> */}
+            </nav>
+
+            {/* hero section  */}
+            <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-12 lg:py-20 relative overflow-hidden">
+                {/* Background decoration */}
+                <div className="absolute inset-0 bg-white/50"></div>
+
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
                         {/* Left Content */}
-                        <div className="relative z-10 text-center lg:text-left">
-                            <div className="inline-block">
-                                <span className="bg-orange-500 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
-                                    Book Publishing & Publication Services USA
-                                </span>
+                        <div className="space-y-8">
+                            <div className="space-y-6">
+                                <div className="text-sm font-medium text-gray-600 tracking-wide uppercase">
+                                    Palmbay Publisher
+                                </div>
+
+                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                                    Maximize Your Creative Writing Potential with{' '}
+                                    <span className="text-blue-600">Modern Book Solutions</span>
+                                </h1>
+
+                                <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
+                                    In a world where words may enchant, inspire, and transform, we aim to provide you
+                                    with the tools you need to make the most of your literary journey. Here at Palmbay Publisher,
+                                    we value the craft of writing, the alchemy of advertising, and the adventure of publishing.
+                                    If you want your ideas to become a reality, go no further than our dedicated team of
+                                    industry veterans.
+                                </p>
                             </div>
 
-                            <h1 className="mt-4 sm:mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
-                                Book Publishing Service For
-                                <br className="hidden sm:block" />
-                                <span className="text-orange-500"> New Authors</span>
-                            </h1>
+                            {/* Action Buttons */}
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <button  onClick={openModal} className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl">
+                                    Get Free Consultancy
+                                </button>
 
-                            <p className="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-2xl lg:max-w-none mx-auto lg:mx-0">
-                                Palmbay Publishers provides book publishing for authors with clear goals to sell
-                                books and enhance author brands. We understand authors can have
-                                limited budgets for book publishing services — and that every dollar
-                                spent must count. But we get results; we show authors how book
-                                publicity can be an excellent investment and have positive ROI.
-                            </p>
+                                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl flex items-center justify-center">
+                                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                    +850 588-0888
+                                </button>
 
-                            <button
-                                onClick={openConsultationModal}
-                                className="mt-6 sm:mt-8 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg flex items-center space-x-2 text-sm sm:text-base lg:text-lg font-medium transition-colors shadow-lg hover:shadow-xl mx-auto lg:mx-0"
-                            >
-                                <span>Get Started</span>
-                                <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5" />
-                            </button>
+                                <button className="bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-900 transition-colors shadow-lg hover:shadow-xl flex items-center justify-center">
+                                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                    </svg>
+                                    Chat With Us
+                                </button>
+                            </div>
+
+                            {/* Trust Indicators */}
+                            <div className="flex items-center space-x-8 pt-8">
+                                {/* 
+                TRUSTPILOT IMAGE: Replace src with your trustpilot logo/stars image
+                Recommended size: 150x40px or similar aspect ratio
+              */}
+                                <img
+                                    src="/orm-2.webp"
+                                    alt="Trustpilot 5 stars rating"
+                                    className="h-10 w-auto"
+                                />
+
+                                {/* 
+                REVIEWS.IO IMAGE: Replace src with your reviews.io logo
+                Recommended size: 120x40px or similar aspect ratio
+              */}
+                                <img
+                                    src="/orm-1.webp"
+                                    alt="Reviews.io logo"
+                                    className="h-8 w-auto"
+                                />
+
+                                {/* 
+                AWARD BADGE IMAGE: Replace src with your 2024 winner badge image
+                Recommended size: 80x80px (square format)
+              */}
+                                <img
+                                    src="/award.webp"
+                                    alt="2024 Winner Award Badge"
+                                    className="w-16 h-16"
+                                />
+                            </div>
                         </div>
 
                         {/* Right Form */}
-                        <div className="relative mt-8 lg:mt-0">
-                            {/* Decorative Elements - Hidden on mobile */}
-                            <div className="hidden md:block absolute -top-4 -left-4 w-16 lg:w-24 h-16 lg:h-24 border-2 border-dashed border-gray-300 rounded-full"></div>
-                            <div className="hidden md:block absolute top-6 lg:top-10 right-6 lg:right-10 w-6 lg:w-8 h-6 lg:h-8 transform rotate-12">
-                                <div className="w-full h-full bg-orange-200 rounded"></div>
-                            </div>
-                            <div className="hidden md:block absolute bottom-0 -right-4 lg:-right-8 w-8 lg:w-12 h-8 lg:h-12 transform -rotate-12">
-                                <div className="w-full h-full border-2 border-orange-300 rounded"></div>
+                        <div className="relative">
+                            {/* Sale Badge */}
+                            <div className="absolute -top-4 -right-4 z-20">
+                                {/* 
+                SALE BADGE IMAGE: Replace src with your "Sale up to 50%" badge image
+                Recommended size: 100x100px (square format)
+                Should include "SALE", "up to", "50%" text in the design
+              */}
+                                <img
+                                    src="/sale-badge.webp"
+                                    alt="Sale up to 50% off"
+                                    className="w-24 h-24 animate-pulse"
+                                />
                             </div>
 
-                            {/* Form */}
-                            <div className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8 relative z-10">
-                                <div className="flex items-center justify-between mb-4 sm:mb-6">
-                                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
-                                        Get Your Free Consultation
+                            {/* Form Card */}
+                            <div className="bg-white rounded-2xl shadow-2xl border border-red-200 p-8 relative">
+                                <div className="text-center mb-8">
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                                        Speak With Our
                                     </h3>
-                                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-orange-100 rounded-full flex items-center justify-center">
-                                        <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 text-orange-500" />
+                                    <h4 className="text-2xl font-bold text-red-600 mb-4">
+                                        Publishing Experts Today!
+                                    </h4>
+                                    <p className="text-gray-600">
+                                        Receive expert advice on publishing your book in just one call!
+                                    </p>
+                                </div>
+
+                                <div className="space-y-6">
+                                    <div className="relative">
+                                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                            </svg>
+                                        </div>
+                                        <input
+                                            type="text"
+                                            name="fullName"
+                                            value={formData.fullName}
+                                            onChange={handleInputChange}
+                                            placeholder="Your Full Name"
+                                            className="w-full pl-10 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all"
+                                        />
+                                    </div>
+
+                                    <div className="relative">
+                                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </svg>
+                                        </div>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleInputChange}
+                                            placeholder="Your Best Email"
+                                            className="w-full pl-10 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all"
+                                        />
+                                    </div>
+
+                                    <div className="relative">
+                                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                        </div>
+                                        <input
+                                            type="tel"
+                                            name="contactNumber"
+                                            value={formData.contactNumber}
+                                            onChange={handleInputChange}
+                                            placeholder="Contact Number"
+                                            className="w-full pl-10 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all"
+                                        />
+                                    </div>
+
+                                    <div className="relative">
+                                        <div className="absolute top-4 left-0 pl-3 flex items-start pointer-events-none">
+                                            <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                            </svg>
+                                        </div>
+                                        <textarea
+                                            name="bookDetails"
+                                            value={formData.bookDetails}
+                                            onChange={handleInputChange}
+                                            placeholder="Tell Us About Your Book"
+                                            rows={4}
+                                            className="w-full pl-10 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all resize-none"
+                                        />
+                                    </div>
+
+                                    <button
+                                        onClick={handleSubmit}
+                                        className="w-full bg-red-600 text-white py-4 px-6 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl"
+                                    >
+                                        Request a Free Consultation
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* Books Stack Image */}
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* section 3 book  */}
+            <div className="min-h-screen bg-gray-100">
+                {/* Header Section */}
+                <div className="bg-blue-900 py-4 px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl mx-auto flex justify-center">
+                        <button className="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                            Get Published On
+                        </button>
+                    </div>
+                </div>
+
+                {/* Publisher Logos Section */}
+                <div className="bg-red-600 py-6 px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
+                        <div className="text-white mb-4 lg:mb-0 lg:mr-8">
+                            <p className="text-lg font-light">From Ideas to</p>
+                            <p className="text-xl font-bold italic">Bestsellers,</p>
+                            <p className="text-lg font-light">We've Got You Covered</p>
+                        </div>
+
+                        <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-8 flex-1">
+                            {/* Amazon Logo - Replace with your image path */}
+                            <div className="text-white text-2xl font-bold">
+                                <img src="/logos-6.png" alt="Amazon" width={120} height={40} />
+                                {/* amazon */}
+                            </div>
+
+                            {/* Barnes & Noble Logo - Replace with your image path */}
+                            <div className="text-white text-lg">
+                                <img src="/logos-5.png" alt="barnes & noble" width={100} height={40} />
+                                {/* barnes & noble */}
+                            </div>
+
+                            {/* Walmart Logo - Replace with your image path */}
+                            <div className="text-white text-lg">
+                                <img src="/logos-3.png" alt="Walmart" width={100} height={30} />
+                                {/* Walmart ebooks */}
+                            </div>
+
+                            {/* Google Play Books Logo - Replace with your image path */}
+                            <div className="text-white text-lg flex items-center">
+                                {/* <img src="/images/google-play-logo.png" alt="Google Play Books" width={120} height={30} /> */}
+                                ▶ Google Play Books
+                            </div>
+                        </div>
+
+                        <div className="mt-4 lg:mt-0 lg:ml-8">
+                            <button  onClick={openModal} className="bg-blue-800 text-white px-6 py-3 rounded font-semibold hover:bg-blue-900 transition-colors">
+                                Get Free Consultancy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Main Content Section */}
+                <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        {/* Left Side - Book Images */}
+                        <div className="flex justify-center lg:justify-start">
+                            <div className="relative">
+                                {/* Main Book Cover - Replace with your image path */}
+                                <img
+                                    src="/home1.png"
+                                    alt="The Dark Secret of Ian's Peak - Part 2: The Basement"
+                                    width={500}
+                                    height={700}
+                                    className="rounded-lg "
+                                />
+
+
+                                {/* Secondary Book Cover - Position it slightly behind and to the left */}
+                                <div className="absolute -left-8 -top-4 -z-10">
+                                    {/* <img 
+                  src="/images/book-cover-secondary.jpg" 
+                  alt="Secondary Book Cover" 
+                  width={350} 
+                  height={450}
+                  className="rounded-lg shadow-xl"
+                /> */}
+                                    <div className="w-72 h-88 bg-gradient-to-b from-yellow-600 to-orange-700 rounded-lg shadow-xl flex items-center justify-center text-white">
+                                        {/* Replace this div with your secondary book cover image */}
+                                        <p className="text-center px-4">Secondary Book Cover</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right Side - Content */}
+                        <div className="space-y-6">
+                            <div>
+                                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight mb-4">
+                                    Expanding the Scope of Your Book's Reach with{' '}
+                                    <span className="text-blue-700">Our Comprehensive Services</span>
+                                </h1>
+
+                                <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                    We are your trusted partners in literary success, providing everything from expert
+                                    book writing that gives life to your ideas to laser-focused marketing strategies that
+                                    expand your audience and flawless publishing services that display your book in a way
+                                    that does it justice. You can count on Palmbay Publisher to supply you with
+                                    the knowledge, advice, and assistance you require to succeed as a writer.
+                                </p>
+                            </div>
+
+                            {/* Services Grid */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                                <div className="space-y-3">
+                                    <div className="flex items-center">
+                                        <div className="w-2 h-2 bg-gray-600 rounded-full mr-3"></div>
+                                        <span className="text-gray-700 font-medium">Fiction</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <div className="w-2 h-2 bg-gray-600 rounded-full mr-3"></div>
+                                        <span className="text-gray-700 font-medium">Biography</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <div className="w-2 h-2 bg-gray-600 rounded-full mr-3"></div>
+                                        <span className="text-gray-700 font-medium">Autobiography</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <div className="w-2 h-2 bg-gray-600 rounded-full mr-3"></div>
+                                        <span className="text-gray-700 font-medium">Action & Adventure</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <div className="w-2 h-2 bg-gray-600 rounded-full mr-3"></div>
+                                        <span className="text-gray-700 font-medium">Anthology</span>
                                     </div>
                                 </div>
 
-                                <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+                                <div className="space-y-3">
+                                    <div className="flex items-center">
+                                        <div className="w-2 h-2 bg-gray-600 rounded-full mr-3"></div>
+                                        <span className="text-gray-700 font-medium">Non-Fiction</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <div className="w-2 h-2 bg-gray-600 rounded-full mr-3"></div>
+                                        <span className="text-gray-700 font-medium">Informative</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <div className="w-2 h-2 bg-gray-600 rounded-full mr-3"></div>
+                                        <span className="text-gray-700 font-medium">Memoirs</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <div className="w-2 h-2 bg-gray-600 rounded-full mr-3"></div>
+                                        <span className="text-gray-700 font-medium">Western</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <div className="w-2 h-2 bg-gray-600 rounded-full mr-3"></div>
+                                        <span className="text-gray-700 font-medium">Romance</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* CTA Button */}
+                            <div>
+                                <button className="bg-red-600 text-white px-8 py-4 rounded font-bold text-lg hover:bg-red-700 transition-colors shadow-lg">
+                                    GET STARTED
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {/*usa Falg Contact Form Section */}
+            <div
+                className="py-16 ">
+                <div className=" mx-auto"   >
+                    <div className=" px-4 sm:px-6 lg:px-8 bg-white bg-opacity-95 backdrop-blur-sm rounded-3xl p-8 sm:p-12 shadow-2xl border-2 border-blue-200"
+                        style={{
+                            backgroundImage: 'url(/american.webp)',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat'
+                        }}
+                    >
+                        {/* Form Header */}
+                        <div className="text-center mb-8">
+                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-2">
+                                Contact Us Today For a Consultation
+                            </h2>
+                            <p className="text-2xl sm:text-3xl font-bold italic text-red-600">
+                                With us!
+                            </p>
+                        </div>
+
+                        {/* Contact Form */}
+                        <form className="space-y-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {/* Full Name */}
+                                <div>
                                     <input
                                         type="text"
-                                        name="name"
-                                        placeholder="Enter Your Name"
-                                        value={formData.name}
-                                        onChange={handleInputChange}
-                                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-colors text-sm sm:text-base text-black placeholder-gray-400"
+                                        placeholder="Your Full Name"
+                                        className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-200 text-gray-700 placeholder-gray-500"
                                         required
                                     />
+                                </div>
 
+                                {/* Email */}
+                                <div>
                                     <input
                                         type="email"
-                                        name="email"
-                                        placeholder="Enter Your Email"
-                                        value={formData.email}
-                                        onChange={handleInputChange}
-                                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-colors text-sm sm:text-base text-black placeholder-gray-400"
+                                        placeholder="Your Best Email"
+                                        className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-200 text-gray-700 placeholder-gray-500"
                                         required
                                     />
+                                </div>
+                            </div>
 
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {/* Contact Number */}
+                                <div>
                                     <input
                                         type="tel"
-                                        name="phone"
-                                        placeholder="Enter Your Phone Number"
-                                        value={formData.phone}
-                                        onChange={handleInputChange}
-                                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-colors text-sm sm:text-base text-black placeholder-gray-400"
+                                        placeholder="Contact Number"
+                                        className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-200 text-gray-700 placeholder-gray-500"
+                                        required
                                     />
+                                </div>
 
-                                    <textarea
-                                        name="message"
-                                        placeholder="Tell us about your book project"
-                                        value={formData.message}
-                                        onChange={handleInputChange}
-                                        rows="4"
-                                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-colors text-sm sm:text-base text-black placeholder-gray-400"
-                                    ></textarea>
-
-                                    <button
-                                        type="submit"
-                                        disabled={isSubmitting}
-                                        className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-orange-300 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg flex items-center justify-center space-x-2 font-medium transition-colors shadow-lg hover:shadow-xl text-sm sm:text-base"
+                                {/* Service Selection */}
+                                <div>
+                                    <select
+                                        className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-200 text-gray-700 appearance-none bg-white cursor-pointer"
+                                        required
                                     >
-                                        {isSubmitting ? (
-                                            <>
-                                                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                                <span>Sending...</span>
-                                            </>
-                                        ) : (
-                                            <>
-                                                <span>Send</span>
-                                                <MessageCircle className="h-4 w-4" />
-                                            </>
-                                        )}
-                                    </button>
-                                </form>
+                                        <option value="" disabled className="text-gray-500">
+                                            Select Service
+                                        </option>
+                                        <option value="fiction">Fiction Writing</option>
+                                        <option value="non-fiction">Non-Fiction Writing</option>
+                                        <option value="biography">Biography</option>
+                                        <option value="autobiography">Autobiography</option>
+                                        <option value="action-adventure">Action & Adventure</option>
+                                        <option value="anthology">Anthology</option>
+                                        <option value="informative">Informative</option>
+                                        <option value="memoirs">Memoirs</option>
+                                        <option value="western">Western</option>
+                                        <option value="romance">Romance</option>
+                                        <option value="publishing">Publishing Services</option>
+                                        <option value="marketing">Marketing Services</option>
+                                    </select>
+                                    {/* Custom dropdown arrow */}
+                                    <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                                        <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                {/* Decorative Background Elements */}
-                <div className="absolute bottom-0 left-0 w-full h-12 sm:h-16 lg:h-24 xl:h-32 bg-gradient-to-r from-gray-800 to-gray-900 transform -skew-y-1 origin-bottom-left"></div>
-            </section>
-
-            {/* Platforms Section */}
-            <section className="bg-white py-8 sm:py-12 lg:py-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-6 sm:mb-8 lg:mb-12">
-                        Platforms We Love Working With
-                    </h2>
-
-                    {/* Desktop/Tablet Grid */}
-                    <div className="hidden sm:flex flex-wrap justify-center items-center gap-3 sm:gap-4 lg:gap-6 xl:gap-8 opacity-70">
-                        {[
-                            "/imgi_15_4.png",
-                            "/imgi_16_5.png",
-                            "/imgi_14_3.png",
-                            "/imgi_17_6.png",
-                            "/imgi_18_7.png",
-                            "/imgi_19_8.png",
-                            "/imgi_20_9.png",
-                            "/imgi_21_10.png",
-                            "/imgi_22_11.png"
-                        ].map((src, index) => (
-                            <div
-                                key={index}
-                                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
-                            >
-                                <img className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" src={src} alt="" />
+                            {/* Message Textarea */}
+                            <div>
+                                <textarea
+                                    placeholder="Tell Us About Your Book"
+                                    rows="3"
+                                    className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-200 text-gray-700 placeholder-gray-500 resize-vertical"
+                                    required
+                                ></textarea>
                             </div>
-                        ))}
-                    </div>
 
-                    {/* Mobile Carousel */}
-                    <div className="sm:hidden">
-                        <div className="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
-                            {[
-                                "/imgi_15_4.png",
-                                "/imgi_16_5.png",
-                                "/imgi_14_3.png",
-                                "/imgi_17_6.png",
-                                "/imgi_18_7.png",
-                                "/imgi_19_8.png",
-                                "/imgi_20_9.png",
-                                "/imgi_21_10.png",
-                                "/imgi_22_11.png"
-                            ].map((src, index) => (
-                                <div
-                                    key={index}
-                                    className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0 hover:bg-gray-200 transition-colors"
+                            {/* Submit Button */}
+                            <div className="text-center pt-4">
+                                <button
+                                    type="submit"
+                                    className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-4 px-12 rounded-full text-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                                 >
-                                    <img className="w-6 h-6" src={src} alt="" />
-                                </div>
-                            ))}
-                        </div>
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            {/* Carousel Section */}
-            <section className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-gray-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Section Header */}
-                    <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6">
-                            Our Latest <span className="text-orange-500">Book Marketing </span>
-                            <br className="hidden sm:block" />
-                            Projects
-                        </h2>
-                        <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
-                            Take a glimpse of our recent book marketing initiatives that demonstrate our expertise in boosting authors'
-                            visibility, engagement, and sales for authors across diverse genres and platforms.
-                        </p>
+
+            {/* section 4  */}
+
+            <section className="bg-gray-50 py-16 px-4">
+                <div className="max-w-7xl mx-auto">
+                    {/* Header */}
+                    <div className="text-center mb-16">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
+                            Seize the Moment! Watch Your Book Grow Into a Masterpiece.
+                        </h1>
+                        <div className="w-16 h-1 bg-red-500 mx-auto"></div>
                     </div>
 
-                    {/* Project Showcase */}
-                    <div className="relative">
-                        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
-                            {/* Book Cover */}
-                            <div className="relative order-2 lg:order-1">
-                                <div className="flex justify-center">
-                                    <img
-                                        src={projects[currentSlide].bookCover}
-                                        alt={projects[currentSlide].title}
-                                        className="w-48 sm:w-64 md:w-80 lg:w-full max-w-sm rounded-lg shadow-2xl max-h-[300px] sm:max-h-[400px] lg:max-h-[500px] object-cover"
-                                        onError={(e) => {
-                                            e.target.src = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDMwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxyZWN0IHg9IjUwIiB5PSI1MCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiNFNUU3RUIiLz4KPHN2ZyB4PSIxMjUiIHk9IjE3NSIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IiM5Q0E0QUYiPgo8cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptLTIgMTVsLTUtNSAxLjQxLTEuNDFMMTAgMTQuMTdsNy41OS03LjU5TDE5IDhsLTkgOXoiLz4KPHN2Zz4KPC9zdmc+";
-                                        }}
-                                    />
+                    {/* Main Content Grid */}
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
+                        {/* Left Column - Services 1 & 2 */}
+                        <div className="space-y-12">
+                            {/* Book Writing Service */}
+                            <div className="relative">
+                                <div className="flex items-start space-x-4">
+                                    <span className="text-6xl md:text-7xl font-light text-blue-200 select-none">01</span>
+                                    <div className="flex-1">
+                                        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">
+                                            <span className="border-b-2 border-red-500 pb-1">Book Writing</span>
+                                        </h3>
+                                        <p className="text-gray-600 mb-4 text-sm md:text-base">
+                                            Our book writing services can free your imagination and let your story flourish.
+                                        </p>
+                                        <a
+                                            href="/services/book-writing"
+                                            className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                                        >
+                                            Read More
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
-                            {/* Project Details */}
-                            <div className="space-y-4 sm:space-y-6 order-1 lg:order-2">
-                                <div className="text-orange-500 text-xs sm:text-sm font-medium tracking-wide uppercase">
-                                    {projects[currentSlide].category}
+                            {/* Book Editing Service */}
+                            <div className="relative">
+                                <div className="flex items-start space-x-4">
+                                    <span className="text-6xl md:text-7xl font-light text-red-200 select-none">02</span>
+                                    <div className="flex-1">
+                                        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">
+                                            <span className="border-b-2 border-red-500 pb-1">Book Editing</span>
+                                        </h3>
+                                        <p className="text-gray-600 mb-4 text-sm md:text-base">
+                                            With flawless grammar, natural prose, and consistent storytelling, our expert editors will make your manuscript effective.
+                                        </p>
+                                        <a
+                                            href="/services/book-editing"
+                                            className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                                        >
+                                            Read More
+                                        </a>
+                                    </div>
                                 </div>
+                            </div>
+                        </div>
 
-                                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
-                                    {projects[currentSlide].title}
+                        {/* Center Column - Book Image */}
+                        <div className="flex justify-center lg:order-none order-first">
+                            <div className="relative w-full max-w-md">
+                                <img
+                                    src="/work-img.webp"
+                                    alt="Cracking the Autism Code - Book by Dr. Kyle Daigle"
+                                    width={400}
+                                    height={500}
+                                    className="w-full h-auto object-contain drop-shadow-2xl"
+                                    priority
+                                />
+                            </div>
+                        </div>
+
+                        {/* Right Column - Services 3 & 4 */}
+                        <div className="space-y-12">
+                            {/* Book Publishing Service */}
+                            <div className="relative">
+                                <div className="flex items-start space-x-4 text-right lg:flex-row-reverse">
+                                    <span className="text-6xl md:text-7xl font-light text-red-200 select-none">03</span>
+                                    <div className="flex-1">
+                                        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">
+                                            <span className="border-b-2 border-red-500 pb-1">Book Publishing</span>
+                                        </h3>
+                                        <p className="text-gray-600 mb-4 text-sm md:text-base">
+                                            Our all-inclusive book publishing services will take care of you, from editing and proofreading to cover art and ISBN ordering and distribution.
+                                        </p>
+                                        <a
+                                            href="/services/book-publishing"
+                                            className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                                        >
+                                            Read More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Book Marketing Service */}
+                            <div className="relative">
+                                <div className="flex items-start space-x-4 text-right lg:flex-row-reverse">
+                                    <span className="text-6xl md:text-7xl font-light text-blue-200 select-none">04</span>
+                                    <div className="flex-1">
+                                        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">
+                                            <span className="border-b-2 border-red-500 pb-1">Book Marketing</span>
+                                        </h3>
+                                        <p className="text-gray-600 mb-4 text-sm md:text-base">
+                                            Gain insight and applause from your distinguished audience as we implement the right marketing tactics for your ideal audience.
+                                        </p>
+                                        <a
+                                            href="/services/book-marketing"
+                                            className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                                        >
+                                            Read More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            {/* show case section  */}
+            <section className="py-16 px-4 bg-gray-50">
+      {/* Container with max width for better readability on large screens */}
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+            Genres Mirroring Your{' '}
+            <span className="text-blue-600">Infinite Creative Potential</span>
+          </h2>
+          
+          {/* Updated description with new company name */}
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Palmbay Publisher offers a wide range of genres. Feel secure knowing that your work will find the ideal publication venue thanks to our knowledge of various literary forms
+          </p>
+        </div>
+
+        {/* Genre Grid - Responsive layout */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 mb-16">
+          {genres.map((genre) => (
+            <div
+              key={genre.id}
+              className="bg-white rounded-lg border-2 border-red-300 p-6 text-center hover:shadow-lg transition-shadow duration-300 hover:border-red-400"
+            >
+              {/* Genre Icon Container */}
+              <div className="mb-4 flex justify-center">
+                <div className="w-16 h-16 md:w-20 md:h-20">
+                  {/* 
+                    Replace the src with your actual image URLs
+                    You can also use Next.js Image component for better optimization:
+                    import Image from 'next/image';
+                    <Image src={genre.icon} alt={genre.alt} width={80} height={80} />
+                  */}
+                  <img
+                    src={genre.icon}
+                    alt={genre.alt}
+                    className="w-full h-full object-contain"
+                    // Add loading="lazy" for better performance
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              
+              {/* Genre Name */}
+              <h3 className="text-sm md:text-base font-medium text-gray-700">
+                {genre.name}
+              </h3>
+            </div>
+          ))}
+        </div>
+
+        {/* Call to Action Section */}
+        <div className="text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
+            We are a universe of linguistic creativity. Are you prepared to start a conversation?
+          </h3>
+          
+          {/* CTA Buttons - Responsive layout */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {/* Primary CTA Button */}
+            <button  onClick={openModal} className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md font-semibold transition-colors duration-300 w-full sm:w-auto">
+              Get Free Consultancy
+            </button>
+            
+            {/* Secondary CTA Button with updated phone number */}
+            <a
+              href="tel:+8505880888"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-semibold transition-colors duration-300 flex items-center justify-center gap-2 w-full sm:w-auto"
+            >
+              {/* Phone icon (you can replace with your own icon) */}
+              <svg 
+                className="w-5 h-5" 
+                fill="currentColor" 
+                viewBox="0 0 20 20"
+              >
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              +850 588-0888
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+     <section className="py-16 px-4 bg-white">
+      {/* Container with max width for better readability */}
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Main content wrapper - responsive layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Left side - Features content */}
+          <div className="order-2 lg:order-1">
+            
+           
+            {/* Features Grid - Responsive 2x2 layout on larger screens, single column on mobile */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {features.map((feature) => (
+                <div key={feature.id} className="space-y-4">
+                  
+                  {/* Feature Icon */}
+                  <div className="w-16 h-16">
+                    {/* 
+                      Replace the src with your actual image URLs
+                      You can also use Next.js Image component for better optimization:
+                      import Image from 'next/image';
+                      <Image src={feature.icon} alt={feature.alt} width={64} height={64} />
+                    */}
+                    <img
+                      src={feature.icon}
+                      alt={feature.alt}
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  
+                  {/* Feature Content */}
+                  <div>
+                    <h3 className={`text-lg font-bold mb-3 ${feature.color}`}>
+                      {feature.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right side - Books Image */}
+          <div className="order-1 lg:order-2">
+             {/* Section Header */}
+            <div className="mb-8">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+                Why <span className="text-blue-600">Choose Us?</span>
+              </h2>
+              
+              {/* Updated description with new company name */}
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                Palmbay Publisher provides you with a set of strengths by which you can evaluate our talents these are the kinds of things that are perfect for a great outcome.
+              </p>
+              
+              {/* CTA Button */}
+              <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md font-semibold transition-colors duration-300">
+                GET STARTED
+              </button>
+            </div>
+
+            <div className="relative">
+              {/* 
+                Replace with your actual books image URL
+                This shows the stack of books (PARADOX, etc.) from your design
+              */}
+              <img
+                src="/choose-img.webp" // Add your books showcase image URL here
+                alt="Published books showcase including PARADOX and other titles"
+                className="w-full h-auto rounded-lg shadow-lg"
+                loading="lazy"
+              />
+              
+              {/* Optional: Add decorative elements if needed */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 opacity-10">
+                {/* 
+                  You can add a decorative pen/writing icon here if you have one
+                  <img src="/images/icons/pen-decoration.svg" alt="" className="w-full h-full" />
+                */}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+            {/*MANUSCRIPT SECTION  */}
+            <section className="bg-white py-16 px-4">
+                <div className="max-w-7xl mx-auto">
+                    {/* Header */}
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-700 leading-tight">
+                            PUTTING MORE THAN WORDS TO PAPER – BRINGING VALUE AND IMPACT IN{' '}
+                            <span className="text-blue-600">YOUR MANUSCRIPT</span>
+                        </h2>
+                    </div>
+
+                    {/* Three Column Features Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+
+                        {/* Fascinating Stories */}
+                        <div className="relative">
+                            {/* Top Border */}
+                            <div className="w-full h-0.5 bg-red-400 mb-6"></div>
+
+                            {/* Left Border - Hidden on mobile, visible on larger screens */}
+                            <div className="absolute left-0 top-6 bottom-6 w-0.5 bg-red-400 hidden lg:block"></div>
+
+                            <div className="lg:pl-8">
+                                <h3 className="text-xl md:text-2xl font-semibold text-red-500 mb-6 text-center lg:text-left">
+                                    Fascinating Stories
                                 </h3>
 
-                                <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
-                                    {projects[currentSlide].description}
+                                <p className="text-gray-600 text-sm md:text-base leading-relaxed text-center lg:text-left">
+                                    Capitalizing on the power of the written word, we assist you in developing your ideas into engaging narratives that will speak to your target audience. We create interesting characters, realistic settings, and exciting conflicts.
                                 </p>
-
-                                {/* Platform Logos */}
-                                <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-6 pt-4">
-                                    <div className="flex items-center space-x-2">
-                                        <span className="text-xl sm:text-2xl">📚</span>
-                                        <span className="text-orange-500 font-bold text-sm sm:text-lg lg:text-xl">amazon</span>
-                                    </div>
-                                    <div className="flex items-center space-x-2 bg-blue-600 text-white px-2 sm:px-3 lg:px-4 py-1 sm:py-2 rounded">
-                                        <span className="text-white font-bold text-sm sm:text-base">facebook</span>
-                                    </div>
-                                    <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-1 sm:space-y-0 sm:space-x-2">
-                                        <span className="text-orange-400 font-bold text-sm sm:text-base">kindle</span>
-                                        <span className="text-gray-600 text-xs sm:text-sm">direct publishing</span>
-                                    </div>
-                                </div>
                             </div>
+
+                            {/* Bottom Border */}
+                            <div className="w-full h-0.5 bg-red-400 mt-6"></div>
                         </div>
 
-                        {/* Navigation Arrows - Desktop Only */}
-                        <button
-                            onClick={prevSlide}
-                            className="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors z-10"
-                        >
-                            <ChevronLeft className="w-6 h-6 text-gray-600" />
-                        </button>
-
-                        <button
-                            onClick={nextSlide}
-                            className="hidden lg:block absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors z-10"
-                        >
-                            <ChevronRight className="w-6 h-6 text-gray-600" />
-                        </button>
-
-                        {/* Navigation Dots */}
-                        <div className="flex justify-center mt-8 sm:mt-12 space-x-2 sm:space-x-3">
-                            {projects.map((_, index) => (
-                                <button
-                                    key={index}
-                                    onClick={() => setCurrentSlide(index)}
-                                    className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${index === currentSlide
-                                        ? 'bg-orange-500 w-6 sm:w-8'
-                                        : 'bg-gray-300 hover:bg-gray-400'
-                                        }`}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Process Section */}
-            <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-orange-50 to-yellow-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Section Header */}
-                    <div className="text-center mb-12 sm:mb-16">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-                            What Is Our <span className="text-orange-500">Book Publishing</span>
-                            <br />
-                            <span className="text-orange-500">Process</span>?
-                        </h2>
-                        <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            Our book publishing process is designed to guide authors from manuscript to market.
-                            We help you refine your work, design a professional book, distribute it across major
-                            platforms, and promote it to the right audience—ensuring your story reaches readers
-                            worldwide.
-                        </p>
-                    </div>
-
-                    {/* Desktop Process Diagram - Hidden on mobile/tablet */}
-                    <div className="hidden xl:flex justify-center items-center min-h-[800px] relative">
-                        {/* Central Book Image */}
-                        <div className="relative z-10">
-                            <img
-                                src="/imgi_32_book-img.png"
-                                alt="Open Book"
-                                className="w-80 h-60 object-contain drop-shadow-2xl"
-                                onError={(e) => {
-                                    e.target.style.display = 'none';
-                                    e.target.nextSibling.style.display = 'block';
-                                }}
-                            />
-                            {/* Fallback book illustration */}
-                            <div className="hidden w-80 h-60 bg-white rounded-lg shadow-2xl flex items-center justify-center">
-                                <div className="w-64 h-44 bg-gray-100 rounded border-l-4 border-gray-300 flex items-center justify-center">
-                                    <span className="text-4xl">📖</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Process Steps */}
-                        {processSteps.map((step, index) => (
-                            <React.Fragment key={step.number}>
-                                {/* Step Content */}
-                                <div className={getPositionClasses(step.position)}>
-                                    <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                                        <div className="flex items-center mb-3">
-                                            <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
-                                            <h3 className="text-lg font-bold text-gray-900">{step.title}</h3>
-                                        </div>
-                                        <p className="text-sm text-gray-600 leading-relaxed">
-                                            {step.description}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                {/* Number Badges */}
-                                <div className={getNumberPositionClasses(step.position)}>
-                                    <div className="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg z-20 relative">
-                                        {step.number}
-                                    </div>
-                                </div>
-                            </React.Fragment>
-                        ))}
-
-                        {/* Decorative elements around the book */}
-                        <div className="absolute inset-0 pointer-events-none">
-                            {/* Curved connecting lines */}
-                            <svg className="w-full h-full" viewBox="0 0 800 600">
-                                <defs>
-                                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                                        <polygon points="0 0, 10 3.5, 0 7" fill="#f97316" opacity="0.6" />
-                                    </marker>
-                                </defs>
-
-                                {/* Curved lines connecting to book center */}
-                                <path d="M 150 150 Q 300 100 400 300" stroke="#f97316" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                                <path d="M 650 150 Q 500 100 400 300" stroke="#f97316" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                                <path d="M 150 300 Q 250 300 400 300" stroke="#f97316" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                                <path d="M 650 300 Q 550 300 400 300" stroke="#f97316" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                                <path d="M 150 450 Q 300 500 400 300" stroke="#f97316" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                                <path d="M 650 450 Q 500 500 400 300" stroke="#f97316" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                            </svg>
-                        </div>
-                    </div>
-
-                    {/* Mobile/Tablet View - Stack for smaller screens */}
-                    <div className="xl:hidden mt-8 sm:mt-12">
-                        <div className="space-y-6 sm:space-y-8">
-                            {processSteps.map((step) => (
-                                <div key={step.number} className="flex items-start space-x-3 sm:space-x-4">
-                                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-lg shadow-lg flex-shrink-0">
-                                        {step.number}
-                                    </div>
-                                    <div className="bg-white p-4 sm:p-6 rounded-xl shadow-lg border border-gray-100 flex-1">
-                                        <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3">{step.title}</h3>
-                                        <p className="text-sm text-gray-600 leading-relaxed">
-                                            {step.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Services Section */}
-            <section className="py-12 sm:py-16 lg:py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Section Header */}
-                    <div className="text-center mb-12 sm:mb-16">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight max-w-5xl mx-auto">
-                            Experience the best Book Publishing Services from
-                            <br className="hidden sm:block" />
-                            <span> Palmbay Publications</span>
-                        </h2>
-                        <div className="w-12 sm:w-16 h-1 bg-orange-500 mx-auto mt-4 sm:mt-6"></div>
-                    </div>
-
-                    {/* Services Grid - Desktop */}
-                    <div className="hidden lg:grid lg:grid-cols-3 gap-6 xl:gap-8">
-                        {services.map((service, index) => (
-                            <div key={service.id} className="group">
-                                <div className="border-2 border-gray-200 rounded-lg p-6 xl:p-8 h-full hover:border-orange-200 hover:shadow-lg transition-all duration-300">
-                                    {/* Illustration Area */}
-                                    <div className="bg-gray-50 rounded-lg p-6 xl:p-8 mb-6 h-48 xl:h-64 flex items-center justify-center group-hover:bg-orange-50 transition-colors duration-300">
-                                        <div className="text-center">
-                                            <img src={service.img} alt="" className="max-w-full max-h-full object-contain" />
-                                        </div>
-                                    </div>
-
-                                    {/* Content */}
-                                    <div className="text-center">
-                                        <h3 className="text-xl xl:text-2xl font-bold text-orange-500 mb-4">
-                                            {service.title}
-                                        </h3>
-                                        <p className="text-sm xl:text-base text-gray-600 leading-relaxed">
-                                            {service.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Services Carousel - Mobile/Tablet */}
-                    <div className="lg:hidden">
+                        {/* Changing Minds through Narratives */}
                         <div className="relative">
-                            {/* Navigation Buttons */}
-                            <button
-                                onClick={prevSlide}
-                                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
-                            >
-                                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
-                            </button>
+                            {/* Top Border */}
+                            <div className="w-full h-0.5 bg-red-400 mb-6"></div>
 
-                            <button
-                                onClick={nextSlide}
-                                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
-                            >
-                                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
-                            </button>
+                            {/* Left Border */}
+                            <div className="absolute left-0 top-6 bottom-6 w-0.5 bg-red-400 hidden lg:block"></div>
 
-                            {/* Carousel Container */}
-                            <div className="overflow-hidden rounded-lg">
-                                <div
-                                    className="flex transition-transform duration-500 ease-in-out"
-                                    style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-                                >
-                                    {services.map((service, index) => (
-                                        <div key={service.id} className="w-full flex-shrink-0 px-2 sm:px-4">
-                                            <div className="border-2 border-gray-200 rounded-lg p-4 sm:p-6 md:p-8">
-                                                {/* Illustration Area */}
-                                                <div className="bg-gray-50 rounded-lg p-4 sm:p-6 md:p-8 mb-4 sm:mb-6 h-48 sm:h-56 md:h-64 flex items-center justify-center">
-                                                    <div className="text-center">
-                                                        <img src={service.img} alt="" className="max-w-full max-h-full object-contain" />
-                                                    </div>
-                                                </div>
+                            <div className="lg:pl-8">
+                                <h3 className="text-xl md:text-2xl font-semibold text-red-500 mb-6 text-center lg:text-left">
+                                    Changing Minds through Narratives
+                                </h3>
 
-                                                {/* Content */}
-                                                <div className="text-center">
-                                                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-orange-500 mb-3 sm:mb-4">
-                                                        {service.title}
-                                                    </h3>
-                                                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                                                        {service.description}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Carousel Indicators */}
-                        <div className="flex justify-center mt-6 sm:mt-8 space-x-2">
-                            {services.map((_, index) => (
-                                <button
-                                    key={index}
-                                    onClick={() => setCurrentSlide(index)}
-                                    className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${index === currentSlide
-                                        ? 'bg-orange-500 w-6 sm:w-8'
-                                        : 'bg-gray-300 hover:bg-gray-400'
-                                        }`}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="relative bg-gradient-to-br from-orange-500 to-red-500 py-12 sm:py-16 lg:py-20 overflow-hidden">
-                {/* Decorative Images - Hidden on mobile */}
-                <div className="absolute top-4 left-4 sm:left-8 opacity-80 hidden sm:block">
-                    <img
-                        src="/vec7.png"
-                        alt="Writing pen decoration"
-                        className="w-[200px] h-[150px] sm:w-[300px] sm:h-[229px] lg:w-[430px] lg:h-[329px] object-contain"
-                        onError={(e) => {
-                            e.target.style.display = 'none';
-                            e.target.nextSibling.style.display = 'block';
-                        }}
-                    />
-                    {/* Fallback */}
-                    <div className="hidden w-16 sm:w-24 h-16 sm:h-24 flex items-center justify-center">
-                        <span className="text-2xl sm:text-4xl text-white opacity-60">✏️</span>
-                    </div>
-                </div>
-
-                <div className="absolute top-8 sm:top-16 right-6 sm:right-12 opacity-80 hidden sm:block">
-                    <img
-                        src="/imgi_49_vec9.png"
-                        alt="Blue pen decoration"
-                        className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 object-contain"
-                        onError={(e) => {
-                            e.target.style.display = 'none';
-                            e.target.nextSibling.style.display = 'block';
-                        }}
-                    />
-                    {/* Fallback */}
-                    <div className="hidden w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 flex items-center justify-center">
-                        <span className="text-2xl sm:text-3xl text-white opacity-60">🖊️</span>
-                    </div>
-                </div>
-
-                <div className="absolute bottom-16 sm:bottom-32 right-4 sm:right-8 opacity-80 hidden sm:block">
-                    <img
-                        src="/vec8.png"
-                        alt="White orange pen decoration"
-                        className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
-                        onError={(e) => {
-                            e.target.style.display = 'none';
-                            e.target.nextSibling.style.display = 'block';
-                        }}
-                    />
-                    {/* Fallback */}
-                    <div className="hidden w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
-                        <span className="text-xl sm:text-2xl text-white opacity-60">🖋️</span>
-                    </div>
-                </div>
-
-                {/* Wavy line decoration */}
-                <div className="absolute bottom-0 left-0 w-full">
-                    <svg viewBox="0 0 1200 100" className="w-full h-12 sm:h-16 fill-current text-black opacity-20">
-                        <path d="M0,60 Q300,10 600,60 T1200,60 L1200,100 L0,100 Z" />
-                    </svg>
-                </div>
-
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-                        Ready to Publish Your Book? Let's Bring
-                        <br className="hidden sm:block" />
-                        Your Story to the World!
-                    </h2>
-
-                    <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto">
-                        Publishing your book is the first step toward sharing your voice with readers everywhere.
-                        As a trusted book publishing partner, we help authors transform manuscripts into
-                        professional, high-quality books available across global platforms. From editing and design
-                        to distribution and launch, our team ensures your work gets the visibility it deserves.
-                        Let's publish your book and make your author journey a success.
-                    </p>
-
-                    {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-                        <a
-                            href="tel:(850) 588-0888"
-                            className="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-lg hover:bg-white/30 transition-all duration-300 flex items-center space-x-2 sm:space-x-3 font-medium text-sm sm:text-base lg:text-lg"
-                        >
-                            <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-                            <span>(850) 588-0888</span>
-                        </a>
-
-                        <button
-                            onClick={openConsultationModal}
-                            className="bg-white text-orange-500 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 flex items-center space-x-2 sm:space-x-3 font-medium text-sm sm:text-base lg:text-lg shadow-lg hover:shadow-xl"
-                        >
-                            <span>Get Started</span>
-                            <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            {/* FAQ Section */}
-            <section className="py-12 sm:py-16 lg:py-20 bg-gray-50 relative">
-                {/* Decorative image for FAQ section */}
-                <div className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 opacity-60 hidden sm:block">
-                    <img
-                        src="/imgi_11_vec2.png"
-                        alt="Orange pen decoration"
-                        className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
-                        onError={(e) => {
-                            e.target.style.display = 'none';
-                            e.target.nextSibling.style.display = 'block';
-                        }}
-                    />
-                    {/* Fallback */}
-                    <div className="hidden w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
-                        <span className="text-2xl sm:text-3xl text-orange-500 opacity-60">✒️</span>
-                    </div>
-                </div>
-
-                {/* Book illustration on left */}
-                <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 opacity-40 hidden sm:block">
-                    <div className="w-12 h-15 sm:w-16 sm:h-20 border-2 border-gray-300 rounded transform -rotate-12">
-                        <div className="w-full h-full bg-white rounded flex items-center justify-center">
-                            <span className="text-lg sm:text-2xl">📖</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Section Header */}
-                    <div className="text-center mb-12 sm:mb-16">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-                            Frequently Asked <span className="text-orange-500">Questions</span>
-                        </h2>
-                        <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
-                            Have questions? We've got answers! Here are some common queries about our book publishing services.
-                        </p>
-                    </div>
-
-                    {/* FAQ Items */}
-                    <div className="space-y-3 sm:space-y-4">
-                        {faqs.map((faq) => (
-                            <div key={faq.id} className="bg-black rounded-lg overflow-hidden">
-                                <button
-                                    onClick={() => toggleFAQ(faq.id)}
-                                    className="w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-6 text-left flex items-center justify-between hover:bg-gray-900 transition-colors duration-200"
-                                >
-                                    <div className="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
-                                        <span className="text-white text-sm sm:text-lg font-bold bg-gray-800 px-2 sm:px-3 py-1 rounded flex-shrink-0">
-                                            {String(faq.id).padStart(2, '0')}
-                                        </span>
-                                        <h3 className="text-white text-sm sm:text-base lg:text-lg font-medium truncate sm:truncate-none">
-                                            {faq.question}
-                                        </h3>
-                                    </div>
-                                    <div className="text-white ml-2 flex-shrink-0">
-                                        {openFAQ === faq.id ? (
-                                            <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6" />
-                                        ) : (
-                                            <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6" />
-                                        )}
-                                    </div>
-                                </button>
-
-                                {/* Answer */}
-                                <div className={`overflow-hidden transition-all duration-300 ${openFAQ === faq.id ? 'max-h-96 pb-4 sm:pb-6' : 'max-h-0'
-                                    }`}>
-                                    <div className="px-4 sm:px-6 lg:px-8">
-                                        <div className="pl-8 sm:pl-12 lg:pl-16">
-                                            <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                                                {faq.answer}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Palmbay Publishers Hero Section */}
-            <section className="py-12 sm:py-16 lg:py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Top Section - From Page to Screen */}
-                    <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-12 sm:mb-16 lg:mb-20">
-                        {/* Left - Laptop Image */}
-                        <div className="relative order-2 lg:order-1">
-                            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-4 sm:p-6 lg:p-8">
-                                <img
-                                    src="/laptop.jpg"
-                                    alt="Laptop with book and movie clapboard"
-                                    className="w-full h-auto rounded-lg shadow-lg"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Right - Content */}
-                        <div className="space-y-4 sm:space-y-6 order-1 lg:order-2">
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                                From Page to Screen:
-                                <br />
-                                <span className="text-orange-500">Transform Your Book Into Film</span>
-                            </h2>
-
-                            <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
-                                At Genfall Publications, we go beyond publishing—we help you bring your story to life on screen.
-                                Our <span className="font-semibold">book-to-film adaptation services</span> give your work the opportunity
-                                to reach new audiences through motion pictures, television, or streaming platforms. From
-                                <span className="font-semibold"> screenplay development, pitch creation, and securing film rights</span>
-                                to <span className="font-semibold">partnering with award-winning production teams</span>, we guide you
-                                through every stage of the journey. Whether you envision a feature film, a binge-worthy series,
-                                or a cinematic short, we ensure your story's essence resonates with viewers worldwide.
-                            </p>
-
-                            <a href="tel:+8505880888">
-                                <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 rounded-lg flex items-center space-x-2 font-medium transition-colors shadow-lg hover:shadow-xl text-sm sm:text-base">
-                                    <span>(850) 588-0888</span>
-                                    <Phone className="h-4 w-4" />
-                                </button>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    {/* Bottom Section - Contact Form */}
-                    <div className="border border-gray-200 rounded-2xl p-4 sm:p-6 lg:p-8 xl:p-12">
-                        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start">
-                            {/* Left - Contact Info */}
-                            <div className="space-y-4 sm:space-y-6">
-                                <div className="space-y-2">
-                                    <h3 className="text-orange-500 text-lg sm:text-xl font-medium">Need Assistance?</h3>
-                                    <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                                        Get in Touch with Us!
-                                    </h4>
-                                </div>
-
-                                <p className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed">
-                                    While we're good with smoke signals, there are simpler
-                                    ways for us to get in touch and answer your questions.
+                                <p className="text-gray-600 text-sm md:text-base leading-relaxed text-center lg:text-left">
+                                    Employing powerful descriptions to provoke deep reflection, helping you connect with readers on a personal level to leave an impression that lasts long after they've turned the last page.
                                 </p>
-                                <a href="tel:+8505880888">
-                                    <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 rounded-lg flex items-center space-x-2 font-medium transition-colors shadow-lg hover:shadow-xl text-sm sm:text-base">
-                                        <span>(850) 588-0888</span>
-                                        <Phone className="h-4 w-4" />
-                                    </button>
-                                </a>
                             </div>
 
-                            {/* Right - Contact Form */}
-                            <div className="space-y-4 sm:space-y-6">
-                                <div className="space-y-2">
-                                    <h4 className="text-xl sm:text-2xl font-bold text-gray-900">
-                                        <span className="text-orange-500">Contact</span> Us
-                                    </h4>
-                                    <h5 className="text-lg sm:text-xl font-semibold text-gray-800">
-                                        Get Your Free Consultation
-                                    </h5>
-                                </div>
+                            {/* Bottom Border */}
+                            <div className="w-full h-0.5 bg-red-400 mt-6"></div>
+                        </div>
 
-                                <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        placeholder="Enter Your Name"
-                                        value={formData.name}
-                                        onChange={handleInputChange}
-                                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border text-black border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-colors text-sm sm:text-base"
-                                    />
+                        {/* Unique Perspectives */}
+                        <div className="relative">
+                            {/* Top Border */}
+                            <div className="w-full h-0.5 bg-red-400 mb-6"></div>
 
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        placeholder="Enter Your Email"
-                                        value={formData.email}
-                                        onChange={handleInputChange}
-                                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border text-black border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-colors text-sm sm:text-base"
-                                    />
+                            {/* Left Border */}
+                            <div className="absolute left-0 top-6 bottom-6 w-0.5 bg-red-400 hidden lg:block"></div>
 
-                                    <input
-                                        type="tel"
-                                        name="phone"
-                                        placeholder="Enter Your Phone Number"
-                                        value={formData.phone}
-                                        onChange={handleInputChange}
-                                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border text-black border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-colors text-sm sm:text-base"
-                                    />
+                            <div className="lg:pl-8">
+                                <h3 className="text-xl md:text-2xl font-semibold text-red-500 mb-6 text-center lg:text-left">
+                                    Unique Perspectives
+                                </h3>
 
-                                    <textarea
-                                        name="message"
-                                        placeholder="Tell us about your book project"
-                                        value={formData.message}
-                                        onChange={handleInputChange}
-                                        rows="4"
-                                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border text-black border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none resize-none transition-colors text-sm sm:text-base"
-                                    ></textarea>
-
-                                    <button
-                                        type="submit"
-                                        disabled={isSubmitting}
-                                        className="bg-orange-500 hover:bg-orange-600 disabled:bg-orange-300 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg flex items-center space-x-2 font-medium transition-colors shadow-lg hover:shadow-xl text-sm sm:text-base"
-                                    >
-                                        {isSubmitting ? (
-                                            <>
-                                                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                                <span>Sending...</span>
-                                            </>
-                                        ) : (
-                                            <>
-                                                <span>Send</span>
-                                                <MessageCircle className="h-4 w-4" />
-                                            </>
-                                        )}
-                                    </button>
-                                </form>
+                                <p className="text-gray-600 text-sm md:text-base leading-relaxed text-center lg:text-left">
+                                    Every writer, in our opinion, has an original perspective just waiting to be shared. With our help, you can find the confidence to write from the heart, share your experiences, and make an impact in the literary world.
+                                </p>
                             </div>
+
+                            {/* Bottom Border */}
+                            <div className="w-full h-0.5 bg-red-400 mt-6"></div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* footer  */}
-            <footer className="relative bg-gray-900 text-white overflow-hidden">
-                {/* Background Image/Pattern */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 opacity-90"></div>
-                <div className="absolute inset-0 bg-black opacity-20"></div>
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-                    <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start">
-                        {/* Left Section - Company Info */}
-                        <div className="space-y-6 sm:space-y-8">
-                            {/* Logo */}
-                            <div className="flex items-center">
-                                <div className="h-12 w-12 sm:h-16 sm:w-16 rounded-full overflow-hidden bg-white shadow-md ring-2 ring-orange-100">
-                                    <img
-                                        src="/logo-2.png"
-                                        alt="Palmbay Publishers Logo"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                                <span className="ml-4 text-2xl sm:text-3xl font-bold text-white">Palmbay Publishers</span>
-                            </div>
-
-                            {/* Description */}
-                            <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-md">
-                                We offer comprehensive publishing solutions to help you bring your
-                                literary masterpiece to the world.
-                            </p>
-
-                            {/* Trustpilot Reviews */}
-                            <div className="space-y-2 sm:space-y-3">
-                                <div className="flex items-center space-x-2">
-                                    <span className="text-teal-400 text-lg sm:text-xl">⭐</span>
-                                    <span className="text-teal-400 font-bold text-sm sm:text-base lg:text-lg">Trustpilot</span>
-                                </div>
-                                <div className="flex items-center space-x-1">
-                                    {[...Array(5)].map((_, i) => (
-                                        <div key={i} className="w-5 h-5 sm:w-6 sm:h-6 bg-teal-500 rounded flex items-center justify-center">
-                                            <span className="text-white text-xs">★</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Right Section - Contact Info */}
-                        <div className="space-y-6 sm:space-y-8 lg:text-right">
-                            <div className="space-y-4 sm:space-y-6">
-                                <h3 className="text-xl sm:text-2xl font-bold text-white">Contact Us</h3>
-
-                                <div className="space-y-3 sm:space-y-4 text-gray-300">
-                                    <a href="tel:+8505880888">
-                                        <div className="text-lg sm:text-xl font-semibold text-white hover:text-orange-500 transition-colors">
-                                            (850) 588-0888
-                                        </div>
-                                    </a>
-
-                                    <a href="mailto:support@palmbaypublishers.com">
-                                        <div className="text-sm sm:text-base lg:text-lg text-orange-400 hover:text-orange-300 transition-colors">
-                                            support@palmbaypublishers.com
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Bottom Section - Footer Links and Copyright */}
-                    <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-gray-700">
-                        <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0">
-                            {/* Copyright */}
-                            <div className="text-gray-400 text-xs sm:text-sm text-center">
-                                © 2025 Palmbay Publishers - All rights reserved.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+{/* our process section  */}
+    <section className="bg-slate-900 py-16 px-4 text-white">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Process</h2>
+          <p className="text-gray-300 max-w-4xl mx-auto text-lg">
+            Palmbay Publisher provides you with a set of strengths by which you can evaluate our talents; 
+            these are the kinds of things that are perfect for a great outcome.
+          </p>
         </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          {/* Left Side - Process List */}
+          <div className="space-y-4">
+            {processes.map((process, index) => (
+              <div 
+                key={process.id}
+                onClick={() => setActiveProcess(index)}
+                className={`flex items-center space-x-4 p-4 rounded-lg cursor-pointer transition-all duration-300 ${
+                  activeProcess === index 
+                    ? 'bg-blue-600 text-white' 
+                    : 'hover:bg-slate-800 text-gray-300 hover:text-white'
+                }`}
+              >
+                <span className="text-2xl">{process.icon}</span>
+                <h3 className="text-lg md:text-xl font-semibold">{process.title}</h3>
+              </div>
+            ))}
+          </div>
+
+          {/* Right Side - Process Details */}
+          <div className="bg-blue-900 rounded-lg border-2 border-blue-600 p-6 lg:p-8">
+            <div className="bg-red-600 rounded-lg p-6 mb-6">
+              <h3 className="text-xl md:text-2xl font-bold text-center">
+                {processes[activeProcess].content.heading}
+              </h3>
+            </div>
+
+            <div className="mb-6">
+              <p className="text-gray-200 text-lg mb-6">
+                {processes[activeProcess].content.subtitle}
+              </p>
+
+              <ul className="space-y-3">
+                {processes[activeProcess].content.steps.map((step, stepIndex) => (
+                  <li key={stepIndex} className="flex items-start space-x-3">
+                    <span className="text-red-400 font-bold text-lg mt-0.5">✓</span>
+                    <span className="text-gray-200">{step}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="text-center">
+              <a  onClick={openModal}
+               
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-bold text-lg transition-colors duration-200 inline-block"
+              >
+                Book Your FREE Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+          {/* book writing section  */}
+   <section className="bg-gray-100 py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Content */}
+          <div className="order-2 lg:order-1">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+              <span className="text-blue-600">BOOK WRITERS FOR HIRE</span> ARE AVAILABLE
+            </h2>
+            
+            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+              We all have some story to tell, but only a few have the time or the writing skills to 
+              craft a compelling piece that resonates with the audience. This is where our book 
+              writers for hire come in. We connect you with a specialist in your genre and niche with 
+              the skills and expertise to capture your unique voice and amplify it for you.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a  onClick={openModal}
+              
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold text-center transition-colors duration-200"
+              >
+                Get Free Consultancy
+              </a>
+              <a 
+                href="tel:+8505880888"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold text-center transition-colors duration-200 flex items-center justify-center gap-2"
+              >
+                <span>📞</span>
+                +850 588-0888
+              </a>
+            </div>
+          </div>
+
+          {/* Right Column - Book Image */}
+          <div className="order-1 lg:order-2 flex justify-center">
+            <div className="relative w-full max-w-lg">
+              <img
+                src="/home2.webp"
+                alt="The Cider King - Published Book Example"
+                width={500}
+                height={400}
+                className="w-full h-auto object-contain drop-shadow-2xl"
+                priority={false}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+ {/* Take Action Section  */}
+  <section className="bg-slate-900 py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left Column - Content */}
+          <div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Take Action For Your Book
+            </h2>
+            
+            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+              Give us a call today and get a detailed review of your book to identify its needs and areas of 
+              improvement.
+            </p>
+          </div>
+
+          {/* Right Column - Action Buttons */}
+          <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 justify-center lg:justify-end">
+            <a  onClick={openModal}
+             
+              className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold text-lg text-center transition-colors duration-200"
+            >
+              Get Free Consultancy
+            </a>
+            <a 
+              href="tel:+8505880888"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg text-center transition-colors duration-200 flex items-center justify-center gap-2"
+            >
+              <span>📞</span>
+              Call Now
+            </a>
+           
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+    {/* Clients Review Section  */}
+ <section className="bg-gray-50 py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-700 mb-4">
+            We Always Keep Our <span className="text-blue-600">Clients Satisfied!</span>
+          </h2>
+          <p className="text-gray-600 text-lg max-w-4xl mx-auto">
+            At Palmbay Publisher, client happiness comes first! We'll ensure your book meets all publishing 
+            standards and work together to achieve your vision.
+          </p>
+        </div>
+
+        {/* Desktop View - 3 Cards */}
+        <div className="hidden md:block relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {testimonials.slice(currentSlide * 3, currentSlide * 3 + 3).map((testimonial) => (
+              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+            ))}
+          </div>
+
+          {/* Navigation Arrows */}
+          <div className="flex justify-between items-center mb-6">
+            <button
+              onClick={prevSlide}
+              className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition-colors"
+            >
+              <span className="text-xl">←</span>
+            </button>
+            <button
+              onClick={nextSlide}
+              className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition-colors"
+            >
+              <span className="text-xl">→</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile View - 1 Card */}
+        <div className="lg:hidden relative">
+          <div className="mb-8">
+            <TestimonialCard testimonial={testimonials[currentSlide * 3]} />
+          </div>
+
+          {/* Mobile Navigation */}
+          <div className="flex justify-between items-center mb-6">
+            <button
+              onClick={prevSlide}
+              className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full"
+            >
+              <span className="text-lg">←</span>
+            </button>
+            <button
+              onClick={nextSlide}
+              className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full"
+            >
+              <span className="text-lg">→</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Slide Indicators */}
+        <div className="flex justify-center space-x-2">
+          {[...Array(Math.ceil(testimonials.length / 3))].map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
+              }`}
+            />
+          ))}
+        </div>
+      
+      </div>
+    </section>
+
+
+{/* contact section  */}
+
+<section className="bg-white py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 shadow-2xl rounded-lg overflow-hidden">
+          
+          {/* Left Side - Contact Info */}
+          <div className="bg-blue-800 text-white p-8 lg:p-12 relative overflow-hidden">
+            {/* Background Decorative Elements */}
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-900 rounded-full opacity-20 transform translate-x-32 translate-y-32"></div>
+            <div className="absolute top-0 left-0 w-32 h-32 bg-blue-700 rounded-full opacity-30 transform -translate-x-16 -translate-y-16"></div>
+            
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Drop Us a Line</h2>
+              
+              <p className="text-blue-100 text-lg mb-12 leading-relaxed">
+                Contact us today for a personalized consultation and find out what 
+                the Palmbay Publisher advantage is!
+              </p>
+
+              <div className="space-y-8">
+                {/* Phone */}
+                <div className="flex items-center space-x-4">
+                  <div className="bg-blue-700 p-3 rounded-full">
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <a href="tel:+8505880888" className="text-xl font-semibold hover:text-blue-200 transition-colors">
+                      +850 588-0888
+                    </a>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-center space-x-4">
+                  <div className="bg-blue-700 p-3 rounded-full">
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <a href="mailto:info@palmbayPublisher.com" className="text-lg hover:text-blue-200 transition-colors break-all">
+                      info@palmbayPublisher.com
+                    </a>
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-start space-x-4">
+                  <div className="bg-blue-700 p-3 rounded-full mt-1">
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-lg leading-relaxed">
+                      42 Broadway Suite 1534,<br />
+                      New York, NY 10004
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side - Contact Form */}
+          <div className="bg-white p-8 lg:p-12">
+            <div className="mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Share a <span className="text-blue-600">Message</span>
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Leave your contact information in the box below, and a member of our team 
+                will get in touch with you soon. We hope to hear from you soon!
+              </p>
+            </div>
+
+            {/* Form */}
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Full Name */}
+              <div>
+                <input
+                  type="text"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleInputChange}
+                  placeholder="Your Full Name"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-700 placeholder-gray-500"
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="Your Best Email"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-700 placeholder-gray-500"
+                />
+              </div>
+
+              {/* Phone */}
+              <div>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  placeholder="Contact Number"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-700 placeholder-gray-500"
+                />
+              </div>
+
+              {/* Message */}
+              <div>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  placeholder="Enter About Your Book"
+                  rows="4"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-700 placeholder-gray-500 resize-vertical"
+                />
+              </div>
+
+              {/* Submit Button */}
+              <div className="text-right">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 rounded-lg font-bold text-lg transition-all duration-200 ${
+                    isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:shadow-lg'
+                  }`}
+                >
+                  {isSubmitting ? 'Submitting...' : 'Request a Free Consultation'}
+                </button>
+              </div>
+
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="text-center text-green-600 font-semibold">
+                  Thank you! Your message has been sent successfully. We'll get back to you soon.
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="text-center text-red-600 font-semibold">
+                  Sorry, there was an error sending your message. Please try again.
+                </div>
+              )}
+            </form>
+          </div>        
+        </div>
+      
+      </div>
+    </section>
+
+
+{/* footer  */}
+
+<footer className="bg-gradient-to-b from-blue-900 to-slate-900">
+      {/* Main Footer Content */}
+      <div className="py-16 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          {/* Logo */}
+          <div className="mb-12">
+            <div className="flex items-center justify-center mb-6">
+              {/* Logo Design */}
+            
+              
+              {/* Company Name */}
+              <div className="ml-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-white">
+                  PALMBAY
+                </h2>
+                <p className="text-lg md:text-xl text-blue-300 font-semibold">
+                  BOOK PUBLICATION
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Mission Statement */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <p className="text-gray-200 text-lg md:text-xl leading-relaxed">
+              We at Palmbay Publisher are dedicated to helping you achieve your writing and publication dreams. 
+              Whether you want to share your personal journey, craft a captivating work of fiction, or delve into a historical topic, 
+              our passionate book enthusiasts will refine your experience word by word.
+            </p>
+          </div>
+
+          {/* Contact Information */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-center">
+            {/* Phone */}
+            <div className="bg-blue-800 bg-opacity-50 rounded-lg p-6">
+              <div className="text-blue-300 mb-2">
+                <svg className="w-8 h-8 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+              </div>
+              <a href="tel:+8505880888" className="text-white text-xl font-semibold hover:text-blue-200 transition-colors">
+                +850 588-0888
+              </a>
+            </div>
+
+            {/* Email */}
+            <div className="bg-blue-800 bg-opacity-50 rounded-lg p-6">
+              <div className="text-blue-300 mb-2">
+                <svg className="w-8 h-8 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+              </div>
+              <a href="mailto:info@palmbayPublisher.com" className="text-white text-lg hover:text-blue-200 transition-colors break-words">
+                info@palmbayPublisher.com
+              </a>
+            </div>
+
+            {/* Address */}
+            <div className="bg-blue-800 bg-opacity-50 rounded-lg p-6">
+              <div className="text-blue-300 mb-2">
+                <svg className="w-8 h-8 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <p className="text-white text-lg">
+                42 Broadway Suite 1534,<br />
+                New York, NY 10004
+              </p>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="bg-red-600 bg-opacity-20 rounded-lg p-8 mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Ready to Start Your Publishing Journey?
+            </h3>
+            <p className="text-blue-100 text-lg mb-6">
+              Contact us today for a free consultation and discover how we can bring your book to life.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a onClick={openModal}
+               
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
+                Get Free Consultation
+              </a>
+              <a 
+                href="tel:+8505880888"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
+              >
+                <span>📞</span>
+                Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer Links */}
+      <div className="bg-slate-800 py-6 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-6">
+            <a href="/terms-conditions" className="text-gray-300 hover:text-white transition-colors">
+              Terms & Conditions
+            </a>
+            <span className="text-gray-500 hidden md:inline">|</span>
+            <a href="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">
+              Privacy Policy
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Disclaimer */}
+      <div className="bg-black py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-4">
+            <h4 className="text-white font-semibold mb-2">Disclaimer:</h4>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              All company logos and trademarks appearing on our website are the property of their respective owners. 
+              We are not affiliated, associated, endorsed by, or in any way officially connected with these companies or their trademarks. 
+              The use of these logos and trademarks does not imply any endorsement, affiliation, or relationship between us and the respective companies. 
+              We solely use these logos and trademarks for identification purposes only. All information and content provided on our website is for 
+              informational purposes only and should not be construed as professional advice. We do not guarantee the accuracy or completeness of any 
+              information provided on our website. We are not responsible for any errors or omissions, or for the results obtained from the use of this information. 
+              Any reliance you place on such information is strictly at your own risk.
+            </p>
+          </div>
+
+          {/* Copyright */}
+          <div className="border-t border-gray-700 pt-4">
+            <p className="text-gray-500 text-sm text-center">
+              © {currentYear} Palmbay Publisher. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+<ConsultationModal />
+        </>
 
     );
 };
-export default GlenfallHeroSection;
+
+export default BookPublishingLP;
+
